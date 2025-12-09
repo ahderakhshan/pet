@@ -780,7 +780,7 @@ class ParsinluFoodDataProcessor(DataProcessor):
     TEST_FILE_NAME = "test.csv"
 
     # Set this to the name of the file containing the unlabeled examples
-    UNLABELED_FILE_NAME = "unlabeled.csv"
+    UNLABELED_FILE_NAME = "test.csv"
 
     # Set this to a list of all labels in the train + test data
     LABELS = ["Positive", "Negative"]
