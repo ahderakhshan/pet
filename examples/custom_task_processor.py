@@ -202,3 +202,4 @@ class ParsinluFoodDataProcessor(DataProcessor):
 
 # register the processor for this task with its name
 PROCESSORS[MyTaskDataProcessor.TASK_NAME] = MyTaskDataProcessor
+PROCESSORS[ParsinluFoodDataProcessor.TASK_NAME] = ParsinluFoodDataProcessor
