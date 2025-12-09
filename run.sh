@@ -6,6 +6,5 @@ python3 cli.py \
 --model_name_or_path /home/am_derakhshan/fnlp/models/xlm-roberta/xlm-roberta-largexlm-roberta \
 --task_name  parsinlu-food \
 --output_dir ./output \
---no_train \
 --do_eval \
 --no_distillation
