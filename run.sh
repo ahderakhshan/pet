@@ -6,5 +6,6 @@ python3 cli.py \
 --model_name_or_path xlm-roberta \
 --task_name /home/am_derakhshan/fnlp/models/xlm-roberta/xlm-roberta-large \
 --output_dir ./output \
---do_train \
---do_eval
+--no_train \
+--do_eval \
+--no_distillation
