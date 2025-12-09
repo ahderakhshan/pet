@@ -1,0 +1,10 @@
+python3 cli.py \
+--method pet \
+--pattern_ids 0 \
+--data_dir ./data \
+--model_type xlm-roberta \
+--model_name_or_path xlm-roberta \
+--task_name /home/am_derakhshan/fnlp/models/xlm-roberta/xlm-roberta-large \
+--output_dir ./output \
+--do_train \
+--do_eval
