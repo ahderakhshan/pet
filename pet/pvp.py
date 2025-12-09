@@ -28,6 +28,7 @@ from pet.utils import InputExample, get_verbalization_ids
 
 import log
 from pet import wrapper as wrp
+from examples.custom_task_pvp import ParsinluFoodPVP
 
 logger = log.get_logger('root')
 
@@ -637,4 +638,5 @@ PVPS = {
     'record': RecordPVP,
     'ax-b': RtePVP,
     'ax-g': RtePVP,
+    "parsinlu-food": ParsinluFoodPVP
 }
