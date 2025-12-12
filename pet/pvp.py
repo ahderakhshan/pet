@@ -628,7 +628,7 @@ class ParsinluFoodPVP(PVP):
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
     VERBALIZER = {
-        "Positive": ["خوب"],
+        "Positive": ["خیلی خوب"],
         "Negative": ["بد"],
         "Neutral": ["متوسط"],
     }

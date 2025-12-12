@@ -25,6 +25,7 @@ from typing import List, Dict, Callable
 import log
 from pet import task_helpers
 from pet.utils import InputExample
+from pet.task_helpers import MultiMaskTaskHelper
 
 logger = log.get_logger('root')
 
@@ -874,6 +875,7 @@ TASK_HELPERS = {
     "multirc": task_helpers.MultiRcTaskHelper,
     "copa": task_helpers.CopaTaskHelper,
     "record": task_helpers.RecordTaskHelper,
+    "parsinlu-food": MultiMaskTaskHelper,
 }
 
 METRICS = {
