@@ -93,7 +93,7 @@ def main():
     parser = argparse.ArgumentParser(description="Command line interface for PET/iPET")
 
     # Required parameters
-    parser.add_argument("--method", required=True, choices=['pet', 'ipet', 'sequence_classifier'],
+    parser.add_argument("--method", required=True, choices=['pet', 'ipet', 'sequence_classifier', 'our_method'],
                         help="The training method to use. Either regular sequence classification, PET or iPET.")
     parser.add_argument("--data_dir", default=None, type=str, required=True,
                         help="The input data dir. Should contain the data files for the task.")
