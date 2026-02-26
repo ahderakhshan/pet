@@ -267,7 +267,7 @@ def main():
         "parsinlu-nli": "./data/parsinlu-nli/",
         "digikala-tc": "./data/digikala-tc/"
     }
-
+    pet_eval_cfg.per_gpu_eval_batch_size = 1
     wrapper = pet.init_model(pet_model_cfg)
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
