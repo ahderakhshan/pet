@@ -536,3 +536,7 @@ class TransformerModelWrapper:
         """Perform a sequence classifier evaluation step."""
         inputs = self.generate_default_inputs(batch)
         return self.model(**inputs)[0]
+
+    def set_model(self, model):
+        self.model = model
+        return self

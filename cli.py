@@ -282,7 +282,8 @@ def main():
             label_list = processor.get_labels()
             pet_model_cfg.label_list = label_list
             scores = {k: 0 for k in tasks_patterns[selected_task]}
-            wrapper.config = pet_model_cfg
+            wrapper = pet.init_model(pet_model_cfg)
+            wrapper = wrapper.set_model(wrapper.model)
             logger.info(f"selected task is {selected_task}")
             for pattern_id in tasks_patterns[selected_task]:
                 logger.info(f"pattern id is {pattern_id}")
@@ -293,7 +294,8 @@ def main():
                 scores[pattern_id] = result['scores']['acc']
             best_pattern = max(scores, key=scores.get)
             pet_model_cfg.pattern_id = best_pattern
-            wrapper.config = pet_model_cfg
+            wrapper = pet.init_model(pet_model_cfg)
+            wrapper = wrapper.set_model(wrapper.model)
             pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
                                    ipet_train_data=None, unlabeled_data=None)
 
