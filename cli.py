@@ -17,6 +17,7 @@ one of the supported tasks and datasets.
 
 import argparse
 import os
+import random
 from typing import Tuple
 
 import torch
@@ -243,36 +244,75 @@ def main():
 
     train_data = load_examples(
         args.task_name, args.data_dir, TRAIN_SET, num_examples=train_ex, num_examples_per_label=train_ex_per_label)
-    eval_data = load_examples(
-        args.task_name, args.data_dir, eval_set, num_examples=test_ex, num_examples_per_label=test_ex_per_label)
-    unlabeled_data = load_examples(
-        args.task_name, args.data_dir, UNLABELED_SET, num_examples=args.unlabeled_examples)
+    # eval_data = load_examples(
+    #     args.task_name, args.data_dir, eval_set, num_examples=test_ex, num_examples_per_label=test_ex_per_label)
+    # unlabeled_data = load_examples(
+    #     args.task_name, args.data_dir, UNLABELED_SET, num_examples=args.unlabeled_examples)
 
     args.metrics = METRICS.get(args.task_name, DEFAULT_METRICS)
 
     pet_model_cfg, pet_train_cfg, pet_eval_cfg = load_pet_configs(args)
-    sc_model_cfg, sc_train_cfg, sc_eval_cfg = load_sequence_classifier_configs(args)
-    ipet_cfg = load_ipet_config(args)
+    # sc_model_cfg, sc_train_cfg, sc_eval_cfg = load_sequence_classifier_configs(args)
+    # ipet_cfg = load_ipet_config(args)
 
-    if args.method == 'pet':
-        pet.train_pet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,
-                      pattern_ids=args.pattern_ids, output_dir=args.output_dir,
-                      ensemble_repetitions=args.pet_repetitions, final_repetitions=args.sc_repetitions,
-                      reduction=args.reduction, train_data=train_data, unlabeled_data=unlabeled_data,
-                      eval_data=eval_data, do_train=args.do_train, do_eval=args.do_eval,
-                      no_distillation=args.no_distillation, seed=args.seed)
+    tasks_patterns = {
+        "parsinlu-food-sentiment": [1, 2, 3],
+        "parsinlu-movie-sentiment": [1, 2, 3],
+        "parsinlu-nli": [1, 2, 3],
+        "digikala-tc": [1, 2]
+    }
+    data_dirs = {
+        "parsinlu-food-sentiment": "./data/parsinlu-food-sentiment/",
+        "parsinlu-movie-sentiment": "./data/parsinlu-movie-sentiment/",
+        "parsinlu-nli": "./data/parsinlu-nli/",
+        "digikala-tc": "./data/digikala-tc/"
+    }
 
-    elif args.method == 'ipet':
-        pet.train_ipet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, ipet_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,
-                       pattern_ids=args.pattern_ids, output_dir=args.output_dir,
-                       ensemble_repetitions=args.pet_repetitions, final_repetitions=args.sc_repetitions,
-                       reduction=args.reduction, train_data=train_data, unlabeled_data=unlabeled_data,
-                       eval_data=eval_data, do_train=args.do_train, do_eval=args.do_eval, seed=args.seed)
+    wrapper = pet.init_model(pet_model_cfg)
+    if args.method == "our_method":
+        tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
+        for iteration in range(100):
+            selected_task = random.sample(tasks, k=1)[0]
+            train_data = load_examples(
+                selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
+                num_examples_per_label=8)
+            pet_eval_cfg.metrics = METRICS.get(selected_task, DEFAULT_METRICS)
+            pet_model_cfg.task_name = selected_task
+            processor = PROCESSORS[selected_task]()
+            label_list = processor.get_labels()
+            pet_model_cfg.label_list = label_list
+            scores = {k: 0 for k in tasks_patterns[selected_task]}
+            wrapper.config = pet_model_cfg
+            for pattern_id in tasks_patterns[selected_task]:
+                evaluate_wrapper = wrapper
+                evaluate_wrapper.config.pattern_id = - pattern_id
+                result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
+                scores[pattern_id] = result['scores']['acc']
+            best_pattern = max(scores, key=scores.get)
+            pet_model_cfg.pattern_id = best_pattern
+            wrapper.config = pet_model_cfg
+            pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
+                                   ipet_train_data=None, unlabeled_data=None)
 
-    elif args.method == 'sequence_classifier':
-        pet.train_classifier(sc_model_cfg, sc_train_cfg, sc_eval_cfg, output_dir=args.output_dir,
-                             repetitions=args.sc_repetitions, train_data=train_data, unlabeled_data=unlabeled_data,
-                             eval_data=eval_data, do_train=args.do_train, do_eval=args.do_eval, seed=args.seed)
+    # if args.method == 'pet':
+    #     pet.train_pet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,
+    #                   pattern_ids=args.pattern_ids, output_dir=args.output_dir,
+    #                   ensemble_repetitions=args.pet_repetitions, final_repetitions=args.sc_repetitions,
+    #                   reduction=args.reduction, train_data=train_data, unlabeled_data=unlabeled_data,
+    #                   eval_data=eval_data, do_train=args.do_train, do_eval=args.do_eval,
+    #                   no_distillation=args.no_distillation, seed=args.seed)
+    #
+    # elif args.method == 'ipet':
+    #     pet.train_ipet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, ipet_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,
+    #                    pattern_ids=args.pattern_ids, output_dir=args.output_dir,
+    #                    ensemble_repetitions=args.pet_repetitions, final_repetitions=args.sc_repetitions,
+    #                    reduction=args.reduction, train_data=train_data, unlabeled_data=unlabeled_data,
+    #                    eval_data=eval_data, do_train=args.do_train, do_eval=args.do_eval, seed=args.seed)
+    #
+    # elif args.method == 'sequence_classifier':
+    #     pet.train_classifier(sc_model_cfg, sc_train_cfg, sc_eval_cfg, output_dir=args.output_dir,
+    #                          repetitions=args.sc_repetitions, train_data=train_data, unlabeled_data=unlabeled_data,
+    #                          eval_data=eval_data, do_train=args.do_train, do_eval=args.do_eval, seed=args.seed)
 
     else:
         raise ValueError(f"Training method '{args.method}' not implemented")
