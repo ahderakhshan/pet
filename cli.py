@@ -283,7 +283,9 @@ def main():
             pet_model_cfg.label_list = label_list
             scores = {k: 0 for k in tasks_patterns[selected_task]}
             wrapper.config = pet_model_cfg
+            logger.info(f"selected task is {selected_task}")
             for pattern_id in tasks_patterns[selected_task]:
+                logger.info(f"pattern id is {pattern_id}")
                 evaluate_wrapper = wrapper
                 evaluate_wrapper.config.pattern_id = - pattern_id
                 result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
