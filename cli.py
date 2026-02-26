@@ -288,6 +288,7 @@ def main():
                 logger.info(f"pattern id is {pattern_id}")
                 evaluate_wrapper = wrapper
                 evaluate_wrapper.config.pattern_id = - pattern_id
+                logger.info(f"evaluate wrapper pattern id is {evaluate_wrapper.config.pattern_id}")
                 result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
                 scores[pattern_id] = result['scores']['acc']
             best_pattern = max(scores, key=scores.get)
