@@ -295,7 +295,7 @@ def main():
                 evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
                 evaluate_pet_model_cfg.pattern_id = -pattern_id
                 evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
-                evaluate_wrapper = evaluate_wrapper.set_model(evaluate_wrapper.model)
+                evaluate_wrapper = evaluate_wrapper.set_model(wrapper.model)
                 # evaluate_wrapper = copy.deepcopy(wrapper)
                 # evaluate_wrapper.config = evaluate_pet_model_cfg
                 logger.info(f"evaluate wrapper pattern id is {evaluate_wrapper.config.pattern_id}")
