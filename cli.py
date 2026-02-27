@@ -274,19 +274,22 @@ def main():
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(100):
             selected_task = random.sample(tasks, k=1)[0]
+            logger.info(f"selected task is {selected_task}")
             train_data = load_examples(
                 selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
                 num_examples_per_label=8)
-            pet_eval_cfg.metrics = METRICS.get(selected_task, DEFAULT_METRICS)
-            pet_model_cfg.task_name = selected_task
             processor = PROCESSORS[selected_task]()
             label_list = processor.get_labels()
+
+            pet_eval_cfg.metrics = METRICS.get(selected_task, DEFAULT_METRICS)
+            pet_model_cfg.task_name = selected_task
             pet_model_cfg.label_list = label_list
-            scores = {k: 0 for k in tasks_patterns[selected_task]}
+
             # wrapper = pet.init_model(pet_model_cfg)
             # wrapper = wrapper.set_model(wrapper.model)
-            wrapper = wrapper.set_config(pet_model_cfg)
-            logger.info(f"selected task is {selected_task}")
+            wrapper.config = pet_model_cfg
+
+            scores = {k: 0 for k in tasks_patterns[selected_task]}
             for pattern_id in tasks_patterns[selected_task]:
                 logger.info(f"pattern id is {pattern_id}")
                 evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
