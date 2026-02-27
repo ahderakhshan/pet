@@ -98,9 +98,9 @@ class MLMPreprocessor(Preprocessor):
 class PLMPreprocessor(MLMPreprocessor):
     """Preprocessor for models pretrained using a permuted language modeling objective (e.g., XLNet)."""
 
-    def get_input_features(self, example: InputExample, labelled: bool, priming: bool = False,
+    def get_input_features(self, example: InputExample, labelled: bool, priming: bool = False, seed=None,
                            **kwargs) -> PLMInputFeatures:
-        input_features = super().get_input_features(example, labelled, priming, **kwargs)
+        input_features = super().get_input_features(example, labelled, priming, seed=seed, **kwargs)
         input_ids = input_features.input_ids
 
         num_masks = 1  # currently, PLMPreprocessor supports only replacements that require exactly one mask
