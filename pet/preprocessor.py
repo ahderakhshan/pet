@@ -48,23 +48,23 @@ class Preprocessor(ABC):
 class MLMPreprocessor(Preprocessor):
     """Preprocessor for models pretrained using a masked language modeling objective (e.g., BERT)."""
 
-    def get_input_features(self, example: InputExample, labelled: bool, priming: bool = False,
+    def get_input_features(self, example: InputExample, labelled: bool, priming: bool = False, seed=None,
                            **kwargs) -> InputFeatures:
 
         if priming:
-            input_ids, token_type_ids = self.pvp.encode(example, priming=True)
+            input_ids, token_type_ids = self.pvp.encode(example, priming=True, seed=seed)
             priming_data = example.meta['priming_data']  # type: List[InputExample]
 
             priming_input_ids = []
             for priming_example in priming_data:
-                pe_input_ids, _ = self.pvp.encode(priming_example, priming=True, labeled=True)
+                pe_input_ids, _ = self.pvp.encode(priming_example, priming=True, labeled=True, seed=seed)
                 priming_input_ids += pe_input_ids
 
             input_ids = priming_input_ids + input_ids
             token_type_ids = self.wrapper.tokenizer.create_token_type_ids_from_sequences(input_ids)
             input_ids = self.wrapper.tokenizer.build_inputs_with_special_tokens(input_ids)
         else:
-            input_ids, token_type_ids = self.pvp.encode(example)
+            input_ids, token_type_ids = self.pvp.encode(example, seed=seed)
 
         attention_mask = [1] * len(input_ids)
         padding_length = self.wrapper.config.max_seq_length - len(input_ids)

@@ -108,7 +108,7 @@ class PVP(ABC):
             return PVP.lowercase_first(s[0]), s[1]
         return s[0].lower() + s[1:]
 
-    def encode(self, example: InputExample, priming: bool = False, labeled: bool = False) \
+    def encode(self, example: InputExample, priming: bool = False, labeled: bool = False, seed=None) \
             -> Tuple[List[int], List[int]]:
         """
         Encode an input example using this pattern-verbalizer pair.
@@ -147,7 +147,7 @@ class PVP(ABC):
                 mask_idx = input_ids.index(self.mask_id)
                 assert mask_idx >= 0, 'sequence of input_ids must contain a mask token'
                 assert len(self.verbalize(example.label)) == 1, 'priming only supports one verbalization per label'
-                verbalizer = self.verbalize(example.label)[0]
+                verbalizer = self.verbalize(example.label, seed=seed)[0]
                 verbalizer_id = get_verbalization_ids(verbalizer, self.wrapper.tokenizer, force_single_token=True)
                 input_ids[mask_idx] = verbalizer_id
             return input_ids, []
@@ -194,7 +194,7 @@ class PVP(ABC):
         pass
 
     @abstractmethod
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         """
         Return all verbalizations for a given label.
 
@@ -541,7 +541,7 @@ class BoolQPVP(PVP):
         else:
             return ['Based on the following passage, ', question, '?', self.mask, '.', passage], []
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id == 0 or self.pattern_id == 2 or self.pattern_id == 4:
             return BoolQPVP.VERBALIZER_A[label]
         else:
@@ -569,7 +569,7 @@ class MultiRcPVP(PVP):
         if self.pattern_id == 3:
             return [passage, question, '- [', self.mask, ']', answer], []
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id == 3:
             return ['False'] if label == "0" else ['True']
         return MultiRcPVP.VERBALIZER[label]
@@ -597,7 +597,7 @@ class WicPVP(PVP):
         if self.pattern_id == 2:
             return [word, ' . Sense (1) (a) "', text_a, '" (', self.mask, ') "', text_b, '"'], []
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id == 2:
             return WicPVP.VERBALIZER_B[label]
         return WicPVP.VERBALIZER_A[label]
@@ -614,7 +614,7 @@ class RecordPVP(PVP):
         question = example.text_b.replace('@placeholder', self.mask * num_masks)
         return [premise, question], []
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         return []
 
 
@@ -656,9 +656,11 @@ class ParsinluFoodPVP(PVP):
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id < 0:
             return [ParsinluFoodPVP.VERBALIZER[-self.pattern_id][label][0]]
+        if seed is not None:
+            random.seed(seed)
         return random.sample(ParsinluFoodPVP.VERBALIZER[self.pattern_id][label], k=1)
 
 
@@ -704,9 +706,11 @@ class ParsinluMoviePVP(PVP):
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id < 0:
             return [ParsinluMoviePVP.VERBALIZER[-self.pattern_id][label][0]]
+        if seed is not None:
+            random.seed(seed)
         return random.sample(ParsinluMoviePVP.VERBALIZER[self.pattern_id][label], k=1)
 
 
@@ -756,7 +760,7 @@ class FarexstancePVP(PVP):
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         return FarexstancePVP.VERBALIZER[label]
 
 
@@ -816,10 +820,12 @@ class ParsinluNLIPVP(PVP):
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id < 0:
             logger.info(f"returned label word for {label} is {[ParsinluNLIPVP.VERBALIZER[-self.pattern_id][label][0]]}")
             return [ParsinluNLIPVP.VERBALIZER[-self.pattern_id][label][0]]
+        if seed is not None:
+            random.seed(seed)
         result = random.sample(ParsinluNLIPVP.VERBALIZER[self.pattern_id][label], k=1)
         logger.info(f"returned label word for {label} is {result}")
         return result
@@ -869,10 +875,12 @@ class DigikalaTcPVP(PVP):
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
-    def verbalize(self, label) -> List[str]:
+    def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id < 0:
             logger.info(f"returned label word for {label} is {[DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]}")
             return [DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]
+        if seed is not None:
+            random.seed(seed)
         label_word = random.sample(DigikalaTcPVP.VERBALIZER[self.pattern_id][label], k=1)
         logger.info(f"returned label word for {label} is {label_word}")
         return label_word

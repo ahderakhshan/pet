@@ -15,6 +15,8 @@ This file contains code for wrapping a transformer language model and
 provides convenience methods for training and inference.
 """
 import json
+import random
+
 import jsonpickle
 import os
 from typing import List, Dict, Optional
@@ -419,10 +421,11 @@ class TransformerModelWrapper:
     def _convert_examples_to_features(self, examples: List[InputExample], labelled: bool = True,
                                       priming: bool = False) -> List[InputFeatures]:
         features = []
+        selected_seed = random.sample([i for i in range(1000)], k=1)[0]
         for (ex_index, example) in enumerate(examples):
             if ex_index % 10000 == 0:
                 logger.info("Writing example {}".format(ex_index))
-            input_features = self.preprocessor.get_input_features(example, labelled=labelled, priming=priming)
+            input_features = self.preprocessor.get_input_features(example, labelled=labelled, priming=priming, seed=selected_seed)
             if self.task_helper:
                 self.task_helper.add_special_input_features(example, input_features)
             features.append(input_features)
