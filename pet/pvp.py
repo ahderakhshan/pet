@@ -880,6 +880,7 @@ class DigikalaTcPVP(PVP):
             logger.info(f"returned label word for {label} is {[DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]}")
             return [DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]
         if seed is not None:
+            logger.info(f"seed set as {seed}")
             random.seed(seed)
         label_word = random.sample(DigikalaTcPVP.VERBALIZER[self.pattern_id][label], k=1)
         logger.info(f"returned label word for {label} is {label_word}")
