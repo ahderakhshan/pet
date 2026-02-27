@@ -818,8 +818,11 @@ class ParsinluNLIPVP(PVP):
 
     def verbalize(self, label) -> List[str]:
         if self.pattern_id < 0:
+            logger.info(f"returned label word for {label} is {[ParsinluNLIPVP.VERBALIZER[-self.pattern_id][label][0]]}")
             return [ParsinluNLIPVP.VERBALIZER[-self.pattern_id][label][0]]
-        return random.sample(ParsinluNLIPVP.VERBALIZER[self.pattern_id][label], k=1)
+        result = random.sample(ParsinluNLIPVP.VERBALIZER[self.pattern_id][label], k=1)
+        logger.info(f"returned label word for {label} is {result}")
+        return result
 
 
 class DigikalaTcPVP(PVP):
@@ -868,8 +871,11 @@ class DigikalaTcPVP(PVP):
 
     def verbalize(self, label) -> List[str]:
         if self.pattern_id < 0:
+            logger.info(f"returned label word for {label} is {[DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]}")
             return [DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]
-        return random.sample(DigikalaTcPVP.VERBALIZER[self.pattern_id][label], k=1)
+        label_word = random.sample(DigikalaTcPVP.VERBALIZER[self.pattern_id][label], k=1)
+        logger.info(f"returned label word for {label} is {label_word}")
+        return label_word
 
 
 PVPS = {
