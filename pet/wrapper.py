@@ -540,3 +540,7 @@ class TransformerModelWrapper:
     def set_model(self, model):
         self.model = model
         return self
+
+    def set_config(self, config):
+        self.config = config
+        return self
