@@ -309,6 +309,7 @@ def main():
             # wrapper.config = pet_model_cfg
             pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
                                    ipet_train_data=None, unlabeled_data=None)
+            torch.cuda.empty_cache()
 
     # if args.method == 'pet':
     #     pet.train_pet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,
