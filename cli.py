@@ -274,7 +274,7 @@ def main():
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(100):
             selected_task = random.sample(tasks, k=1)[0]
-            logger.info(f"selected task is {selected_task}")
+            logger.info(f"{iteration}- selected task is {selected_task}")
             train_data = load_examples(
                 selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
                 num_examples_per_label=8)
