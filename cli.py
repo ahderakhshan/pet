@@ -282,23 +282,27 @@ def main():
             label_list = processor.get_labels()
             pet_model_cfg.label_list = label_list
             scores = {k: 0 for k in tasks_patterns[selected_task]}
-            wrapper = pet.init_model(pet_model_cfg)
-            wrapper = wrapper.set_model(wrapper.model)
+            # wrapper = pet.init_model(pet_model_cfg)
+            # wrapper = wrapper.set_model(wrapper.model)
+            wrapper.config = pet_model_cfg
             logger.info(f"selected task is {selected_task}")
             for pattern_id in tasks_patterns[selected_task]:
                 logger.info(f"pattern id is {pattern_id}")
                 evaluate_pet_model_cfg = pet_model_cfg
                 evaluate_pet_model_cfg.pattern_id = -pattern_id
-                evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
-                evaluate_wrapper = evaluate_wrapper.set_model(evaluate_wrapper.model)
+                # evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
+                # evaluate_wrapper = evaluate_wrapper.set_model(evaluate_wrapper.model)
+                evaluate_wrapper = wrapper
+                evaluate_wrapper.config = evaluate_pet_model_cfg
                 logger.info(f"evaluate wrapper pattern id is {evaluate_wrapper.config.pattern_id}")
                 result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
                 scores[pattern_id] = result['scores']['acc']
             best_pattern = max(scores, key=scores.get)
             logger.info(f"scores for patterns are {scores} so pattern {best_pattern} selected")
             pet_model_cfg.pattern_id = best_pattern
-            wrapper = pet.init_model(pet_model_cfg)
-            wrapper = wrapper.set_model(wrapper.model)
+            # wrapper = pet.init_model(pet_model_cfg)
+            # wrapper = wrapper.set_model(wrapper.model)
+            wrapper.config = pet_model_cfg
             pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
                                    ipet_train_data=None, unlabeled_data=None)
 
