@@ -110,7 +110,7 @@ class WrapperConfig(object):
     """A configuration for a :class:`TransformerModelWrapper`."""
 
     def __init__(self, model_type: str, model_name_or_path: str, wrapper_type: str, task_name: str, max_seq_length: int,
-                 label_list: List[str], pattern_id: int = 0, verbalizer_file: str = None, cache_dir: str = None, seed: int = None):
+                 label_list: List[str], pattern_id: int = 0, verbalizer_file: str = None, cache_dir: str = None, seed: int = None, first_lad: bool = True):
         """
         Create a new config.
 
@@ -134,6 +134,7 @@ class WrapperConfig(object):
         self.verbalizer_file = verbalizer_file
         self.cache_dir = cache_dir
         self.seed = seed
+        self.first_load = first_lad
 
 
 class TransformerModelWrapper:
@@ -157,8 +158,9 @@ class TransformerModelWrapper:
         if self.config.model_type == 'gpt2':
             self.tokenizer.pad_token, self.tokenizer.mask_token = self.tokenizer.eos_token, self.tokenizer.eos_token
 
-        self.model = model_class.from_pretrained(config.model_name_or_path, config=model_config,
-                                                 cache_dir=config.cache_dir if config.cache_dir else None)
+        if self.config.first_load:
+            self.model = model_class.from_pretrained(config.model_name_or_path, config=model_config,
+                                                     cache_dir=config.cache_dir if config.cache_dir else None)
         #Multi GPU Training
         n_gpus = torch.cuda.device_count()
         if n_gpus >1:

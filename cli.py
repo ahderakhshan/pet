@@ -269,8 +269,10 @@ def main():
         "digikala-tc": "./data/digikala-tc/"
     }
     pet_eval_cfg.per_gpu_eval_batch_size = 1
+    pet_model_cfg.first_load = True
     wrapper = pet.init_model(pet_model_cfg)
     new_model = wrapper.model
+    pet_model_cfg.first_load = False
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(100):
@@ -288,9 +290,9 @@ def main():
             pet_model_cfg.task_name = selected_task
             pet_model_cfg.label_list = label_list
 
-            # wrapper = pet.init_model(pet_model_cfg)
+            wrapper.config = pet_model_cfg
+            wrapper = pet.init_model(pet_model_cfg)
             wrapper = wrapper.set_model(new_model)
-            # wrapper.config = pet_model_cfg
 
             scores = {k: 0 for k in tasks_patterns[selected_task]}
             for pattern_id in tasks_patterns[selected_task]:
@@ -308,7 +310,7 @@ def main():
             logger.info(f"scores for patterns are {scores} so pattern {best_pattern} selected")
             pet_model_cfg.pattern_id = best_pattern
             wrapper = pet.init_model(pet_model_cfg)
-            wrapper = wrapper.set_model(wrapper.model)
+            # wrapper = wrapper.set_model(wrapper.model)
             # wrapper.config = pet_model_cfg
             pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
                                    ipet_train_data=None, unlabeled_data=None)
