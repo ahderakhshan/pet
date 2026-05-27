@@ -270,6 +270,7 @@ def main():
     }
     pet_eval_cfg.per_gpu_eval_batch_size = 1
     wrapper = pet.init_model(pet_model_cfg)
+    new_model = wrapper.model
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(100):
@@ -287,8 +288,8 @@ def main():
             pet_model_cfg.task_name = selected_task
             pet_model_cfg.label_list = label_list
 
-            wrapper = pet.init_model(pet_model_cfg)
-            wrapper = wrapper.set_model(wrapper.model)
+            # wrapper = pet.init_model(pet_model_cfg)
+            wrapper = wrapper.set_model(new_model)
             # wrapper.config = pet_model_cfg
 
             scores = {k: 0 for k in tasks_patterns[selected_task]}
@@ -311,6 +312,7 @@ def main():
             # wrapper.config = pet_model_cfg
             pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
                                    ipet_train_data=None, unlabeled_data=None)
+            new_model = wrapper.model
             torch.cuda.empty_cache()
 
     # if args.method == 'pet':
