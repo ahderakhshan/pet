@@ -272,9 +272,9 @@ def main():
     wrapper = pet.init_model(pet_model_cfg)
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
-        selected_seed = random.randint(1, 10000000)
-        wrapper.config.seed = selected_seed
         for iteration in range(100):
+            selected_seed = random.randint(1, 10000000)
+            wrapper.config.seed = selected_seed
             selected_task = random.sample(tasks, k=1)[0]
             logger.info(f"{iteration}- selected task is {selected_task}")
             train_data = load_examples(
