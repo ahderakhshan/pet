@@ -300,7 +300,7 @@ def main():
                 evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
                 evaluate_pet_model_cfg.pattern_id = -pattern_id
                 evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
-                evaluate_wrapper = evaluate_wrapper.set_model(wrapper.model)
+                evaluate_wrapper = evaluate_wrapper.set_model(new_model)
                 # evaluate_wrapper = copy.deepcopy(wrapper)
                 # evaluate_wrapper.config = evaluate_pet_model_cfg
                 logger.info(f"evaluate wrapper pattern id is {evaluate_wrapper.config.pattern_id}")
@@ -310,6 +310,7 @@ def main():
             logger.info(f"scores for patterns are {scores} so pattern {best_pattern} selected")
             pet_model_cfg.pattern_id = best_pattern
             wrapper = pet.init_model(pet_model_cfg)
+            wrapper = wrapper.set_model(new_model)
             # wrapper = wrapper.set_model(wrapper.model)
             # wrapper.config = pet_model_cfg
             pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
