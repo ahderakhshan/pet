@@ -110,7 +110,7 @@ class WrapperConfig(object):
     """A configuration for a :class:`TransformerModelWrapper`."""
 
     def __init__(self, model_type: str, model_name_or_path: str, wrapper_type: str, task_name: str, max_seq_length: int,
-                 label_list: List[str], pattern_id: int = 0, verbalizer_file: str = None, cache_dir: str = None):
+                 label_list: List[str], pattern_id: int = 0, verbalizer_file: str = None, cache_dir: str = None, seed: int = None):
         """
         Create a new config.
 
@@ -133,6 +133,7 @@ class WrapperConfig(object):
         self.pattern_id = pattern_id
         self.verbalizer_file = verbalizer_file
         self.cache_dir = cache_dir
+        self.seed = seed
 
 
 class TransformerModelWrapper:
