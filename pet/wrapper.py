@@ -422,6 +422,7 @@ class TransformerModelWrapper:
                                       priming: bool = False) -> List[InputFeatures]:
         features = []
         selected_seed = random.sample([i for i in range(1000)], k=1)[0]
+        logger.info(f"selected seed is {selected_seed} for {len(examples)} data!!!!!!!!!!!!!!!!!")
         for (ex_index, example) in enumerate(examples):
             if ex_index % 10000 == 0:
                 logger.info("Writing example {}".format(ex_index))
