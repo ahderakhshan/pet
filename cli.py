@@ -275,7 +275,7 @@ def main():
     pet_model_cfg.first_load = False
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
-        for iteration in range(5):
+        for iteration in range(100):
             selected_seed = random.randint(1, 10000000)
             logger.info(f"*** selected seed: {selected_seed}")
 
