@@ -241,10 +241,10 @@ def main():
         test_ex_per_label = eq_div(args.test_examples, len(args.label_list)) if args.test_examples != -1 else -1
         train_ex, test_ex = None, None
 
-    eval_set = TEST_SET if args.eval_set == 'test' else DEV_SET
+    # eval_set = TEST_SET if args.eval_set == 'test' else DEV_SET
 
-    train_data = load_examples(
-        args.task_name, args.data_dir, TRAIN_SET, num_examples=train_ex, num_examples_per_label=train_ex_per_label)
+    # train_data = load_examples(
+    #     args.task_name, args.data_dir, TRAIN_SET, num_examples=train_ex, num_examples_per_label=train_ex_per_label)
     # eval_data = load_examples(
     #     args.task_name, args.data_dir, eval_set, num_examples=test_ex, num_examples_per_label=test_ex_per_label)
     # unlabeled_data = load_examples(
@@ -275,20 +275,23 @@ def main():
     pet_model_cfg.first_load = False
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
-        for iteration in range(100):
+        for iteration in range(5):
             selected_seed = random.randint(1, 10000000)
-            wrapper.config.seed = selected_seed
+
             selected_task = random.sample(tasks, k=1)[0]
             logger.info(f"{iteration}- selected task is {selected_task}")
+
             train_data = load_examples(
                 selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
                 num_examples_per_label=8)
+
             processor = PROCESSORS[selected_task]()
             label_list = processor.get_labels()
 
             pet_eval_cfg.metrics = METRICS.get(selected_task, DEFAULT_METRICS)
             pet_model_cfg.task_name = selected_task
             pet_model_cfg.label_list = label_list
+            pet_model_cfg.seed = selected_seed
 
             wrapper.config = pet_model_cfg
             wrapper = pet.init_model(pet_model_cfg)
@@ -298,11 +301,9 @@ def main():
             for pattern_id in tasks_patterns[selected_task]:
                 logger.info(f"pattern id is {pattern_id}")
                 evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
-                evaluate_pet_model_cfg.pattern_id = -pattern_id
+                evaluate_pet_model_cfg.pattern_id = -pattern_id  # negative pattern_id is selected to use main label words for evaluation
                 evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
                 evaluate_wrapper = evaluate_wrapper.set_model(new_model)
-                # evaluate_wrapper = copy.deepcopy(wrapper)
-                # evaluate_wrapper.config = evaluate_pet_model_cfg
                 logger.info(f"evaluate wrapper pattern id is {evaluate_wrapper.config.pattern_id}")
                 result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
                 scores[pattern_id] = result['scores']['acc']
