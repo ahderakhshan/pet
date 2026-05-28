@@ -277,9 +277,10 @@ def main():
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(5):
             selected_seed = random.randint(1, 10000000)
+            logger.info(f"*** selected seed: {selected_seed}")
 
             selected_task = random.sample(tasks, k=1)[0]
-            logger.info(f"{iteration}- selected task is {selected_task}")
+            logger.info(f"*** selected task: {selected_task}")
 
             train_data = load_examples(
                 selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
@@ -299,16 +300,15 @@ def main():
 
             scores = {k: 0 for k in tasks_patterns[selected_task]}
             for pattern_id in tasks_patterns[selected_task]:
-                logger.info(f"pattern id is {pattern_id}")
                 evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
                 evaluate_pet_model_cfg.pattern_id = -pattern_id  # negative pattern_id is selected to use main label words for evaluation
                 evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
                 evaluate_wrapper = evaluate_wrapper.set_model(new_model)
-                logger.info(f"evaluate wrapper pattern id is {evaluate_wrapper.config.pattern_id}")
                 result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
                 scores[pattern_id] = result['scores']['acc']
             best_pattern = max(scores, key=scores.get)
-            logger.info(f"scores for patterns are {scores} so pattern {best_pattern} selected")
+            logger.info(f"*** scores for patterns: {scores}")
+            logger.info(f"*** selected patter: {best_pattern}")
             pet_model_cfg.pattern_id = best_pattern
             wrapper = pet.init_model(pet_model_cfg)
             wrapper = wrapper.set_model(new_model)
