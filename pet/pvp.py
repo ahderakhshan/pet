@@ -828,7 +828,6 @@ class ParsinluNLIPVP(PVP):
 
     def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id < 0:
-            logger.info(f"returned label word for {label} is {[ParsinluNLIPVP.VERBALIZER[-self.pattern_id][label][0]]}")
             return [ParsinluNLIPVP.VERBALIZER[-self.pattern_id][label][0]]
         if seed is not None:
             random.seed(seed)
@@ -885,7 +884,6 @@ class DigikalaTcPVP(PVP):
 
     def verbalize(self, label, seed=None) -> List[str]:
         if self.pattern_id < 0:
-            logger.info(f"returned label word for {label} is {[DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]}")
             return [DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]
         if seed is not None:
             logger.info(f"seed set as {seed}")
