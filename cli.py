@@ -216,6 +216,9 @@ def main():
     parser.add_argument("--eval_set", choices=['dev', 'test'], default='dev',
                         help="Whether to perform evaluation on the dev set or the test set")
 
+    # our parameters
+    parser.add_argument("--train_iterations", type=int, default=100, help="number of iterations in pretraining phase")
+
     args = parser.parse_args()
     logger.info("Parameters: {}".format(args))
 
@@ -275,7 +278,7 @@ def main():
     pet_model_cfg.first_load = False
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
-        for iteration in range(100):
+        for iteration in range(args.train_iterations):
             selected_seed = random.randint(1, 10000000)
             logger.info(f"*** selected seed: {selected_seed}")
 
@@ -309,6 +312,7 @@ def main():
             best_pattern = max(scores, key=scores.get)
             logger.info(f"*** scores for patterns: {scores}")
             logger.info(f"*** selected patter: {best_pattern}")
+            logger.info(f"*** selected label words: {wrapper.config.label_words}")
             pet_model_cfg.pattern_id = best_pattern
             wrapper = pet.init_model(pet_model_cfg)
             wrapper = wrapper.set_model(new_model)

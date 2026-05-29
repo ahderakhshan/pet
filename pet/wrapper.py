@@ -133,8 +133,10 @@ class WrapperConfig(object):
         self.pattern_id = pattern_id
         self.verbalizer_file = verbalizer_file
         self.cache_dir = cache_dir
+        # our parameters
         self.seed = seed
         self.first_load = first_lad
+        self.label_words = {}
 
 
 class TransformerModelWrapper:

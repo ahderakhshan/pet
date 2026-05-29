@@ -664,6 +664,7 @@ class ParsinluFoodPVP(PVP):
         random.seed(self.wrapper.config.seed)
         label_word = random.sample(ParsinluFoodPVP.VERBALIZER[self.pattern_id][label], k=1)
         logger.info(f"*** returned label word for {label} is {label_word}")
+        self.wrapper.config.label_words[label] = label_word
         return label_word
 
 
@@ -717,6 +718,7 @@ class ParsinluMoviePVP(PVP):
         random.seed(self.wrapper.config.seed)
         label_word = random.sample(ParsinluMoviePVP.VERBALIZER[self.pattern_id][label], k=1)
         logger.info(f"*** returned label word for {label} is {label_word}")
+        self.wrapper.config.label_words[label] = label_word
         return label_word
 
 
@@ -835,6 +837,7 @@ class ParsinluNLIPVP(PVP):
         random.seed(self.wrapper.config.seed)
         label_word = random.sample(ParsinluNLIPVP.VERBALIZER[self.pattern_id][label], k=1)
         logger.info(f"*** returned label word for {label} is {label_word}")
+        self.wrapper.config.label_words[label] = label_word
         return label_word
 
 
@@ -890,6 +893,7 @@ class DigikalaTcPVP(PVP):
             random.seed(seed)
         random.seed(self.wrapper.config.seed)
         label_word = random.sample(DigikalaTcPVP.VERBALIZER[self.pattern_id][label], k=1)
+        self.wrapper.config.label_words[label] = label_word
         logger.info(f"*** returned label word for {label} is {label_word}")
         return label_word
 
