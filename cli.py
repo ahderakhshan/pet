@@ -313,8 +313,6 @@ def main():
             best_pattern = max(scores, key=scores.get)
             logger.info(f"*** scores for patterns: {scores}")
             logger.info(f"*** selected patter: {best_pattern}")
-            logger.info(f"*** selected label words: {wrapper.config.label_words}")
-            wrapper.config.label_words = {}
             pet_model_cfg.pattern_id = best_pattern
             wrapper = pet.init_model(pet_model_cfg)
             wrapper = wrapper.set_model(new_model)
@@ -322,6 +320,8 @@ def main():
             # wrapper.config = pet_model_cfg
             pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
                                    ipet_train_data=None, unlabeled_data=None)
+            logger.info(f"*** selected label words: {wrapper.config.label_words}")
+            wrapper.config.label_words = {}
             new_model = wrapper.model
             torch.cuda.empty_cache()
 
