@@ -288,6 +288,7 @@ def main():
             train_data = load_examples(
                 selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
                 num_examples_per_label=8)
+            logger.info(f"*** example 0 text a is: {train_data[0].text_a}")
 
             processor = PROCESSORS[selected_task]()
             label_list = processor.get_labels()
@@ -313,6 +314,7 @@ def main():
             logger.info(f"*** scores for patterns: {scores}")
             logger.info(f"*** selected patter: {best_pattern}")
             logger.info(f"*** selected label words: {wrapper.config.label_words}")
+            wrapper.config.label_words = {}
             pet_model_cfg.pattern_id = best_pattern
             wrapper = pet.init_model(pet_model_cfg)
             wrapper = wrapper.set_model(new_model)
