@@ -1274,7 +1274,7 @@ def load_examples(task, data_dir: str, set_type: str, *_, num_examples: int = No
         examples = _shuffle_and_restrict(examples, num_examples, seed)
 
     elif num_examples_per_label is not None:
-        examples = _shuffle_and_restrict(examples, len(examples), seed)
+        examples = _shuffle_and_restrict(examples, len(examples)-1, seed)
         limited_examples = LimitedExampleList(processor.get_labels(), num_examples_per_label)
         for example in examples:
             limited_examples.add(example)
