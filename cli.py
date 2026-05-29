@@ -287,7 +287,7 @@ def main():
 
             train_data = load_examples(
                 selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
-                num_examples_per_label=8)
+                num_examples_per_label=8, seed=selected_seed)
             logger.info(f"*** example 0 text a is: {train_data[0].text_a}")
 
             processor = PROCESSORS[selected_task]()
