@@ -295,6 +295,7 @@ def main():
     pet_eval_cfg.per_gpu_eval_batch_size = 16
     pet_model_cfg.first_load = True
     wrapper = pet.init_model(pet_model_cfg)
+    wrapper.config.pattern_id = 1
     new_model = wrapper.model
     pet_model_cfg.first_load = False
     log_file = open("./log_file.txt", "w", encoding="utf-8-sig")
