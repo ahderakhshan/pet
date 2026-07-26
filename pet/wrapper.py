@@ -110,7 +110,7 @@ class WrapperConfig(object):
     """A configuration for a :class:`TransformerModelWrapper`."""
 
     def __init__(self, model_type: str, model_name_or_path: str, wrapper_type: str, task_name: str, max_seq_length: int,
-                 label_list: List[str], pattern_id: int = 0, verbalizer_file: str = None, cache_dir: str = None, seed: int = None, first_lad: bool = True, mapping_no: int = 0):
+                 label_list: List[str], pattern_id: int = 1, verbalizer_file: str = None, cache_dir: str = None, seed: int = None, first_lad: bool = True, mapping_no: int = 0):
         """
         Create a new config.
 
