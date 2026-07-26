@@ -25,7 +25,7 @@ from transformers import PreTrainedTokenizer, GPT2Tokenizer
 from pet.task_helpers import MultiMaskTaskHelper
 from pet.tasks import TASK_HELPERS
 from pet.utils import InputExample, get_verbalization_ids
-
+from pathlib import Path
 import log
 from pet import wrapper as wrp
 
@@ -33,6 +33,7 @@ logger = log.get_logger('root')
 
 FilledPattern = Tuple[List[Union[str, Tuple[str, bool]]], List[Union[str, Tuple[str, bool]]]]
 MAPPING_NO = 40
+BASE_DIR = Path(__file__).resolve().parent
 
 
 class PVP(ABC):
@@ -629,9 +630,9 @@ class ParsinluFoodPVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = [eval(line) for line in open("../mappings/parsi-nlu-foodsentiment-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
-    VERBALIZER_2 = [eval(line) for line in open("../mappings/parsi-nlu-foodsentiment-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
-    VERBALIZER_3 = [eval(line) for line in open("../mappings/parsi-nlu-foodsentiment-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_1 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-foodsentiment-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-foodsentiment-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_3 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-foodsentiment-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {1: VERBALIZER_1, 2: VERBALIZER_2, 3: VERBALIZER_3}
 
     def get_parts(self, example: InputExample):
@@ -672,9 +673,9 @@ class ParsinluMoviePVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = [eval(line) for line in open("../mappings/parsi-nlu-moviesentiment-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
-    VERBALIZER_2 = [eval(line) for line in open("../mappings/parsi-nlu-moviesentiment-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
-    VERBALIZER_3 = [eval(line) for line in open("../mappings/parsi-nlu-moviesentiment-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_1 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-moviesentiment-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-moviesentiment-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_3 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-moviesentiment-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {
         1: VERBALIZER_1,
         2: VERBALIZER_2,
@@ -706,7 +707,7 @@ class ParsinluMoviePVP(PVP):
 
     def verbalize(self, label, seed=None) -> List[str]:
         mapping_no = self.wrapper.config.mapping_no
-        return [ParsinluFoodPVP.VERBALIZER[self.pattern_id][mapping_no][label]]
+        return [ParsinluMoviePVP.VERBALIZER[self.pattern_id][mapping_no][label]]
 
 
 class FarexstancePVP(PVP):
@@ -771,9 +772,9 @@ class ParsinluNLIPVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = [eval(line) for line in open("../mappings/parsi-nlu-nli-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
-    VERBALIZER_2 = [eval(line) for line in open("../mappings/parsi-nlu-nli-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
-    VERBALIZER_3 = [eval(line) for line in open("../mappings/parsi-nlu-nli-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_1 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-nli-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-nli-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_3 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/parsi-nlu-nli-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {
         1: VERBALIZER_1,
         2: VERBALIZER_2,
@@ -832,8 +833,8 @@ class DigikalaTcPVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = [eval(line) for line in open("../mappings/digikala-text-classification-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
-    VERBALIZER_2 = [eval(line) for line in open("../mappings/digikala-text-classification-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_1 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/digikala-text-classification-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open(f"{BASE_DIR.parent}/mappings/digikala-text-classification-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {
         1: VERBALIZER_1,
         2: VERBALIZER_2
