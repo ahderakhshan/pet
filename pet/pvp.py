@@ -32,6 +32,7 @@ from pet import wrapper as wrp
 logger = log.get_logger('root')
 
 FilledPattern = Tuple[List[Union[str, Tuple[str, bool]]], List[Union[str, Tuple[str, bool]]]]
+MAPPING_NO = 40
 
 
 class PVP(ABC):
@@ -628,9 +629,9 @@ class ParsinluFoodPVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = {'Positive': ['ممنون', 'تشکر', 'عالی ممنون', 'ممنون عالی', 'خوب', 'عالی'], 'Negative': [':(', 'بد', '!!!!!'], 'Neutral': ['متوسط']}
-    VERBALIZER_2 = {'Positive': ['عالی', 'خوب', 'سالم', 'کیفیت خوب', 'خوشمزه', 'کیفیت عالی', 'قیمت خوب'], 'Negative': ['خراب', 'بد', 'اشتباه', 'تلخ', 'عجیب', 'ضعیف', 'کم'], 'Neutral': ['متوسط',  'معروف']}
-    VERBALIZER_3 = {'Positive': ['خوب', 'خوش'], 'Negative': ['خراب', 'فاجعه', 'بد', 'بدی', 'اشتباه', 'تلخ', 'ضعیف', 'عجیب'], 'Neutral': ['متوسط' ]}
+    VERBALIZER_1 = [eval(line) for line in open("../mappings/parsi-nlu-foodsentiment-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open("../mappings/parsi-nlu-foodsentiment-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_3 = [eval(line) for line in open("../mappings/parsi-nlu-foodsentiment-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {1: VERBALIZER_1, 2: VERBALIZER_2, 3: VERBALIZER_3}
 
     def get_parts(self, example: InputExample):
@@ -647,25 +648,18 @@ class ParsinluFoodPVP(PVP):
 
         # For each pattern_id, we define the corresponding pattern and return a pair of text a and text b (where text b
         # can also be empty).
-        if self.pattern_id in [1, -1]:
-            return [text_a, self.mask, self.mask], []
-        elif self.pattern_id in [2, -2]:
-            return [text_a, self.mask, self.mask, "است."], []
-        elif self.pattern_id in [3, -3]:
-            return [text_a, self.mask, self.mask, "بود."], []
+        if self.pattern_id == 1:
+            return [text_a, self.mask], []
+        elif self.pattern_id == 2:
+            return [text_a, self.mask, "است."], []
+        elif self.pattern_id == 3:
+            return [text_a, self.mask, "بود."], []
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
     def verbalize(self, label, seed=None) -> List[str]:
-        if self.pattern_id < 0:
-            return [ParsinluFoodPVP.VERBALIZER[-self.pattern_id][label][0]]
-        if seed is not None:
-            random.seed(seed)
-        random.seed(self.wrapper.config.seed)
-        label_word = random.sample(ParsinluFoodPVP.VERBALIZER[self.pattern_id][label], k=1)
-        logger.info(f"*** returned label word for {label} is {label_word}")
-        self.wrapper.config.label_words[label] = label_word
-        return label_word
+        mapping_no = self.wrapper.config.mapping_no
+        return [ParsinluFoodPVP.VERBALIZER[self.pattern_id][mapping_no][label]]
 
 
 class ParsinluMoviePVP(PVP):
@@ -678,9 +672,9 @@ class ParsinluMoviePVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = {'Positive': ['ممنون', 'خوب', 'عالی',], 'Negative': ['بد', 'فیلم', '!!!!'], 'Neutral': ['متوسط', 'عکس', 'ادامه ...']}
-    VERBALIZER_2 = {'Positive': ['دیدنی', 'جذاب', 'بسیار عالی','واقعا عالی', 'خوب'], 'Negative': ['بد', 'تلخ', 'فیلم بد', 'واقعا بد', 'خیلی بد'], 'Neutral': ['متوسط', 'پایان گذشته', 'جالب', 'قشنگ']}
-    VERBALIZER_3 = {'Positive': ['زیبایی','واقعا عالی' ,'واقعا خوب' ,'ممنون', 'بسیار عالی', 'موفق', 'بسیار العاده', 'مفید', 'متفاوت', 'خوب', 'عالی'], 'Negative': ['بد', 'فاجعه', 'بدی', 'تلخ', 'واقعا بد' ,'فیلم بد', 'ضعیف', 'فیلم ضعیف'], 'Neutral': ['متوسط', 'جالب', 'قشنگ', 'زیبا']}
+    VERBALIZER_1 = [eval(line) for line in open("../mappings/parsi-nlu-moviesentiment-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open("../mappings/parsi-nlu-moviesentiment-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_3 = [eval(line) for line in open("../mappings/parsi-nlu-moviesentiment-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {
         1: VERBALIZER_1,
         2: VERBALIZER_2,
@@ -701,25 +695,18 @@ class ParsinluMoviePVP(PVP):
 
         # For each pattern_id, we define the corresponding pattern and return a pair of text a and text b (where text b
         # can also be empty).
-        if self.pattern_id in [1, -1]:
-            return [text_a, self.mask, self.mask], []
-        elif self.pattern_id in [2, -2]:
-            return [text_a, self.mask, self.mask, "است."], []
-        elif self.pattern_id in [3, -3]:
-            return [text_a, self.mask, self.mask, "بود."], []
+        if self.pattern_id == 1:
+            return [text_a, self.mask], []
+        elif self.pattern_id == 2:
+            return [text_a, self.mask, "است."], []
+        elif self.pattern_id == 3:
+            return [text_a, self.mask, "بود."], []
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
     def verbalize(self, label, seed=None) -> List[str]:
-        if self.pattern_id < 0:
-            return [ParsinluMoviePVP.VERBALIZER[-self.pattern_id][label][0]]
-        if seed is not None:
-            random.seed(seed)
-        random.seed(self.wrapper.config.seed)
-        label_word = random.sample(ParsinluMoviePVP.VERBALIZER[self.pattern_id][label], k=1)
-        logger.info(f"*** returned label word for {label} is {label_word}")
-        self.wrapper.config.label_words[label] = label_word
-        return label_word
+        mapping_no = self.wrapper.config.mapping_no
+        return [ParsinluFoodPVP.VERBALIZER[self.pattern_id][mapping_no][label]]
 
 
 class FarexstancePVP(PVP):
@@ -784,9 +771,9 @@ class ParsinluNLIPVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = {'e': ['بله', 'نعم', 'آر بله'], 'n': ['شاید', 'امروزه'], 'c': ['خیر', 'هرگز', 'خب', 'برعکس']}
-    VERBALIZER_2 = {'e': ['بله', 'پس', 'لذا'], 'n': ['شاید'], 'c': ['خیر']}
-    VERBALIZER_3 = {'e': ['بله'], 'n': ['شاید'], 'c': ['خیر', 'هیچ',]}
+    VERBALIZER_1 = [eval(line) for line in open("../mappings/parsi-nlu-nli-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open("../mappings/parsi-nlu-nli-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_3 = [eval(line) for line in open("../mappings/parsi-nlu-nli-3.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {
         1: VERBALIZER_1,
         2: VERBALIZER_2,
@@ -807,38 +794,30 @@ class ParsinluNLIPVP(PVP):
 
         # For each pattern_id, we define the corresponding pattern and return a pair of text a and text b (where text b
         # can also be empty).
-        if self.pattern_id in [1, -1]:
+        if self.pattern_id == 1:
             example_text_a = example.text_a[:-1] if example.text_a[-1] in self.PUNCTUATIONS else example.text_a
             example_text_b = example.text_b
             text_a = self.shortenable(example_text_a)
             text_b = self.shortenable(example_text_b)
-            return [text_a, "؟", self.mask, self.mask, "،", text_b], []
-        elif self.pattern_id in [2, -2]:
+            return [text_a, "؟", self.mask, "،", text_b], []
+        elif self.pattern_id == 2:
             example_text_a = example.text_a
             example_text_b = example.text_b
             text_a = self.shortenable(example_text_a)
             text_b = self.shortenable(example_text_b)
-            return [text_a, self.mask, self.mask, "،", text_b], []
-        elif self.pattern_id in [3, -3]:
+            return [text_a, self.mask, "،", text_b], []
+        elif self.pattern_id == 3:
             example_text_a = example.text_a[:-1] if example.text_a[-1] in self.PUNCTUATIONS else example.text_a
             example_text_b = example.text_b[:-1] if example.text_b[-1] in self.PUNCTUATIONS else example.text_b
             text_a = self.shortenable(example_text_a)
             text_b = self.shortenable(example_text_b)
-            return [text_a, "،", text_b, "؟", self.mask, self.mask], []
+            return [text_a, "،", text_b, "؟", self.mask], []
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
     def verbalize(self, label, seed=None) -> List[str]:
-        if self.pattern_id < 0:
-            return [ParsinluNLIPVP.VERBALIZER[-self.pattern_id][label][0]]
-        if seed is not None:
-            random.seed(seed)
-            logger.warning(f"seed selected as {seed}")
-        random.seed(self.wrapper.config.seed)
-        label_word = random.sample(ParsinluNLIPVP.VERBALIZER[self.pattern_id][label], k=1)
-        logger.info(f"*** returned label word for {label} is {label_word}")
-        self.wrapper.config.label_words[label] = label_word
-        return label_word
+        mapping_no = self.wrapper.config.mapping_no
+        return [ParsinluNLIPVP.VERBALIZER[self.pattern_id][mapping_no][label]]
 
 
 class DigikalaTcPVP(PVP):
@@ -853,8 +832,8 @@ class DigikalaTcPVP(PVP):
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
-    VERBALIZER_1 = {'علم و تکنولوژی': ['فناوری', 'تکنولوژی', 'پرشین تکنولوژی'], 'بازی ویدیویی': ['بازی', 'بازی بازی', 'گیم بازی', 'اخبار بازی', 'بازی نیوز', 'گرافیک', 'ویدیو'], 'هنر و سینما': ['سینما', 'موسیقی', 'تماشا فیلم', 'فیلم', 'مجله فیلم', 'شعار فیلم'], 'سلامت و زیبایی': ['سلامتی', 'سلامت', 'سلامت سلامت', 'سوال', 'سلامت مقاله', 'سلامت نا', 'ورزش'], 'کتاب و ادبیات': ['ادبیات', 'نویسنده', 'کتاب', 'کتاب کتاب', 'چکی کتاب', 'روانشناسی', 'خلاصه داستان', 'خلاصه فارسی'], 'راهنمای خرید': ['خرید', 'آموزش', 'عنوان مطلب', 'موضوع مطلب', 'نکته'], 'عمومی': ['عمومی']}
-    VERBALIZER_2 = {'علم و تکنولوژی': ['فناوری', 'فناوری سامسونگ', 'فناوری اپل', 'سامسونگ', 'فناوری تکنولوژی', 'فناوری افزار', 'اپل', 'فناوری موبایل', 'گوشی', 'گوشی موبایل', 'طراحی'], 'بازی ویدیویی': ['گیم', 'گیم پلی', 'گیم لر', 'ویدیو', 'مایکروسافت', 'گرافیک'], 'هنر و سینما': ['سینمایی', 'سینما', 'سینمای سینما', 'مستند', 'موسیقی', 'هنر'], 'سلامت و زیبایی': ['سلامتی', 'تغذیه', 'پزشکی', 'سلامت پزشکی', 'سلامت', 'ورزشی', 'فوتبال', 'جام ملی', 'فوتبال ملی', 'جام ورزشی', 'جام فوتبال'], 'کتاب و ادبیات': ['ادبیات', 'شعر', 'نویسنده', 'کتاب', 'کتاب خواندن', 'کتاب صوتی', 'خواندن', 'داستان', 'داستان داستان', 'کتاب رمان', 'زندگی', 'زندگی زندگی', 'داستان رمان', 'رمان'], 'راهنمای خرید': ['خرید', 'خرید خرید', 'لوازم خرید', 'فروشگاه', 'راهنمای خرید', 'فروش', 'خرید لباس', 'رنگ کالا', 'راهنمای', 'دکوراسیون', 'ماشین اصلاح', 'کفش', 'راهنمای لباس', 'آموزش', 'باغ بانی', 'راهنمای کودک', 'لباس'], 'عمومی': ['عمومی']}
+    VERBALIZER_1 = [eval(line) for line in open("../mappings/digikala-text-classification-1.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
+    VERBALIZER_2 = [eval(line) for line in open("../mappings/digikala-text-classification-2.txt", "r", encoding="utf-8").read().split("\n")][:MAPPING_NO]
     VERBALIZER = {
         1: VERBALIZER_1,
         2: VERBALIZER_2
@@ -874,28 +853,20 @@ class DigikalaTcPVP(PVP):
 
         # For each pattern_id, we define the corresponding pattern and return a pair of text a and text b (where text b
         # can also be empty).
-        if self.pattern_id in [1, -1]:
+        if self.pattern_id == 1:
             example_text_a = example.text_a
             text_a = self.shortenable(example_text_a)
-            return [self.mask, self.mask, ":", text_a], []
-        elif self.pattern_id in [2, -2]:
-            example_text_a = example.text_a[0:-1] if example.text_a[-1] in self.PUNCTUATIONS else example.text_a
+            return [self.mask, ":", text_a], []
+        elif self.pattern_id == 2:
+            example_text_a = example.text_a[:-1] if example.text_a[-1] in self.PUNCTUATIONS else example.text_a
             text_a = self.shortenable(example_text_a)
-            return [text_a, ":", self.mask, self.mask], []
+            return [text_a, ":", self.mask], []
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
     def verbalize(self, label, seed=None) -> List[str]:
-        if self.pattern_id < 0:
-            return [DigikalaTcPVP.VERBALIZER[-self.pattern_id][label][0]]
-        if seed is not None:
-            logger.info(f"seed set as {seed}")
-            random.seed(seed)
-        random.seed(self.wrapper.config.seed)
-        label_word = random.sample(DigikalaTcPVP.VERBALIZER[self.pattern_id][label], k=1)
-        self.wrapper.config.label_words[label] = label_word
-        logger.info(f"*** returned label word for {label} is {label_word}")
-        return label_word
+        mapping_no = self.wrapper.config.mapping_no
+        return [DigikalaTcPVP.VERBALIZER[self.pattern_id][mapping_no][label]]
 
 
 PVPS = {

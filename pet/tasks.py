@@ -1219,11 +1219,6 @@ TASK_HELPERS = {
     "multirc": task_helpers.MultiRcTaskHelper,
     "copa": task_helpers.CopaTaskHelper,
     "record": task_helpers.RecordTaskHelper,
-    "parsinlu-food-sentiment": MultiMaskTaskHelper,
-    "parsinlu-movie-sentiment": MultiMaskTaskHelper,
-    "parsinlu-nli": MultiMaskTaskHelper,
-    "digikala-tc": MultiMaskTaskHelper,
-    "farexstance": MultiMaskTaskHelper,
 }
 
 METRICS = {

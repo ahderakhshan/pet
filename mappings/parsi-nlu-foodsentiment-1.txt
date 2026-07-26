@@ -1,0 +1,8 @@
+{'Positive': 'ممنون', 'Negative': ':(', 'Neutral': 'متوسط'}
+{'Positive': 'عالی', 'Negative': ':(', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': ':(', 'Neutral': 'متوسط'}
+{'Positive': 'تشکر', 'Negative': ':(', 'Neutral': 'متوسط'}
+{'Positive': 'عالی', 'Negative': 'بد', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'بد', 'Neutral': 'متوسط'}
+{'Positive': 'تشکر', 'Negative': 'بد', 'Neutral': 'متوسط'}
+{'Positive': 'ممنون', 'Negative': 'بد', 'Neutral': 'متوسط'}

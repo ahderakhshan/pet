@@ -218,6 +218,8 @@ def main():
 
     # our parameters
     parser.add_argument("--train_iterations", type=int, default=100, help="number of iterations in pretraining phase")
+    parser.add_argument("--k", type=int, default=8, help="number of data per label in training process")
+    parser.add_argument("--n_mappings", type=int, default=5, help="number of mappings selected to evaluate on dev part")
 
     args = parser.parse_args()
     logger.info("Parameters: {}".format(args))
@@ -258,12 +260,31 @@ def main():
     pet_model_cfg, pet_train_cfg, pet_eval_cfg = load_pet_configs(args)
     # sc_model_cfg, sc_train_cfg, sc_eval_cfg = load_sequence_classifier_configs(args)
     # ipet_cfg = load_ipet_config(args)
-
+    random.seed(42)
     tasks_patterns = {
         "parsinlu-food-sentiment": [1, 2, 3],
         "parsinlu-movie-sentiment": [1, 2, 3],
         "parsinlu-nli": [1, 2, 3],
         "digikala-tc": [1, 2]
+    }
+    MAPPING_NO = 40
+
+    task_template_total_mappings_count = {
+        "parsinlu-food-sentiment":
+            {1: min(MAPPING_NO, len(open("./mappings/parsi-nlu-foodsentiment-1.txt", "r").read().split("\n"))),
+             2: min(MAPPING_NO, len(open("./mappings/parsi-nlu-foodsentiment-2.txt", "r").read().split("\n"))),
+             3: min(MAPPING_NO, len(open("./mappings/parsi-nlu-foodsentiment-3.txt", "r").read().split("\n")))},
+        "parsinlu-movie-sentiment":
+            {1: min(MAPPING_NO, len(open("./mappings/parsi-nlu-moviesentiment-1.txt", "r").read().split("\n"))),
+             2: min(MAPPING_NO, len(open("./mappings/parsi-nlu-moviesentiment-2.txt", "r").read().split("\n"))),
+             3: min(MAPPING_NO, len(open("./mappings/parsi-nlu-moviesentiment-3.txt", "r").read().split("\n")))},
+        "parsinlu-nli":
+            {1: min(MAPPING_NO, len(open("./mappings/parsi-nlu-nli-1.txt", "r").read().split("\n"))),
+             2: min(MAPPING_NO, len(open("./mappings/parsi-nlu-nli-2.txt", "r").read().split("\n"))),
+             3: min(MAPPING_NO, len(open("./mappings/parsi-nlu-nli-3.txt", "r").read().split("\n")))},
+        "digikala-tc":
+            {1: min(MAPPING_NO, len(open("./mappings/digikala-text-classification-1.txt", "r").read().split("\n"))),
+             2: min(MAPPING_NO, len(open("./mappings/digikala-text-classification-2.txt", "r").read().split("\n"))),}
     }
     data_dirs = {
         "parsinlu-food-sentiment": "./data/parsinlu-food-sentiment/",
@@ -271,59 +292,108 @@ def main():
         "parsinlu-nli": "./data/parsinlu-nli/",
         "digikala-tc": "./data/digikala-tc/"
     }
-    pet_eval_cfg.per_gpu_eval_batch_size = 1
+    pet_eval_cfg.per_gpu_eval_batch_size = 16
     pet_model_cfg.first_load = True
     wrapper = pet.init_model(pet_model_cfg)
     new_model = wrapper.model
     pet_model_cfg.first_load = False
+    log_file = open("./log_file.txt", "w", encoding="utf-8-sig")
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(args.train_iterations):
+
+            # seed selection
             selected_seed = random.randint(1, 10000000)
             logger.info(f"*** selected seed: {selected_seed}")
 
+            # task selection
             selected_task = random.sample(tasks, k=1)[0]
-            logger.info(f"*** selected task: {selected_task}")
-
-            train_data = load_examples(
-                selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
-                num_examples_per_label=8, seed=selected_seed)
-            logger.info(f"*** example 0 text a is: {train_data[0].text_a}")
-
             processor = PROCESSORS[selected_task]()
             label_list = processor.get_labels()
+            logger.info(f"*** selected task: {selected_task}\n")
+            log_file.write(f"iteration: {iteration}\n")
+            log_file.write(f"selected task: {selected_task}\n")
 
+            # data preparation
+            train_dev_data = load_examples(
+                selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
+                num_examples_per_label=2*args.k, seed=selected_seed)
+            train_data, dev_data = [], []
+            all_labels = set()
+            for data in train_dev_data:
+                if len([sample for sample in train_data if sample.label == data.label]) < args.k:
+                    train_data.append(data)
+                else:
+                    dev_data.append(data)
+                all_labels.add(data.label)
+            for label in all_labels:
+                train_label_data = [d for d in train_data if d.label == label]
+                dev_label_data = [d for d in dev_data if d.label == label]
+                if len(train_label_data) < args.k:
+                    replace_data = train_label_data[:int(len(train_label_data)/2)]
+                    for data in replace_data:
+                        dev_data.append(data)
+                        train_data.remove(data)
+                elif len(dev_label_data) < args.k:
+                    replace_data = train_label_data[:int((len(train_label_data) - len(dev_label_data))/2)]
+                    for data in replace_data:
+                        dev_data.append(data)
+                        train_data.remove(data)
+
+            logger.info(f"*** len train data is {len(train_data)} and len dev data is {len(dev_data)}")
+            log_file.write(f"len train data is {len(train_data)} and len dev data is {len(dev_data)}\n")
+
+            # confing determination
             pet_eval_cfg.metrics = METRICS.get(selected_task, DEFAULT_METRICS)
             pet_model_cfg.task_name = selected_task
             pet_model_cfg.label_list = label_list
             pet_model_cfg.seed = selected_seed
-
             wrapper.config = pet_model_cfg
             wrapper = pet.init_model(pet_model_cfg)
             wrapper = wrapper.set_model(new_model)
 
-            scores = {k: 0 for k in tasks_patterns[selected_task]}
-            for pattern_id in tasks_patterns[selected_task]:
+            # select template
+            selected_template = random.choice(tasks_patterns[selected_task])
+            log_file.write(f"selected template: {selected_template}\n")
+
+            # evaluate mappings
+            template_mapping_count = task_template_total_mappings_count[selected_task][selected_template]
+            scores = {k: 0 for k in range(template_mapping_count)}
+            for template_mapping in range(template_mapping_count):
                 evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
-                evaluate_pet_model_cfg.pattern_id = -pattern_id  # negative pattern_id is selected to use main label words for evaluation
+                evaluate_pet_model_cfg.mapping_no = template_mapping
+                evaluate_pet_model_cfg.pattern_id = selected_template
                 evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
                 evaluate_wrapper = evaluate_wrapper.set_model(new_model)
                 result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
-                scores[pattern_id] = result['scores']['acc']
-            best_pattern = max(scores, key=scores.get)
-            logger.info(f"*** scores for patterns: {scores}")
-            logger.info(f"*** selected patter: {best_pattern}")
-            pet_model_cfg.pattern_id = best_pattern
-            wrapper = pet.init_model(pet_model_cfg)
-            wrapper = wrapper.set_model(new_model)
-            # wrapper = wrapper.set_model(wrapper.model)
-            # wrapper.config = pet_model_cfg
-            pet.train_single_model(wrapper, train_data, pet_train_cfg, pet_eval_cfg,
-                                   ipet_train_data=None, unlabeled_data=None)
-            logger.info(f"*** selected label words: {wrapper.config.label_words}")
-            wrapper.config.label_words = {}
-            new_model = wrapper.model
+                scores[template_mapping] = result['scores']['acc']
+                log_file.write(f"mapping {template_mapping} accuracy: {result['scores']['acc']}\n")
+            scores = dict(sorted(scores.items(), key=lambda item: item[1]))
+            best_mappings = list(scores.keys())[:args.n_mappings]
+            log_file.write(f"evaluate mapping finished. best mappings: {best_mappings}\n")
+
+            # select best mappings
+            best_result = -1
+            best_model = None
+            for mapping in best_mappings:
+                # train model on train set
+                mapping_selector_model_cfg = copy.deepcopy(pet_model_cfg)
+                mapping_selector_model_cfg.pattern_id = selected_template
+                mapping_selector_model_cfg.mapping_no = mapping
+                mapping_selector_wrapper = pet.init_model(mapping_selector_model_cfg)
+                mapping_selector_wrapper = mapping_selector_wrapper.set_model(new_model)
+                pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
+                                       pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
+                result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
+                log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores'['acc']]}")
+                if result['scores']['acc'] > best_result:
+                    best_result = result['scores']['acc']
+                    best_model = mapping_selector_wrapper.model
+
+            new_model = best_model
             torch.cuda.empty_cache()
+            # TODO: DEBUG AND DOUBLE CHECK THE CODE
+            # TODO: SET LOGGING!!!
 
     # if args.method == 'pet':
     #     pet.train_pet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,

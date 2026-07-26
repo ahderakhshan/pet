@@ -1,0 +1,16 @@
+{'Positive': 'خوش', 'Negative': 'تلخ', 'Neutral': 'متوسط'}
+{'Positive': 'خوش', 'Negative': 'بد', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'بد', 'Neutral': 'متوسط'}
+{'Positive': 'خوش', 'Negative': 'ضعیف', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'تلخ', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'عجیب', 'Neutral': 'متوسط'}
+{'Positive': 'خوش', 'Negative': 'اشتباه', 'Neutral': 'متوسط'}
+{'Positive': 'خوش', 'Negative': 'خراب', 'Neutral': 'متوسط'}
+{'Positive': 'خوش', 'Negative': 'عجیب', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'خراب', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'ضعیف', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'اشتباه', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'فاجعه', 'Neutral': 'متوسط'}
+{'Positive': 'خوش', 'Negative': 'فاجعه', 'Neutral': 'متوسط'}
+{'Positive': 'خوب', 'Negative': 'بدی', 'Neutral': 'متوسط'}
+{'Positive': 'خوش', 'Negative': 'بدی', 'Neutral': 'متوسط'}
