@@ -365,7 +365,7 @@ def main():
                 evaluate_pet_model_cfg.pattern_id = selected_template
                 evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
                 evaluate_wrapper = evaluate_wrapper.set_model(new_model)
-                result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
+                result = pet.evaluate(evaluate_wrapper, train_data, evaluate_pet_model_cfg, priming_data=None)
                 scores[template_mapping] = result['scores']['acc']
                 log_file.write(f"mapping {template_mapping} accuracy: {result['scores']['acc']}\n")
             scores = dict(sorted(scores.items(), key=lambda item: item[1]))
@@ -383,7 +383,7 @@ def main():
                 mapping_selector_wrapper = pet.init_model(mapping_selector_model_cfg)
                 mapping_selector_wrapper = mapping_selector_wrapper.set_model(new_model)
                 pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
-                                       pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
+                                       mapping_selector_model_cfg, ipet_train_data=None, unlabeled_data=None)
                 result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
                 log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores'['acc']]}")
                 if result['scores']['acc'] > best_result:
