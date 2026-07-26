@@ -369,7 +369,7 @@ def main():
                 result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
                 scores[template_mapping] = result['scores']['acc']
                 log_file.write(f"mapping {template_mapping} accuracy: {result['scores']['acc']}\n")
-            scores = dict(sorted(scores.items(), key=lambda item: item[1]))
+            scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
             best_mappings = list(scores.keys())[:args.n_mappings]
             log_file.write(f"evaluate mapping finished. best mappings: {best_mappings}\n")
 
