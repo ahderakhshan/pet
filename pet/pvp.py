@@ -660,6 +660,9 @@ class ParsinluFoodPVP(PVP):
 
     def verbalize(self, label, seed=None) -> List[str]:
         mapping_no = self.wrapper.config.mapping_no
+        print(f"pattern id is {self.pattern_id}")
+        print(f"mapping no is {mapping_no}")
+        print(f"label is {label}")
         return [ParsinluFoodPVP.VERBALIZER[self.pattern_id][mapping_no][label]]
 
 
