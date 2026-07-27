@@ -341,7 +341,7 @@ def main():
                     for data in replace_data:
                         dev_data.append(data)
                         train_data.remove(data)
-            log_file.write(f"train data text a is {[d.text_a for d in train_data]}\n")
+            # log_file.write(f"train data text a is {[d.text_a for d in train_data]}\n")
             logger.info(f"*** len train data is {len(train_data)} and len dev data is {len(dev_data)}")
             log_file.write(f"len train data is {len(train_data)} and len dev data is {len(dev_data)}\n")
 
