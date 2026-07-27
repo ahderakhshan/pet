@@ -386,13 +386,14 @@ def main():
                 pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
                                        pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
                 result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
-                log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores'['acc']]}")
+                log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores']['acc']}\n")
                 if result['scores']['acc'] > best_result:
                     best_result = result['scores']['acc']
                     best_model = mapping_selector_wrapper.model
 
             new_model = best_model
             torch.cuda.empty_cache()
+            log_file.write("-"*20 + "\n")
             # TODO: DEBUG AND DOUBLE CHECK THE CODE
             # TODO: SET LOGGING!!!
 
