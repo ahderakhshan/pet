@@ -28,6 +28,7 @@ from pet.utils import eq_div
 from pet.wrapper import WRAPPER_TYPES, MODEL_CLASSES, SEQUENCE_CLASSIFIER_WRAPPER, WrapperConfig
 import pet
 import log
+import datetime
 
 logger = log.get_logger('root')
 
@@ -312,7 +313,7 @@ def main():
             processor = PROCESSORS[selected_task]()
             label_list = processor.get_labels()
             logger.info(f"*** selected task: {selected_task}\n")
-            log_file.write(f"iteration: {iteration}\n")
+            log_file.write(f"iteration: {iteration} time: {str(datetime.datetime.now())}\n")
             log_file.write(f"selected task: {selected_task}\n")
 
             # data preparation
@@ -340,7 +341,7 @@ def main():
                     for data in replace_data:
                         dev_data.append(data)
                         train_data.remove(data)
-
+            log_file.write(f"train data text a is {[d.text_a for d in train_data]}\n")
             logger.info(f"*** len train data is {len(train_data)} and len dev data is {len(dev_data)}")
             log_file.write(f"len train data is {len(train_data)} and len dev data is {len(dev_data)}\n")
 
