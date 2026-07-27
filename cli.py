@@ -19,6 +19,7 @@ import argparse
 import copy
 import os
 import random
+import time
 from typing import Tuple
 
 import torch
@@ -134,13 +135,13 @@ def main():
     parser.add_argument("--pet_max_seq_length", default=256, type=int,
                         help="The maximum total input sequence length after tokenization for PET. Sequences longer "
                              "than this will be truncated, sequences shorter will be padded.")
-    parser.add_argument("--pet_per_gpu_train_batch_size", default=4, type=int,
+    parser.add_argument("--pet_per_gpu_train_batch_size", default=2, type=int,
                         help="Batch size per GPU/CPU for PET training.")
     parser.add_argument("--pet_per_gpu_eval_batch_size", default=8, type=int,
                         help="Batch size per GPU/CPU for PET evaluation.")
     parser.add_argument("--pet_per_gpu_unlabeled_batch_size", default=4, type=int,
                         help="Batch size per GPU/CPU for auxiliary language modeling examples in PET.")
-    parser.add_argument('--pet_gradient_accumulation_steps', type=int, default=1,
+    parser.add_argument('--pet_gradient_accumulation_steps', type=int, default=4,
                         help="Number of updates steps to accumulate before performing a backward/update pass in PET.")
     parser.add_argument("--pet_num_train_epochs", default=3, type=float,
                         help="Total number of training epochs to perform in PET.")
@@ -395,8 +396,12 @@ def main():
             new_model = best_model
             torch.cuda.empty_cache()
             log_file.write("-"*20 + "\n")
-            # TODO: DEBUG AND DOUBLE CHECK THE CODE
-            # TODO: SET LOGGING!!!
+            if iteration % 10 == 0:
+                time.sleep(60*10)
+                new_model.save_pretrained(args.output_dir)
+            # TODO: CHECK K WITH REZAZADE
+
+    new_model.save_pretrained(args.output_dir)
 
     # if args.method == 'pet':
     #     pet.train_pet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,
