@@ -378,6 +378,7 @@ def main():
             # select best mappings
             best_result = -1
             best_model = None
+            train_mapping_selection = None
             for mapping in best_mappings:
                 # train model on train set
                 mapping_selector_model_cfg = copy.deepcopy(pet_model_cfg)
@@ -392,6 +393,8 @@ def main():
                 if result['scores']['acc'] > best_result:
                     best_result = result['scores']['acc']
                     best_model = mapping_selector_wrapper.model
+                    train_mapping_selection = mapping
+            log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
 
             new_model = best_model
             torch.cuda.empty_cache()
