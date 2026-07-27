@@ -423,8 +423,8 @@ def main():
     #                          repetitions=args.sc_repetitions, train_data=train_data, unlabeled_data=unlabeled_data,
     #                          eval_data=eval_data, do_train=args.do_train, do_eval=args.do_eval, seed=args.seed)
 
-    else:
-        raise ValueError(f"Training method '{args.method}' not implemented")
+    # else:
+    #     raise ValueError(f"Training method '{args.method}' not implemented")
 
 
 if __name__ == "__main__":
