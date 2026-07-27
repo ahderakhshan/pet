@@ -396,7 +396,7 @@ def main():
             new_model = best_model
             torch.cuda.empty_cache()
             log_file.write("-"*20 + "\n")
-            if iteration % 10 == 0:
+            if (iteration+1) % 10 == 0:
                 time.sleep(60*10)
                 new_model.save_pretrained(args.output_dir)
             # TODO: CHECK K WITH REZAZADE
