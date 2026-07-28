@@ -401,7 +401,7 @@ def main():
             if (iteration+1) % 10 == 0:
                 time.sleep(6*10)
                 new_model.save_pretrained(args.output_dir)
-                log_file.write(f"model saved at iteration {iteration}")
+                log_file.write(f"model saved at iteration {iteration}\n")
             log_file.write("-" * 20 + "\n")
 
     new_model.save_pretrained(args.output_dir)
