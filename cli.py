@@ -398,13 +398,14 @@ def main():
 
             new_model = best_model
             torch.cuda.empty_cache()
-            log_file.write("-"*20 + "\n")
             if (iteration+1) % 10 == 0:
-                time.sleep(60*10)
+                time.sleep(6*10)
                 new_model.save_pretrained(args.output_dir)
-            # TODO: CHECK K WITH REZAZADE
+                log_file.write(f"model saved at iteration {iteration}")
+            log_file.write("-" * 20 + "\n")
 
     new_model.save_pretrained(args.output_dir)
+    log_file.write(f"final model saved!")
 
     # if args.method == 'pet':
     #     pet.train_pet(pet_model_cfg, pet_train_cfg, pet_eval_cfg, sc_model_cfg, sc_train_cfg, sc_eval_cfg,
