@@ -1,4 +1,4 @@
-!python cli.py --method our_method \
+python cli.py --method our_method \
   --train_iterations 300 \
   --data_dir ./ \
   --model_type xlm-roberta \
