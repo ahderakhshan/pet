@@ -132,7 +132,7 @@ def main():
                         help="If set to true, no distillation is performed (only for PET)")
     parser.add_argument("--pet_repetitions", default=3, type=int,
                         help="The number of times to repeat PET training and testing with different seeds.")
-    parser.add_argument("--pet_max_seq_length", default=256, type=int,
+    parser.add_argument("--pet_max_seq_length", default=512, type=int,
                         help="The maximum total input sequence length after tokenization for PET. Sequences longer "
                              "than this will be truncated, sequences shorter will be padded.")
     parser.add_argument("--pet_per_gpu_train_batch_size", default=2, type=int,
@@ -143,7 +143,7 @@ def main():
                         help="Batch size per GPU/CPU for auxiliary language modeling examples in PET.")
     parser.add_argument('--pet_gradient_accumulation_steps', type=int, default=4,
                         help="Number of updates steps to accumulate before performing a backward/update pass in PET.")
-    parser.add_argument("--pet_num_train_epochs", default=3, type=float,
+    parser.add_argument("--pet_num_train_epochs", default=1, type=float,
                         help="Total number of training epochs to perform in PET.")
     parser.add_argument("--pet_max_steps", default=-1, type=int,
                         help="If > 0: set total number of training steps to perform in PET. Override num_train_epochs.")
@@ -151,7 +151,7 @@ def main():
     # SequenceClassifier-specific optional parameters (also used for the final PET classifier)
     parser.add_argument("--sc_repetitions", default=1, type=int,
                         help="The number of times to repeat seq. classifier training and testing with different seeds.")
-    parser.add_argument("--sc_max_seq_length", default=256, type=int,
+    parser.add_argument("--sc_max_seq_length", default=512, type=int,
                         help="The maximum total input sequence length after tokenization for sequence classification. "
                              "Sequences longer than this will be truncated, sequences shorter will be padded.")
     parser.add_argument("--sc_per_gpu_train_batch_size", default=4, type=int,
@@ -163,7 +163,7 @@ def main():
     parser.add_argument('--sc_gradient_accumulation_steps', type=int, default=1,
                         help="Number of updates steps to accumulate before performing a backward/update pass for "
                              "sequence classifier training.")
-    parser.add_argument("--sc_num_train_epochs", default=3, type=float,
+    parser.add_argument("--sc_num_train_epochs", default=1, type=float,
                         help="Total number of training epochs to perform for sequence classifier training.")
     parser.add_argument("--sc_max_steps", default=-1, type=int,
                         help="If > 0: set total number of training steps to perform for sequence classifier training. "
@@ -219,7 +219,7 @@ def main():
                         help="Whether to perform evaluation on the dev set or the test set")
 
     # our parameters
-    parser.add_argument("--train_iterations", type=int, default=100, help="number of iterations in pretraining phase")
+    parser.add_argument("--train_iterations", type=int, default=300, help="number of iterations in pretraining phase")
     parser.add_argument("--k", type=int, default=8, help="number of data per label in training process")
     parser.add_argument("--n_mappings", type=int, default=5, help="number of mappings selected to evaluate on dev part")
 
@@ -398,13 +398,14 @@ def main():
 
             new_model = best_model
             torch.cuda.empty_cache()
-            if (iteration+1) % 10 == 0:
-                time.sleep(6*10)
-                new_model.save_pretrained(args.output_dir)
+            time.sleep(60)
+            if (iteration+1) % 50 == 0:
+                time.sleep(600)
+                new_model.save_pretrained(args.output_dir + str(iteration + 1))
                 log_file.write(f"model saved at iteration {iteration}\n")
             log_file.write("-" * 20 + "\n")
 
-    new_model.save_pretrained(args.output_dir)
+    # new_model.save_pretrained(args.output_dir)
     log_file.write(f"final model saved!")
 
     # if args.method == 'pet':

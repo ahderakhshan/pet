@@ -1,0 +1,3644 @@
+iteration: 0 time: 2026-07-29 08:04:45.950740
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.4583333333333333
+mapping 1 accuracy: 0.4166666666666667
+mapping 2 accuracy: 0.4166666666666667
+mapping 3 accuracy: 0.4583333333333333
+mapping 4 accuracy: 0.4583333333333333
+mapping 5 accuracy: 0.4166666666666667
+mapping 6 accuracy: 0.375
+mapping 7 accuracy: 0.4583333333333333
+mapping 8 accuracy: 0.4166666666666667
+mapping 9 accuracy: 0.4166666666666667
+mapping 10 accuracy: 0.375
+mapping 11 accuracy: 0.4166666666666667
+mapping 12 accuracy: 0.4166666666666667
+mapping 13 accuracy: 0.4583333333333333
+mapping 14 accuracy: 0.4166666666666667
+mapping 15 accuracy: 0.4166666666666667
+evaluate mapping finished. best mappings: [0, 3, 4, 7, 13]
+mapping 0 accuracy on dev after train: 0.625
+mapping 3 accuracy on dev after train: 0.5833333333333334
+mapping 4 accuracy on dev after train: 0.7083333333333334
+mapping 7 accuracy on dev after train: 0.7916666666666666
+mapping 13 accuracy on dev after train: 0.8333333333333334
+after train mapping 13 selected.
+--------------------
+iteration: 1 time: 2026-07-29 08:07:05.395763
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.5892857142857143
+mapping 1 accuracy: 0.5714285714285714
+mapping 2 accuracy: 0.5535714285714286
+mapping 3 accuracy: 0.5714285714285714
+mapping 4 accuracy: 0.5714285714285714
+mapping 5 accuracy: 0.5892857142857143
+mapping 6 accuracy: 0.5178571428571429
+mapping 7 accuracy: 0.625
+mapping 8 accuracy: 0.5535714285714286
+mapping 9 accuracy: 0.5714285714285714
+mapping 10 accuracy: 0.6071428571428571
+mapping 11 accuracy: 0.5714285714285714
+mapping 12 accuracy: 0.5357142857142857
+mapping 13 accuracy: 0.5892857142857143
+mapping 14 accuracy: 0.5357142857142857
+mapping 15 accuracy: 0.5178571428571429
+mapping 16 accuracy: 0.6071428571428571
+mapping 17 accuracy: 0.5892857142857143
+mapping 18 accuracy: 0.5178571428571429
+mapping 19 accuracy: 0.5535714285714286
+mapping 20 accuracy: 0.5
+mapping 21 accuracy: 0.5892857142857143
+mapping 22 accuracy: 0.5714285714285714
+mapping 23 accuracy: 0.5
+mapping 24 accuracy: 0.5357142857142857
+mapping 25 accuracy: 0.5714285714285714
+mapping 26 accuracy: 0.625
+mapping 27 accuracy: 0.6071428571428571
+mapping 28 accuracy: 0.44642857142857145
+mapping 29 accuracy: 0.5535714285714286
+mapping 30 accuracy: 0.5892857142857143
+mapping 31 accuracy: 0.5178571428571429
+mapping 32 accuracy: 0.5178571428571429
+mapping 33 accuracy: 0.5535714285714286
+mapping 34 accuracy: 0.5535714285714286
+mapping 35 accuracy: 0.5178571428571429
+mapping 36 accuracy: 0.5892857142857143
+mapping 37 accuracy: 0.5
+mapping 38 accuracy: 0.5178571428571429
+mapping 39 accuracy: 0.625
+evaluate mapping finished. best mappings: [7, 26, 39, 10, 16]
+mapping 7 accuracy on dev after train: 0.5535714285714286
+mapping 26 accuracy on dev after train: 0.5535714285714286
+mapping 39 accuracy on dev after train: 0.5535714285714286
+mapping 10 accuracy on dev after train: 0.5714285714285714
+mapping 16 accuracy on dev after train: 0.6071428571428571
+after train mapping 16 selected.
+--------------------
+iteration: 2 time: 2026-07-29 08:13:11.361700
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.5416666666666666
+mapping 1 accuracy: 0.5416666666666666
+mapping 2 accuracy: 0.5416666666666666
+mapping 3 accuracy: 0.5416666666666666
+mapping 4 accuracy: 0.5833333333333334
+mapping 5 accuracy: 0.5416666666666666
+mapping 6 accuracy: 0.5416666666666666
+mapping 7 accuracy: 0.5416666666666666
+mapping 8 accuracy: 0.5416666666666666
+mapping 9 accuracy: 0.625
+mapping 10 accuracy: 0.5833333333333334
+mapping 11 accuracy: 0.7083333333333334
+mapping 12 accuracy: 0.5833333333333334
+mapping 13 accuracy: 0.5416666666666666
+mapping 14 accuracy: 0.5
+mapping 15 accuracy: 0.7083333333333334
+mapping 16 accuracy: 0.5833333333333334
+mapping 17 accuracy: 0.625
+mapping 18 accuracy: 0.5416666666666666
+mapping 19 accuracy: 0.5833333333333334
+mapping 20 accuracy: 0.5416666666666666
+mapping 21 accuracy: 0.5416666666666666
+mapping 22 accuracy: 0.6666666666666666
+mapping 23 accuracy: 0.5833333333333334
+mapping 24 accuracy: 0.5416666666666666
+mapping 25 accuracy: 0.5833333333333334
+mapping 26 accuracy: 0.625
+mapping 27 accuracy: 0.5416666666666666
+mapping 28 accuracy: 0.5
+mapping 29 accuracy: 0.5833333333333334
+mapping 30 accuracy: 0.5416666666666666
+mapping 31 accuracy: 0.5416666666666666
+mapping 32 accuracy: 0.625
+mapping 33 accuracy: 0.5833333333333334
+mapping 34 accuracy: 0.5416666666666666
+mapping 35 accuracy: 0.5833333333333334
+mapping 36 accuracy: 0.5833333333333334
+mapping 37 accuracy: 0.625
+mapping 38 accuracy: 0.5833333333333334
+mapping 39 accuracy: 0.5416666666666666
+evaluate mapping finished. best mappings: [11, 15, 22, 9, 17]
+mapping 11 accuracy on dev after train: 0.625
+mapping 15 accuracy on dev after train: 0.5416666666666666
+mapping 22 accuracy on dev after train: 0.625
+mapping 9 accuracy on dev after train: 0.7083333333333334
+mapping 17 accuracy on dev after train: 0.625
+after train mapping 9 selected.
+--------------------
+iteration: 3 time: 2026-07-29 08:16:36.451068
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.5416666666666666
+mapping 1 accuracy: 0.5416666666666666
+mapping 2 accuracy: 0.5416666666666666
+mapping 3 accuracy: 0.5
+mapping 4 accuracy: 0.8333333333333334
+mapping 5 accuracy: 0.7916666666666666
+mapping 6 accuracy: 0.7083333333333334
+mapping 7 accuracy: 0.5833333333333334
+evaluate mapping finished. best mappings: [4, 5, 6, 7, 0]
+mapping 4 accuracy on dev after train: 0.8333333333333334
+mapping 5 accuracy on dev after train: 0.7916666666666666
+mapping 6 accuracy on dev after train: 0.7916666666666666
+mapping 7 accuracy on dev after train: 0.7916666666666666
+mapping 0 accuracy on dev after train: 0.7916666666666666
+after train mapping 4 selected.
+--------------------
+iteration: 4 time: 2026-07-29 08:18:28.599283
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.8333333333333334
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.8333333333333334
+mapping 4 accuracy: 0.75
+mapping 5 accuracy: 0.8333333333333334
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.7916666666666666
+mapping 9 accuracy: 0.8333333333333334
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.8333333333333334
+mapping 12 accuracy: 0.875
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.7916666666666666
+mapping 15 accuracy: 0.875
+mapping 16 accuracy: 0.8333333333333334
+mapping 17 accuracy: 0.8333333333333334
+mapping 18 accuracy: 0.8333333333333334
+mapping 19 accuracy: 0.8333333333333334
+mapping 20 accuracy: 0.875
+mapping 21 accuracy: 0.8333333333333334
+mapping 22 accuracy: 0.8333333333333334
+mapping 23 accuracy: 0.875
+mapping 24 accuracy: 0.9166666666666666
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.8333333333333334
+mapping 27 accuracy: 0.8333333333333334
+mapping 28 accuracy: 0.875
+mapping 29 accuracy: 0.8333333333333334
+mapping 30 accuracy: 0.8333333333333334
+mapping 31 accuracy: 0.875
+mapping 32 accuracy: 0.7916666666666666
+mapping 33 accuracy: 0.8333333333333334
+mapping 34 accuracy: 0.75
+mapping 35 accuracy: 0.875
+mapping 36 accuracy: 0.8333333333333334
+mapping 37 accuracy: 0.8333333333333334
+mapping 38 accuracy: 0.875
+mapping 39 accuracy: 0.875
+evaluate mapping finished. best mappings: [24, 1, 2, 6, 7]
+mapping 24 accuracy on dev after train: 0.8333333333333334
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.875
+mapping 6 accuracy on dev after train: 0.875
+mapping 7 accuracy on dev after train: 0.8333333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 5 time: 2026-07-29 08:21:52.415449
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.6666666666666666
+mapping 1 accuracy: 0.7083333333333334
+mapping 2 accuracy: 0.7083333333333334
+mapping 3 accuracy: 0.7083333333333334
+mapping 4 accuracy: 0.7083333333333334
+mapping 5 accuracy: 0.6666666666666666
+mapping 6 accuracy: 0.7916666666666666
+mapping 7 accuracy: 0.7083333333333334
+mapping 8 accuracy: 0.7083333333333334
+mapping 9 accuracy: 0.8333333333333334
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.7916666666666666
+mapping 13 accuracy: 0.7083333333333334
+mapping 14 accuracy: 0.7916666666666666
+mapping 15 accuracy: 0.8333333333333334
+mapping 16 accuracy: 0.6666666666666666
+mapping 17 accuracy: 0.875
+mapping 18 accuracy: 0.875
+mapping 19 accuracy: 0.7916666666666666
+mapping 20 accuracy: 0.75
+mapping 21 accuracy: 0.75
+mapping 22 accuracy: 0.9166666666666666
+mapping 23 accuracy: 0.7916666666666666
+mapping 24 accuracy: 0.7083333333333334
+mapping 25 accuracy: 0.7916666666666666
+mapping 26 accuracy: 0.7916666666666666
+mapping 27 accuracy: 0.7083333333333334
+mapping 28 accuracy: 0.7083333333333334
+mapping 29 accuracy: 0.875
+mapping 30 accuracy: 0.6666666666666666
+mapping 31 accuracy: 0.7083333333333334
+mapping 32 accuracy: 0.875
+mapping 33 accuracy: 0.7916666666666666
+mapping 34 accuracy: 0.7083333333333334
+mapping 35 accuracy: 0.7916666666666666
+mapping 36 accuracy: 0.6666666666666666
+mapping 37 accuracy: 0.7916666666666666
+mapping 38 accuracy: 0.7916666666666666
+mapping 39 accuracy: 0.75
+evaluate mapping finished. best mappings: [11, 22, 10, 17, 18]
+mapping 11 accuracy on dev after train: 0.7083333333333334
+mapping 22 accuracy on dev after train: 0.7916666666666666
+mapping 10 accuracy on dev after train: 0.8333333333333334
+mapping 17 accuracy on dev after train: 0.9166666666666666
+mapping 18 accuracy on dev after train: 0.875
+after train mapping 17 selected.
+--------------------
+iteration: 6 time: 2026-07-29 08:25:18.924339
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.5714285714285714
+mapping 1 accuracy: 0.5
+mapping 2 accuracy: 0.5892857142857143
+mapping 3 accuracy: 0.5178571428571429
+mapping 4 accuracy: 0.5892857142857143
+mapping 5 accuracy: 0.5178571428571429
+mapping 6 accuracy: 0.5892857142857143
+mapping 7 accuracy: 0.5178571428571429
+mapping 8 accuracy: 0.6071428571428571
+mapping 9 accuracy: 0.5357142857142857
+mapping 10 accuracy: 0.5
+mapping 11 accuracy: 0.44642857142857145
+mapping 12 accuracy: 0.5714285714285714
+mapping 13 accuracy: 0.5178571428571429
+mapping 14 accuracy: 0.5
+mapping 15 accuracy: 0.5714285714285714
+mapping 16 accuracy: 0.5357142857142857
+mapping 17 accuracy: 0.48214285714285715
+mapping 18 accuracy: 0.5535714285714286
+mapping 19 accuracy: 0.44642857142857145
+mapping 20 accuracy: 0.48214285714285715
+mapping 21 accuracy: 0.5535714285714286
+mapping 22 accuracy: 0.6071428571428571
+mapping 23 accuracy: 0.5714285714285714
+mapping 24 accuracy: 0.5178571428571429
+mapping 25 accuracy: 0.5357142857142857
+mapping 26 accuracy: 0.4642857142857143
+mapping 27 accuracy: 0.625
+mapping 28 accuracy: 0.5
+mapping 29 accuracy: 0.5535714285714286
+mapping 30 accuracy: 0.48214285714285715
+mapping 31 accuracy: 0.4642857142857143
+mapping 32 accuracy: 0.6071428571428571
+mapping 33 accuracy: 0.5535714285714286
+mapping 34 accuracy: 0.5357142857142857
+mapping 35 accuracy: 0.39285714285714285
+mapping 36 accuracy: 0.5357142857142857
+mapping 37 accuracy: 0.4107142857142857
+mapping 38 accuracy: 0.5535714285714286
+mapping 39 accuracy: 0.4642857142857143
+evaluate mapping finished. best mappings: [27, 8, 22, 32, 2]
+mapping 27 accuracy on dev after train: 0.625
+mapping 8 accuracy on dev after train: 0.5892857142857143
+mapping 22 accuracy on dev after train: 0.5357142857142857
+mapping 32 accuracy on dev after train: 0.5892857142857143
+mapping 2 accuracy on dev after train: 0.5892857142857143
+after train mapping 27 selected.
+--------------------
+iteration: 7 time: 2026-07-29 08:31:25.546744
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.7142857142857143
+mapping 1 accuracy: 0.6785714285714286
+mapping 2 accuracy: 0.6785714285714286
+mapping 3 accuracy: 0.6785714285714286
+mapping 4 accuracy: 0.7321428571428571
+mapping 5 accuracy: 0.6964285714285714
+mapping 6 accuracy: 0.6607142857142857
+mapping 7 accuracy: 0.6428571428571429
+mapping 8 accuracy: 0.6785714285714286
+mapping 9 accuracy: 0.6785714285714286
+mapping 10 accuracy: 0.6964285714285714
+mapping 11 accuracy: 0.6607142857142857
+mapping 12 accuracy: 0.7321428571428571
+mapping 13 accuracy: 0.6964285714285714
+mapping 14 accuracy: 0.6785714285714286
+mapping 15 accuracy: 0.6785714285714286
+mapping 16 accuracy: 0.6964285714285714
+mapping 17 accuracy: 0.625
+mapping 18 accuracy: 0.6428571428571429
+mapping 19 accuracy: 0.625
+mapping 20 accuracy: 0.6428571428571429
+mapping 21 accuracy: 0.6785714285714286
+mapping 22 accuracy: 0.6607142857142857
+mapping 23 accuracy: 0.6785714285714286
+mapping 24 accuracy: 0.6607142857142857
+mapping 25 accuracy: 0.6607142857142857
+mapping 26 accuracy: 0.6607142857142857
+mapping 27 accuracy: 0.7142857142857143
+mapping 28 accuracy: 0.6785714285714286
+mapping 29 accuracy: 0.6785714285714286
+mapping 30 accuracy: 0.5714285714285714
+mapping 31 accuracy: 0.6071428571428571
+mapping 32 accuracy: 0.6607142857142857
+mapping 33 accuracy: 0.6964285714285714
+mapping 34 accuracy: 0.6964285714285714
+mapping 35 accuracy: 0.5714285714285714
+mapping 36 accuracy: 0.6607142857142857
+mapping 37 accuracy: 0.5714285714285714
+mapping 38 accuracy: 0.6607142857142857
+mapping 39 accuracy: 0.6607142857142857
+evaluate mapping finished. best mappings: [4, 12, 0, 27, 5]
+mapping 4 accuracy on dev after train: 0.6964285714285714
+mapping 12 accuracy on dev after train: 0.6964285714285714
+mapping 0 accuracy on dev after train: 0.75
+mapping 27 accuracy on dev after train: 0.7321428571428571
+mapping 5 accuracy on dev after train: 0.6964285714285714
+after train mapping 0 selected.
+--------------------
+iteration: 8 time: 2026-07-29 08:37:30.187373
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.7083333333333334
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.75
+mapping 8 accuracy: 0.6666666666666666
+mapping 9 accuracy: 0.875
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.8333333333333334
+mapping 12 accuracy: 0.9166666666666666
+mapping 13 accuracy: 0.6666666666666666
+mapping 14 accuracy: 0.9166666666666666
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.9166666666666666
+mapping 17 accuracy: 0.9166666666666666
+mapping 18 accuracy: 0.875
+mapping 19 accuracy: 0.9583333333333334
+mapping 20 accuracy: 0.9166666666666666
+mapping 21 accuracy: 1.0
+mapping 22 accuracy: 0.8333333333333334
+mapping 23 accuracy: 0.9166666666666666
+mapping 24 accuracy: 0.8333333333333334
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.7916666666666666
+mapping 27 accuracy: 0.7916666666666666
+mapping 28 accuracy: 0.9583333333333334
+mapping 29 accuracy: 0.9166666666666666
+mapping 30 accuracy: 0.9166666666666666
+mapping 31 accuracy: 0.7916666666666666
+mapping 32 accuracy: 0.9166666666666666
+mapping 33 accuracy: 0.875
+mapping 34 accuracy: 0.7083333333333334
+mapping 35 accuracy: 0.875
+mapping 36 accuracy: 0.875
+mapping 37 accuracy: 0.875
+mapping 38 accuracy: 0.875
+mapping 39 accuracy: 0.875
+evaluate mapping finished. best mappings: [21, 5, 19, 28, 12]
+mapping 21 accuracy on dev after train: 0.6666666666666666
+mapping 5 accuracy on dev after train: 0.7083333333333334
+mapping 19 accuracy on dev after train: 0.7916666666666666
+mapping 28 accuracy on dev after train: 0.6666666666666666
+mapping 12 accuracy on dev after train: 0.7083333333333334
+after train mapping 19 selected.
+--------------------
+iteration: 9 time: 2026-07-29 08:40:54.592821
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.2916666666666667
+mapping 1 accuracy: 0.2916666666666667
+evaluate mapping finished. best mappings: [0, 1]
+mapping 0 accuracy on dev after train: 0.375
+mapping 1 accuracy on dev after train: 0.3333333333333333
+after train mapping 0 selected.
+model saved at iteration 9
+--------------------
+iteration: 10 time: 2026-07-29 08:42:41.107722
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.375
+mapping 1 accuracy: 0.375
+mapping 2 accuracy: 0.3333333333333333
+evaluate mapping finished. best mappings: [0, 1, 2]
+mapping 0 accuracy on dev after train: 0.4166666666666667
+mapping 1 accuracy on dev after train: 0.4166666666666667
+mapping 2 accuracy on dev after train: 0.4583333333333333
+after train mapping 2 selected.
+--------------------
+iteration: 11 time: 2026-07-29 08:43:43.364205
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.875
+mapping 9 accuracy: 0.875
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.875
+mapping 12 accuracy: 0.875
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.875
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.8333333333333334
+mapping 1 accuracy on dev after train: 0.7916666666666666
+mapping 2 accuracy on dev after train: 0.75
+mapping 3 accuracy on dev after train: 0.8333333333333334
+mapping 4 accuracy on dev after train: 0.7916666666666666
+after train mapping 0 selected.
+--------------------
+iteration: 12 time: 2026-07-29 08:45:58.976637
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.8333333333333334
+mapping 1 accuracy: 0.8333333333333334
+mapping 2 accuracy: 0.7916666666666666
+mapping 3 accuracy: 0.7916666666666666
+mapping 4 accuracy: 0.8333333333333334
+mapping 5 accuracy: 0.8333333333333334
+mapping 6 accuracy: 0.8333333333333334
+mapping 7 accuracy: 0.7916666666666666
+mapping 8 accuracy: 0.8333333333333334
+mapping 9 accuracy: 0.8333333333333334
+mapping 10 accuracy: 0.8333333333333334
+mapping 11 accuracy: 0.8333333333333334
+mapping 12 accuracy: 0.875
+mapping 13 accuracy: 0.7916666666666666
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.7916666666666666
+mapping 16 accuracy: 0.8333333333333334
+mapping 17 accuracy: 0.8333333333333334
+mapping 18 accuracy: 0.9166666666666666
+mapping 19 accuracy: 0.7916666666666666
+mapping 20 accuracy: 0.9166666666666666
+mapping 21 accuracy: 0.8333333333333334
+mapping 22 accuracy: 0.8333333333333334
+mapping 23 accuracy: 0.9166666666666666
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.9166666666666666
+mapping 26 accuracy: 0.8333333333333334
+mapping 27 accuracy: 0.9166666666666666
+mapping 28 accuracy: 0.875
+mapping 29 accuracy: 0.875
+mapping 30 accuracy: 0.875
+mapping 31 accuracy: 0.8333333333333334
+mapping 32 accuracy: 0.9166666666666666
+mapping 33 accuracy: 0.875
+mapping 34 accuracy: 0.875
+mapping 35 accuracy: 0.875
+mapping 36 accuracy: 0.9166666666666666
+mapping 37 accuracy: 0.8333333333333334
+mapping 38 accuracy: 0.875
+mapping 39 accuracy: 0.7916666666666666
+evaluate mapping finished. best mappings: [18, 20, 23, 25, 27]
+mapping 18 accuracy on dev after train: 0.875
+mapping 20 accuracy on dev after train: 0.9583333333333334
+mapping 23 accuracy on dev after train: 0.9166666666666666
+mapping 25 accuracy on dev after train: 0.9166666666666666
+mapping 27 accuracy on dev after train: 0.6666666666666666
+after train mapping 20 selected.
+--------------------
+iteration: 13 time: 2026-07-29 08:49:22.130315
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.75
+mapping 4 accuracy: 0.6666666666666666
+mapping 5 accuracy: 0.7916666666666666
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.6666666666666666
+mapping 8 accuracy: 0.9166666666666666
+mapping 9 accuracy: 0.7916666666666666
+mapping 10 accuracy: 0.5833333333333334
+mapping 11 accuracy: 0.8333333333333334
+mapping 12 accuracy: 0.875
+mapping 13 accuracy: 0.8333333333333334
+mapping 14 accuracy: 0.7916666666666666
+mapping 15 accuracy: 0.7083333333333334
+mapping 16 accuracy: 0.875
+mapping 17 accuracy: 0.875
+mapping 18 accuracy: 0.6666666666666666
+mapping 19 accuracy: 0.8333333333333334
+mapping 20 accuracy: 0.75
+mapping 21 accuracy: 0.625
+mapping 22 accuracy: 0.75
+mapping 23 accuracy: 0.625
+mapping 24 accuracy: 0.8333333333333334
+mapping 25 accuracy: 0.7916666666666666
+mapping 26 accuracy: 0.8333333333333334
+evaluate mapping finished. best mappings: [8, 0, 1, 2, 6]
+mapping 8 accuracy on dev after train: 0.75
+mapping 0 accuracy on dev after train: 0.7916666666666666
+mapping 1 accuracy on dev after train: 0.8333333333333334
+mapping 2 accuracy on dev after train: 0.7083333333333334
+mapping 6 accuracy on dev after train: 0.7083333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 14 time: 2026-07-29 08:52:07.544267
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.7083333333333334
+mapping 1 accuracy: 0.6666666666666666
+mapping 2 accuracy: 0.5833333333333334
+mapping 3 accuracy: 0.6666666666666666
+mapping 4 accuracy: 0.6666666666666666
+mapping 5 accuracy: 0.6666666666666666
+mapping 6 accuracy: 0.625
+mapping 7 accuracy: 0.6666666666666666
+mapping 8 accuracy: 0.7083333333333334
+mapping 9 accuracy: 0.6666666666666666
+mapping 10 accuracy: 0.5833333333333334
+mapping 11 accuracy: 0.5833333333333334
+mapping 12 accuracy: 0.6666666666666666
+mapping 13 accuracy: 0.6666666666666666
+mapping 14 accuracy: 0.6666666666666666
+mapping 15 accuracy: 0.7083333333333334
+evaluate mapping finished. best mappings: [0, 8, 15, 1, 3]
+mapping 0 accuracy on dev after train: 0.75
+mapping 8 accuracy on dev after train: 0.7916666666666666
+mapping 15 accuracy on dev after train: 0.7916666666666666
+mapping 1 accuracy on dev after train: 0.75
+mapping 3 accuracy on dev after train: 0.7916666666666666
+after train mapping 8 selected.
+--------------------
+iteration: 15 time: 2026-07-29 08:54:22.661060
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.7678571428571429
+mapping 1 accuracy: 0.7678571428571429
+mapping 2 accuracy: 0.75
+mapping 3 accuracy: 0.7678571428571429
+mapping 4 accuracy: 0.7678571428571429
+mapping 5 accuracy: 0.7857142857142857
+mapping 6 accuracy: 0.7678571428571429
+mapping 7 accuracy: 0.7857142857142857
+mapping 8 accuracy: 0.75
+mapping 9 accuracy: 0.7857142857142857
+mapping 10 accuracy: 0.75
+mapping 11 accuracy: 0.75
+mapping 12 accuracy: 0.75
+mapping 13 accuracy: 0.75
+mapping 14 accuracy: 0.7678571428571429
+mapping 15 accuracy: 0.75
+mapping 16 accuracy: 0.7678571428571429
+mapping 17 accuracy: 0.7678571428571429
+mapping 18 accuracy: 0.7321428571428571
+mapping 19 accuracy: 0.7321428571428571
+mapping 20 accuracy: 0.7678571428571429
+mapping 21 accuracy: 0.75
+mapping 22 accuracy: 0.75
+mapping 23 accuracy: 0.6785714285714286
+mapping 24 accuracy: 0.7142857142857143
+mapping 25 accuracy: 0.7857142857142857
+mapping 26 accuracy: 0.7678571428571429
+mapping 27 accuracy: 0.75
+mapping 28 accuracy: 0.6607142857142857
+mapping 29 accuracy: 0.7678571428571429
+mapping 30 accuracy: 0.6607142857142857
+mapping 31 accuracy: 0.6607142857142857
+mapping 32 accuracy: 0.6785714285714286
+mapping 33 accuracy: 0.7678571428571429
+mapping 34 accuracy: 0.7678571428571429
+mapping 35 accuracy: 0.6785714285714286
+mapping 36 accuracy: 0.6785714285714286
+mapping 37 accuracy: 0.6785714285714286
+mapping 38 accuracy: 0.6428571428571429
+mapping 39 accuracy: 0.7678571428571429
+evaluate mapping finished. best mappings: [5, 7, 9, 25, 0]
+mapping 5 accuracy on dev after train: 0.7857142857142857
+mapping 7 accuracy on dev after train: 0.6785714285714286
+mapping 9 accuracy on dev after train: 0.7321428571428571
+mapping 25 accuracy on dev after train: 0.6071428571428571
+mapping 0 accuracy on dev after train: 0.75
+after train mapping 5 selected.
+--------------------
+iteration: 16 time: 2026-07-29 09:00:25.172956
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.75
+mapping 2 accuracy: 0.8333333333333334
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.9166666666666666
+mapping 5 accuracy: 0.9166666666666666
+mapping 6 accuracy: 0.9166666666666666
+mapping 7 accuracy: 0.7916666666666666
+mapping 8 accuracy: 0.6666666666666666
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.9166666666666666
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.9166666666666666
+mapping 13 accuracy: 0.75
+mapping 14 accuracy: 0.9166666666666666
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.875
+mapping 17 accuracy: 0.9166666666666666
+mapping 18 accuracy: 0.9166666666666666
+mapping 19 accuracy: 0.9166666666666666
+mapping 20 accuracy: 0.875
+mapping 21 accuracy: 0.9166666666666666
+mapping 22 accuracy: 0.9166666666666666
+mapping 23 accuracy: 0.9166666666666666
+mapping 24 accuracy: 0.7916666666666666
+mapping 25 accuracy: 0.8333333333333334
+mapping 26 accuracy: 0.7916666666666666
+mapping 27 accuracy: 0.8333333333333334
+mapping 28 accuracy: 0.9166666666666666
+mapping 29 accuracy: 0.9166666666666666
+mapping 30 accuracy: 0.9166666666666666
+mapping 31 accuracy: 0.7916666666666666
+mapping 32 accuracy: 0.9166666666666666
+mapping 33 accuracy: 0.9166666666666666
+mapping 34 accuracy: 0.75
+mapping 35 accuracy: 0.7916666666666666
+mapping 36 accuracy: 0.875
+mapping 37 accuracy: 0.8333333333333334
+mapping 38 accuracy: 0.875
+mapping 39 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [4, 5, 6, 9, 10]
+mapping 4 accuracy on dev after train: 0.9166666666666666
+mapping 5 accuracy on dev after train: 0.7916666666666666
+mapping 6 accuracy on dev after train: 0.875
+mapping 9 accuracy on dev after train: 0.8333333333333334
+mapping 10 accuracy on dev after train: 0.8333333333333334
+after train mapping 4 selected.
+--------------------
+iteration: 17 time: 2026-07-29 09:03:51.950444
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.4166666666666667
+mapping 1 accuracy: 0.4583333333333333
+evaluate mapping finished. best mappings: [1, 0]
+mapping 1 accuracy on dev after train: 0.5
+mapping 0 accuracy on dev after train: 0.3333333333333333
+after train mapping 1 selected.
+--------------------
+iteration: 18 time: 2026-07-29 09:04:35.082573
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.625
+mapping 1 accuracy: 0.6666666666666666
+evaluate mapping finished. best mappings: [1, 0]
+mapping 1 accuracy on dev after train: 0.3333333333333333
+mapping 0 accuracy on dev after train: 0.2916666666666667
+after train mapping 1 selected.
+--------------------
+iteration: 19 time: 2026-07-29 09:05:17.855779
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.6071428571428571
+mapping 1 accuracy: 0.6428571428571429
+mapping 2 accuracy: 0.6428571428571429
+mapping 3 accuracy: 0.6428571428571429
+mapping 4 accuracy: 0.625
+mapping 5 accuracy: 0.6428571428571429
+mapping 6 accuracy: 0.625
+mapping 7 accuracy: 0.6071428571428571
+mapping 8 accuracy: 0.6428571428571429
+mapping 9 accuracy: 0.625
+mapping 10 accuracy: 0.5892857142857143
+mapping 11 accuracy: 0.6428571428571429
+mapping 12 accuracy: 0.625
+mapping 13 accuracy: 0.6428571428571429
+mapping 14 accuracy: 0.5178571428571429
+mapping 15 accuracy: 0.5535714285714286
+mapping 16 accuracy: 0.625
+mapping 17 accuracy: 0.6607142857142857
+mapping 18 accuracy: 0.625
+mapping 19 accuracy: 0.6071428571428571
+mapping 20 accuracy: 0.6785714285714286
+mapping 21 accuracy: 0.5892857142857143
+mapping 22 accuracy: 0.6071428571428571
+mapping 23 accuracy: 0.6607142857142857
+mapping 24 accuracy: 0.625
+mapping 25 accuracy: 0.6428571428571429
+mapping 26 accuracy: 0.625
+mapping 27 accuracy: 0.6607142857142857
+mapping 28 accuracy: 0.625
+mapping 29 accuracy: 0.6785714285714286
+mapping 30 accuracy: 0.625
+mapping 31 accuracy: 0.6428571428571429
+mapping 32 accuracy: 0.6785714285714286
+mapping 33 accuracy: 0.6428571428571429
+mapping 34 accuracy: 0.6607142857142857
+mapping 35 accuracy: 0.5535714285714286
+mapping 36 accuracy: 0.6428571428571429
+mapping 37 accuracy: 0.5535714285714286
+mapping 38 accuracy: 0.5535714285714286
+mapping 39 accuracy: 0.5892857142857143
+evaluate mapping finished. best mappings: [20, 29, 32, 17, 23]
+mapping 20 accuracy on dev after train: 0.6785714285714286
+mapping 29 accuracy on dev after train: 0.6607142857142857
+mapping 32 accuracy on dev after train: 0.6964285714285714
+mapping 17 accuracy on dev after train: 0.6428571428571429
+mapping 23 accuracy on dev after train: 0.6071428571428571
+after train mapping 32 selected.
+model saved at iteration 19
+--------------------
+iteration: 20 time: 2026-07-29 09:12:34.498195
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.7916666666666666
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.7916666666666666
+mapping 7 accuracy: 0.875
+evaluate mapping finished. best mappings: [0, 1, 2, 4, 5]
+mapping 0 accuracy on dev after train: 0.9166666666666666
+mapping 1 accuracy on dev after train: 0.75
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 0.8333333333333334
+mapping 5 accuracy on dev after train: 0.875
+after train mapping 0 selected.
+--------------------
+iteration: 21 time: 2026-07-29 09:14:27.433911
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.7916666666666666
+mapping 5 accuracy: 0.9166666666666666
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.7083333333333334
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.7916666666666666
+mapping 12 accuracy: 0.9166666666666666
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.8333333333333334
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.7916666666666666
+mapping 17 accuracy: 0.7083333333333334
+mapping 18 accuracy: 0.8333333333333334
+mapping 19 accuracy: 0.9166666666666666
+mapping 20 accuracy: 0.9166666666666666
+mapping 21 accuracy: 0.875
+mapping 22 accuracy: 0.9166666666666666
+mapping 23 accuracy: 0.8333333333333334
+mapping 24 accuracy: 0.9166666666666666
+mapping 25 accuracy: 0.9166666666666666
+mapping 26 accuracy: 0.8333333333333334
+mapping 27 accuracy: 0.8333333333333334
+mapping 28 accuracy: 0.875
+mapping 29 accuracy: 0.9166666666666666
+mapping 30 accuracy: 0.8333333333333334
+mapping 31 accuracy: 0.875
+mapping 32 accuracy: 0.8333333333333334
+mapping 33 accuracy: 0.9166666666666666
+mapping 34 accuracy: 0.8333333333333334
+mapping 35 accuracy: 0.8333333333333334
+mapping 36 accuracy: 0.8333333333333334
+mapping 37 accuracy: 0.9166666666666666
+mapping 38 accuracy: 0.9166666666666666
+mapping 39 accuracy: 0.875
+evaluate mapping finished. best mappings: [0, 1, 3, 5, 9]
+mapping 0 accuracy on dev after train: 0.7916666666666666
+mapping 1 accuracy on dev after train: 0.875
+mapping 3 accuracy on dev after train: 0.8333333333333334
+mapping 5 accuracy on dev after train: 0.8333333333333334
+mapping 9 accuracy on dev after train: 0.8333333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 22 time: 2026-07-29 09:17:56.959176
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.875
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 0.8333333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 23 time: 2026-07-29 09:20:15.533192
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.4583333333333333
+mapping 1 accuracy: 0.3333333333333333
+evaluate mapping finished. best mappings: [0, 1]
+mapping 0 accuracy on dev after train: 0.2916666666666667
+mapping 1 accuracy on dev after train: 0.2916666666666667
+after train mapping 0 selected.
+--------------------
+iteration: 24 time: 2026-07-29 09:20:58.643824
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.3333333333333333
+mapping 1 accuracy: 0.4166666666666667
+mapping 2 accuracy: 0.4166666666666667
+mapping 3 accuracy: 0.375
+mapping 4 accuracy: 0.2916666666666667
+mapping 5 accuracy: 0.375
+mapping 6 accuracy: 0.4583333333333333
+mapping 7 accuracy: 0.3333333333333333
+mapping 8 accuracy: 0.25
+mapping 9 accuracy: 0.375
+mapping 10 accuracy: 0.4166666666666667
+mapping 11 accuracy: 0.4166666666666667
+mapping 12 accuracy: 0.4583333333333333
+mapping 13 accuracy: 0.375
+mapping 14 accuracy: 0.4166666666666667
+mapping 15 accuracy: 0.375
+mapping 16 accuracy: 0.375
+mapping 17 accuracy: 0.3333333333333333
+mapping 18 accuracy: 0.3333333333333333
+mapping 19 accuracy: 0.4166666666666667
+mapping 20 accuracy: 0.3333333333333333
+mapping 21 accuracy: 0.4166666666666667
+mapping 22 accuracy: 0.4583333333333333
+mapping 23 accuracy: 0.4583333333333333
+mapping 24 accuracy: 0.5416666666666666
+mapping 25 accuracy: 0.3333333333333333
+mapping 26 accuracy: 0.4166666666666667
+mapping 27 accuracy: 0.2916666666666667
+mapping 28 accuracy: 0.3333333333333333
+mapping 29 accuracy: 0.4166666666666667
+mapping 30 accuracy: 0.4166666666666667
+mapping 31 accuracy: 0.375
+mapping 32 accuracy: 0.2916666666666667
+mapping 33 accuracy: 0.4583333333333333
+mapping 34 accuracy: 0.4166666666666667
+mapping 35 accuracy: 0.3333333333333333
+mapping 36 accuracy: 0.375
+mapping 37 accuracy: 0.3333333333333333
+mapping 38 accuracy: 0.3333333333333333
+mapping 39 accuracy: 0.375
+evaluate mapping finished. best mappings: [24, 6, 12, 22, 23]
+mapping 24 accuracy on dev after train: 0.4166666666666667
+mapping 6 accuracy on dev after train: 0.5416666666666666
+mapping 12 accuracy on dev after train: 0.5
+mapping 22 accuracy on dev after train: 0.4166666666666667
+mapping 23 accuracy on dev after train: 0.625
+after train mapping 23 selected.
+--------------------
+iteration: 25 time: 2026-07-29 09:24:29.383822
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.625
+mapping 1 accuracy: 0.5
+mapping 2 accuracy: 0.5833333333333334
+evaluate mapping finished. best mappings: [0, 2, 1]
+mapping 0 accuracy on dev after train: 0.7083333333333334
+mapping 2 accuracy on dev after train: 0.7083333333333334
+mapping 1 accuracy on dev after train: 0.75
+after train mapping 1 selected.
+--------------------
+iteration: 26 time: 2026-07-29 09:25:32.551765
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.4166666666666667
+mapping 1 accuracy: 0.4583333333333333
+mapping 2 accuracy: 0.5416666666666666
+mapping 3 accuracy: 0.5416666666666666
+mapping 4 accuracy: 0.5
+mapping 5 accuracy: 0.4583333333333333
+mapping 6 accuracy: 0.5416666666666666
+mapping 7 accuracy: 0.5416666666666666
+mapping 8 accuracy: 0.375
+mapping 9 accuracy: 0.5
+mapping 10 accuracy: 0.5
+mapping 11 accuracy: 0.4583333333333333
+mapping 12 accuracy: 0.625
+mapping 13 accuracy: 0.5
+mapping 14 accuracy: 0.5416666666666666
+mapping 15 accuracy: 0.4583333333333333
+mapping 16 accuracy: 0.5416666666666666
+mapping 17 accuracy: 0.4583333333333333
+mapping 18 accuracy: 0.5416666666666666
+mapping 19 accuracy: 0.5
+mapping 20 accuracy: 0.5
+mapping 21 accuracy: 0.5416666666666666
+mapping 22 accuracy: 0.5833333333333334
+mapping 23 accuracy: 0.5833333333333334
+mapping 24 accuracy: 0.6666666666666666
+mapping 25 accuracy: 0.5833333333333334
+mapping 26 accuracy: 0.5416666666666666
+mapping 27 accuracy: 0.625
+mapping 28 accuracy: 0.625
+mapping 29 accuracy: 0.5416666666666666
+mapping 30 accuracy: 0.5
+mapping 31 accuracy: 0.375
+mapping 32 accuracy: 0.5
+mapping 33 accuracy: 0.5833333333333334
+mapping 34 accuracy: 0.4583333333333333
+mapping 35 accuracy: 0.4583333333333333
+mapping 36 accuracy: 0.6666666666666666
+mapping 37 accuracy: 0.5833333333333334
+mapping 38 accuracy: 0.6666666666666666
+mapping 39 accuracy: 0.625
+evaluate mapping finished. best mappings: [24, 36, 38, 12, 27]
+mapping 24 accuracy on dev after train: 0.5
+mapping 36 accuracy on dev after train: 0.5416666666666666
+mapping 38 accuracy on dev after train: 0.5
+mapping 12 accuracy on dev after train: 0.5833333333333334
+mapping 27 accuracy on dev after train: 0.625
+after train mapping 27 selected.
+--------------------
+iteration: 27 time: 2026-07-29 09:29:02.664977
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.7857142857142857
+mapping 1 accuracy: 0.7142857142857143
+mapping 2 accuracy: 0.7321428571428571
+mapping 3 accuracy: 0.7321428571428571
+mapping 4 accuracy: 0.8035714285714286
+mapping 5 accuracy: 0.7142857142857143
+mapping 6 accuracy: 0.75
+mapping 7 accuracy: 0.7857142857142857
+mapping 8 accuracy: 0.7321428571428571
+mapping 9 accuracy: 0.7321428571428571
+mapping 10 accuracy: 0.7678571428571429
+mapping 11 accuracy: 0.7321428571428571
+mapping 12 accuracy: 0.75
+mapping 13 accuracy: 0.7321428571428571
+mapping 14 accuracy: 0.75
+mapping 15 accuracy: 0.6785714285714286
+mapping 16 accuracy: 0.8035714285714286
+mapping 17 accuracy: 0.75
+mapping 18 accuracy: 0.75
+mapping 19 accuracy: 0.7857142857142857
+mapping 20 accuracy: 0.6785714285714286
+mapping 21 accuracy: 0.7678571428571429
+mapping 22 accuracy: 0.7321428571428571
+mapping 23 accuracy: 0.75
+mapping 24 accuracy: 0.7678571428571429
+mapping 25 accuracy: 0.7321428571428571
+mapping 26 accuracy: 0.8035714285714286
+mapping 27 accuracy: 0.7678571428571429
+mapping 28 accuracy: 0.6964285714285714
+mapping 29 accuracy: 0.7142857142857143
+mapping 30 accuracy: 0.7321428571428571
+mapping 31 accuracy: 0.7678571428571429
+mapping 32 accuracy: 0.6964285714285714
+mapping 33 accuracy: 0.7321428571428571
+mapping 34 accuracy: 0.7321428571428571
+mapping 35 accuracy: 0.6785714285714286
+mapping 36 accuracy: 0.7678571428571429
+mapping 37 accuracy: 0.6964285714285714
+mapping 38 accuracy: 0.6964285714285714
+mapping 39 accuracy: 0.7678571428571429
+evaluate mapping finished. best mappings: [4, 16, 26, 0, 7]
+mapping 4 accuracy on dev after train: 0.8214285714285714
+mapping 16 accuracy on dev after train: 0.7142857142857143
+mapping 26 accuracy on dev after train: 0.7678571428571429
+mapping 0 accuracy on dev after train: 0.7857142857142857
+mapping 7 accuracy on dev after train: 0.8214285714285714
+after train mapping 4 selected.
+--------------------
+iteration: 28 time: 2026-07-29 09:35:14.459104
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.9166666666666666
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 3 accuracy on dev after train: 0.8333333333333334
+mapping 4 accuracy on dev after train: 0.7916666666666666
+after train mapping 2 selected.
+--------------------
+iteration: 29 time: 2026-07-29 09:37:08.139251
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 1.0
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 1.0
+mapping 7 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [3, 6, 0, 1, 2]
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 6 accuracy on dev after train: 0.9166666666666666
+mapping 0 accuracy on dev after train: 1.0
+mapping 1 accuracy on dev after train: 1.0
+mapping 2 accuracy on dev after train: 1.0
+after train mapping 0 selected.
+model saved at iteration 29
+--------------------
+iteration: 30 time: 2026-07-29 09:40:07.968137
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.625
+mapping 1 accuracy: 0.75
+mapping 2 accuracy: 0.7916666666666666
+mapping 3 accuracy: 0.75
+mapping 4 accuracy: 0.625
+mapping 5 accuracy: 0.5416666666666666
+mapping 6 accuracy: 0.6666666666666666
+mapping 7 accuracy: 0.75
+mapping 8 accuracy: 0.4583333333333333
+mapping 9 accuracy: 0.625
+mapping 10 accuracy: 0.7083333333333334
+mapping 11 accuracy: 0.7916666666666666
+mapping 12 accuracy: 0.75
+mapping 13 accuracy: 0.625
+mapping 14 accuracy: 0.75
+mapping 15 accuracy: 0.7083333333333334
+mapping 16 accuracy: 0.5833333333333334
+mapping 17 accuracy: 0.5833333333333334
+mapping 18 accuracy: 0.5833333333333334
+mapping 19 accuracy: 0.875
+mapping 20 accuracy: 0.7916666666666666
+mapping 21 accuracy: 0.7916666666666666
+mapping 22 accuracy: 0.75
+mapping 23 accuracy: 0.8333333333333334
+mapping 24 accuracy: 0.7916666666666666
+mapping 25 accuracy: 0.5416666666666666
+mapping 26 accuracy: 0.6666666666666666
+mapping 27 accuracy: 0.5833333333333334
+mapping 28 accuracy: 0.7083333333333334
+mapping 29 accuracy: 0.75
+mapping 30 accuracy: 0.7083333333333334
+mapping 31 accuracy: 0.5833333333333334
+mapping 32 accuracy: 0.4166666666666667
+mapping 33 accuracy: 0.7083333333333334
+mapping 34 accuracy: 0.6666666666666666
+mapping 35 accuracy: 0.6666666666666666
+mapping 36 accuracy: 0.75
+mapping 37 accuracy: 0.625
+mapping 38 accuracy: 0.625
+mapping 39 accuracy: 0.75
+evaluate mapping finished. best mappings: [19, 23, 2, 11, 20]
+mapping 19 accuracy on dev after train: 0.5
+mapping 23 accuracy on dev after train: 0.5416666666666666
+mapping 2 accuracy on dev after train: 0.5833333333333334
+mapping 11 accuracy on dev after train: 0.5
+mapping 20 accuracy on dev after train: 0.5416666666666666
+after train mapping 2 selected.
+--------------------
+iteration: 31 time: 2026-07-29 09:43:39.506047
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 1.0
+mapping 13 accuracy: 1.0
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [12, 13, 0, 1, 2]
+mapping 12 accuracy on dev after train: 0.9166666666666666
+mapping 13 accuracy on dev after train: 0.9166666666666666
+mapping 0 accuracy on dev after train: 0.8333333333333334
+mapping 1 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.9166666666666666
+after train mapping 12 selected.
+--------------------
+iteration: 32 time: 2026-07-29 09:45:57.737702
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.7321428571428571
+mapping 1 accuracy: 0.625
+mapping 2 accuracy: 0.7142857142857143
+mapping 3 accuracy: 0.625
+mapping 4 accuracy: 0.7321428571428571
+mapping 5 accuracy: 0.625
+mapping 6 accuracy: 0.7142857142857143
+mapping 7 accuracy: 0.625
+mapping 8 accuracy: 0.6964285714285714
+mapping 9 accuracy: 0.6071428571428571
+mapping 10 accuracy: 0.625
+mapping 11 accuracy: 0.5892857142857143
+mapping 12 accuracy: 0.7321428571428571
+mapping 13 accuracy: 0.6964285714285714
+mapping 14 accuracy: 0.625
+mapping 15 accuracy: 0.7142857142857143
+mapping 16 accuracy: 0.7321428571428571
+mapping 17 accuracy: 0.625
+mapping 18 accuracy: 0.7142857142857143
+mapping 19 accuracy: 0.6071428571428571
+mapping 20 accuracy: 0.5892857142857143
+mapping 21 accuracy: 0.6964285714285714
+mapping 22 accuracy: 0.6964285714285714
+mapping 23 accuracy: 0.6785714285714286
+mapping 24 accuracy: 0.7142857142857143
+mapping 25 accuracy: 0.6071428571428571
+mapping 26 accuracy: 0.625
+mapping 27 accuracy: 0.7321428571428571
+mapping 28 accuracy: 0.5714285714285714
+mapping 29 accuracy: 0.625
+mapping 30 accuracy: 0.6785714285714286
+mapping 31 accuracy: 0.6785714285714286
+mapping 32 accuracy: 0.6785714285714286
+mapping 33 accuracy: 0.7321428571428571
+mapping 34 accuracy: 0.75
+mapping 35 accuracy: 0.5714285714285714
+mapping 36 accuracy: 0.5714285714285714
+mapping 37 accuracy: 0.5892857142857143
+mapping 38 accuracy: 0.6607142857142857
+mapping 39 accuracy: 0.6428571428571429
+evaluate mapping finished. best mappings: [34, 0, 4, 12, 16]
+mapping 34 accuracy on dev after train: 0.6964285714285714
+mapping 0 accuracy on dev after train: 0.7321428571428571
+mapping 4 accuracy on dev after train: 0.75
+mapping 12 accuracy on dev after train: 0.7142857142857143
+mapping 16 accuracy on dev after train: 0.7142857142857143
+after train mapping 4 selected.
+--------------------
+iteration: 33 time: 2026-07-29 09:52:08.513346
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.5833333333333334
+mapping 1 accuracy: 0.5416666666666666
+evaluate mapping finished. best mappings: [0, 1]
+mapping 0 accuracy on dev after train: 0.5416666666666666
+mapping 1 accuracy on dev after train: 0.5416666666666666
+after train mapping 0 selected.
+--------------------
+iteration: 34 time: 2026-07-29 09:52:51.448649
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.8035714285714286
+mapping 1 accuracy: 0.8571428571428571
+mapping 2 accuracy: 0.7857142857142857
+mapping 3 accuracy: 0.8214285714285714
+mapping 4 accuracy: 0.7857142857142857
+mapping 5 accuracy: 0.8392857142857143
+mapping 6 accuracy: 0.7857142857142857
+mapping 7 accuracy: 0.8035714285714286
+mapping 8 accuracy: 0.7678571428571429
+mapping 9 accuracy: 0.8214285714285714
+mapping 10 accuracy: 0.8392857142857143
+mapping 11 accuracy: 0.8214285714285714
+mapping 12 accuracy: 0.8035714285714286
+mapping 13 accuracy: 0.7678571428571429
+mapping 14 accuracy: 0.8035714285714286
+mapping 15 accuracy: 0.7678571428571429
+mapping 16 accuracy: 0.7857142857142857
+mapping 17 accuracy: 0.7857142857142857
+mapping 18 accuracy: 0.7678571428571429
+mapping 19 accuracy: 0.8035714285714286
+mapping 20 accuracy: 0.8035714285714286
+mapping 21 accuracy: 0.75
+mapping 22 accuracy: 0.75
+mapping 23 accuracy: 0.6785714285714286
+mapping 24 accuracy: 0.7678571428571429
+mapping 25 accuracy: 0.8035714285714286
+mapping 26 accuracy: 0.8392857142857143
+mapping 27 accuracy: 0.8035714285714286
+mapping 28 accuracy: 0.7321428571428571
+mapping 29 accuracy: 0.8571428571428571
+mapping 30 accuracy: 0.7321428571428571
+mapping 31 accuracy: 0.7678571428571429
+mapping 32 accuracy: 0.6607142857142857
+mapping 33 accuracy: 0.7678571428571429
+mapping 34 accuracy: 0.7857142857142857
+mapping 35 accuracy: 0.7857142857142857
+mapping 36 accuracy: 0.7142857142857143
+mapping 37 accuracy: 0.75
+mapping 38 accuracy: 0.6785714285714286
+mapping 39 accuracy: 0.8214285714285714
+evaluate mapping finished. best mappings: [1, 29, 5, 10, 26]
+mapping 1 accuracy on dev after train: 0.8035714285714286
+mapping 29 accuracy on dev after train: 0.8035714285714286
+mapping 5 accuracy on dev after train: 0.8214285714285714
+mapping 10 accuracy on dev after train: 0.7678571428571429
+mapping 26 accuracy on dev after train: 0.75
+after train mapping 5 selected.
+--------------------
+iteration: 35 time: 2026-07-29 09:58:58.733610
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.8392857142857143
+mapping 2 accuracy: 0.8571428571428571
+mapping 3 accuracy: 0.8214285714285714
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.8571428571428571
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.8571428571428571
+mapping 8 accuracy: 0.8571428571428571
+mapping 9 accuracy: 0.8392857142857143
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.8392857142857143
+mapping 12 accuracy: 0.8928571428571429
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.8214285714285714
+mapping 15 accuracy: 0.8571428571428571
+mapping 16 accuracy: 0.875
+mapping 17 accuracy: 0.8392857142857143
+mapping 18 accuracy: 0.8571428571428571
+mapping 19 accuracy: 0.8571428571428571
+mapping 20 accuracy: 0.8571428571428571
+mapping 21 accuracy: 0.875
+mapping 22 accuracy: 0.8571428571428571
+mapping 23 accuracy: 0.75
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.8392857142857143
+mapping 26 accuracy: 0.8214285714285714
+mapping 27 accuracy: 0.875
+mapping 28 accuracy: 0.7142857142857143
+mapping 29 accuracy: 0.8392857142857143
+mapping 30 accuracy: 0.7857142857142857
+mapping 31 accuracy: 0.8035714285714286
+mapping 32 accuracy: 0.7321428571428571
+mapping 33 accuracy: 0.8571428571428571
+mapping 34 accuracy: 0.875
+mapping 35 accuracy: 0.7678571428571429
+mapping 36 accuracy: 0.7142857142857143
+mapping 37 accuracy: 0.75
+mapping 38 accuracy: 0.7678571428571429
+mapping 39 accuracy: 0.8392857142857143
+evaluate mapping finished. best mappings: [12, 0, 4, 6, 10]
+mapping 12 accuracy on dev after train: 0.8214285714285714
+mapping 0 accuracy on dev after train: 0.8392857142857143
+mapping 4 accuracy on dev after train: 0.8214285714285714
+mapping 6 accuracy on dev after train: 0.8214285714285714
+mapping 10 accuracy on dev after train: 0.8214285714285714
+after train mapping 0 selected.
+--------------------
+iteration: 36 time: 2026-07-29 10:05:02.353989
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.4166666666666667
+mapping 1 accuracy: 0.5416666666666666
+evaluate mapping finished. best mappings: [1, 0]
+mapping 1 accuracy on dev after train: 0.5833333333333334
+mapping 0 accuracy on dev after train: 0.4583333333333333
+after train mapping 1 selected.
+--------------------
+iteration: 37 time: 2026-07-29 10:05:44.582102
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.75
+mapping 1 accuracy: 0.8333333333333334
+mapping 2 accuracy: 0.6666666666666666
+evaluate mapping finished. best mappings: [1, 0, 2]
+mapping 1 accuracy on dev after train: 0.5416666666666666
+mapping 0 accuracy on dev after train: 0.625
+mapping 2 accuracy on dev after train: 0.5833333333333334
+after train mapping 0 selected.
+--------------------
+iteration: 38 time: 2026-07-29 10:06:47.511697
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.7142857142857143
+mapping 1 accuracy: 0.7142857142857143
+mapping 2 accuracy: 0.7142857142857143
+mapping 3 accuracy: 0.75
+mapping 4 accuracy: 0.75
+mapping 5 accuracy: 0.7321428571428571
+mapping 6 accuracy: 0.6964285714285714
+mapping 7 accuracy: 0.7321428571428571
+mapping 8 accuracy: 0.75
+mapping 9 accuracy: 0.7321428571428571
+mapping 10 accuracy: 0.7321428571428571
+mapping 11 accuracy: 0.7321428571428571
+mapping 12 accuracy: 0.7321428571428571
+mapping 13 accuracy: 0.7678571428571429
+mapping 14 accuracy: 0.6607142857142857
+mapping 15 accuracy: 0.6607142857142857
+mapping 16 accuracy: 0.7678571428571429
+mapping 17 accuracy: 0.6964285714285714
+mapping 18 accuracy: 0.6964285714285714
+mapping 19 accuracy: 0.75
+mapping 20 accuracy: 0.75
+mapping 21 accuracy: 0.7857142857142857
+mapping 22 accuracy: 0.7857142857142857
+mapping 23 accuracy: 0.75
+mapping 24 accuracy: 0.7321428571428571
+mapping 25 accuracy: 0.7678571428571429
+mapping 26 accuracy: 0.6785714285714286
+mapping 27 accuracy: 0.7678571428571429
+mapping 28 accuracy: 0.7321428571428571
+mapping 29 accuracy: 0.75
+mapping 30 accuracy: 0.7321428571428571
+mapping 31 accuracy: 0.7321428571428571
+mapping 32 accuracy: 0.7321428571428571
+mapping 33 accuracy: 0.75
+mapping 34 accuracy: 0.7142857142857143
+mapping 35 accuracy: 0.6785714285714286
+mapping 36 accuracy: 0.6964285714285714
+mapping 37 accuracy: 0.6607142857142857
+mapping 38 accuracy: 0.6785714285714286
+mapping 39 accuracy: 0.7321428571428571
+evaluate mapping finished. best mappings: [21, 22, 13, 16, 25]
+mapping 21 accuracy on dev after train: 0.8035714285714286
+mapping 22 accuracy on dev after train: 0.8035714285714286
+mapping 13 accuracy on dev after train: 0.7857142857142857
+mapping 16 accuracy on dev after train: 0.7678571428571429
+mapping 25 accuracy on dev after train: 0.8035714285714286
+after train mapping 21 selected.
+--------------------
+iteration: 39 time: 2026-07-29 10:12:49.962950
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.5416666666666666
+mapping 1 accuracy: 0.5833333333333334
+mapping 2 accuracy: 0.5
+mapping 3 accuracy: 0.7083333333333334
+mapping 4 accuracy: 0.5416666666666666
+mapping 5 accuracy: 0.5416666666666666
+mapping 6 accuracy: 0.6666666666666666
+mapping 7 accuracy: 0.5833333333333334
+mapping 8 accuracy: 0.4583333333333333
+mapping 9 accuracy: 0.5416666666666666
+mapping 10 accuracy: 0.4583333333333333
+mapping 11 accuracy: 0.5
+mapping 12 accuracy: 0.5833333333333334
+mapping 13 accuracy: 0.5416666666666666
+mapping 14 accuracy: 0.625
+mapping 15 accuracy: 0.5
+mapping 16 accuracy: 0.5416666666666666
+mapping 17 accuracy: 0.4583333333333333
+mapping 18 accuracy: 0.5416666666666666
+mapping 19 accuracy: 0.5
+mapping 20 accuracy: 0.4583333333333333
+mapping 21 accuracy: 0.4583333333333333
+mapping 22 accuracy: 0.6666666666666666
+mapping 23 accuracy: 0.5
+mapping 24 accuracy: 0.5833333333333334
+mapping 25 accuracy: 0.5416666666666666
+mapping 26 accuracy: 0.4583333333333333
+mapping 27 accuracy: 0.5
+mapping 28 accuracy: 0.7083333333333334
+mapping 29 accuracy: 0.4583333333333333
+mapping 30 accuracy: 0.6666666666666666
+mapping 31 accuracy: 0.4166666666666667
+mapping 32 accuracy: 0.3333333333333333
+mapping 33 accuracy: 0.5833333333333334
+mapping 34 accuracy: 0.5416666666666666
+mapping 35 accuracy: 0.375
+mapping 36 accuracy: 0.5833333333333334
+mapping 37 accuracy: 0.3333333333333333
+mapping 38 accuracy: 0.4166666666666667
+mapping 39 accuracy: 0.5416666666666666
+evaluate mapping finished. best mappings: [3, 28, 6, 22, 30]
+mapping 3 accuracy on dev after train: 0.5416666666666666
+mapping 28 accuracy on dev after train: 0.6666666666666666
+mapping 6 accuracy on dev after train: 0.6666666666666666
+mapping 22 accuracy on dev after train: 0.6666666666666666
+mapping 30 accuracy on dev after train: 0.5416666666666666
+after train mapping 28 selected.
+model saved at iteration 39
+--------------------
+iteration: 40 time: 2026-07-29 10:17:21.762855
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9166666666666666
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9166666666666666
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [2, 4, 5, 9, 10]
+mapping 2 accuracy on dev after train: 0.8333333333333334
+mapping 4 accuracy on dev after train: 0.8333333333333334
+mapping 5 accuracy on dev after train: 0.875
+mapping 9 accuracy on dev after train: 0.75
+mapping 10 accuracy on dev after train: 0.8333333333333334
+after train mapping 5 selected.
+--------------------
+iteration: 41 time: 2026-07-29 10:19:37.221903
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.7678571428571429
+mapping 1 accuracy: 0.7678571428571429
+mapping 2 accuracy: 0.75
+mapping 3 accuracy: 0.7321428571428571
+mapping 4 accuracy: 0.7142857142857143
+mapping 5 accuracy: 0.75
+mapping 6 accuracy: 0.7678571428571429
+mapping 7 accuracy: 0.75
+mapping 8 accuracy: 0.7321428571428571
+mapping 9 accuracy: 0.7678571428571429
+mapping 10 accuracy: 0.7678571428571429
+mapping 11 accuracy: 0.7321428571428571
+mapping 12 accuracy: 0.7321428571428571
+mapping 13 accuracy: 0.7142857142857143
+mapping 14 accuracy: 0.7678571428571429
+mapping 15 accuracy: 0.7678571428571429
+mapping 16 accuracy: 0.6964285714285714
+mapping 17 accuracy: 0.7678571428571429
+mapping 18 accuracy: 0.75
+mapping 19 accuracy: 0.7678571428571429
+mapping 20 accuracy: 0.75
+mapping 21 accuracy: 0.7142857142857143
+mapping 22 accuracy: 0.7321428571428571
+mapping 23 accuracy: 0.7678571428571429
+mapping 24 accuracy: 0.75
+mapping 25 accuracy: 0.7142857142857143
+mapping 26 accuracy: 0.7678571428571429
+mapping 27 accuracy: 0.7321428571428571
+mapping 28 accuracy: 0.6964285714285714
+mapping 29 accuracy: 0.7321428571428571
+mapping 30 accuracy: 0.75
+mapping 31 accuracy: 0.7678571428571429
+mapping 32 accuracy: 0.7678571428571429
+mapping 33 accuracy: 0.75
+mapping 34 accuracy: 0.75
+mapping 35 accuracy: 0.7678571428571429
+mapping 36 accuracy: 0.75
+mapping 37 accuracy: 0.75
+mapping 38 accuracy: 0.7321428571428571
+mapping 39 accuracy: 0.75
+evaluate mapping finished. best mappings: [0, 1, 6, 9, 10]
+mapping 0 accuracy on dev after train: 0.8035714285714286
+mapping 1 accuracy on dev after train: 0.75
+mapping 6 accuracy on dev after train: 0.8571428571428571
+mapping 9 accuracy on dev after train: 0.8392857142857143
+mapping 10 accuracy on dev after train: 0.75
+after train mapping 6 selected.
+--------------------
+iteration: 42 time: 2026-07-29 10:25:39.782443
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9166666666666666
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+mapping 16 accuracy: 0.9166666666666666
+mapping 17 accuracy: 0.9166666666666666
+mapping 18 accuracy: 0.9583333333333334
+mapping 19 accuracy: 0.9583333333333334
+mapping 20 accuracy: 0.9583333333333334
+mapping 21 accuracy: 0.9583333333333334
+mapping 22 accuracy: 0.9583333333333334
+mapping 23 accuracy: 0.9166666666666666
+mapping 24 accuracy: 0.9583333333333334
+mapping 25 accuracy: 0.9583333333333334
+mapping 26 accuracy: 0.9583333333333334
+mapping 27 accuracy: 0.9166666666666666
+mapping 28 accuracy: 0.9583333333333334
+mapping 29 accuracy: 0.9583333333333334
+mapping 30 accuracy: 0.9583333333333334
+mapping 31 accuracy: 0.9583333333333334
+mapping 32 accuracy: 0.9583333333333334
+mapping 33 accuracy: 0.9583333333333334
+mapping 34 accuracy: 0.9166666666666666
+mapping 35 accuracy: 0.9583333333333334
+mapping 36 accuracy: 0.9583333333333334
+mapping 37 accuracy: 0.9583333333333334
+mapping 38 accuracy: 0.9583333333333334
+mapping 39 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.75
+mapping 3 accuracy on dev after train: 0.875
+mapping 4 accuracy on dev after train: 0.7916666666666666
+after train mapping 0 selected.
+--------------------
+iteration: 43 time: 2026-07-29 10:29:03.296089
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.7857142857142857
+mapping 1 accuracy: 0.7678571428571429
+mapping 2 accuracy: 0.75
+mapping 3 accuracy: 0.7857142857142857
+mapping 4 accuracy: 0.7678571428571429
+mapping 5 accuracy: 0.7857142857142857
+mapping 6 accuracy: 0.7678571428571429
+mapping 7 accuracy: 0.8035714285714286
+mapping 8 accuracy: 0.7678571428571429
+mapping 9 accuracy: 0.7678571428571429
+mapping 10 accuracy: 0.7857142857142857
+mapping 11 accuracy: 0.7678571428571429
+mapping 12 accuracy: 0.7857142857142857
+mapping 13 accuracy: 0.8035714285714286
+mapping 14 accuracy: 0.7857142857142857
+mapping 15 accuracy: 0.7678571428571429
+mapping 16 accuracy: 0.7857142857142857
+mapping 17 accuracy: 0.7857142857142857
+mapping 18 accuracy: 0.7857142857142857
+mapping 19 accuracy: 0.7678571428571429
+mapping 20 accuracy: 0.7321428571428571
+mapping 21 accuracy: 0.7678571428571429
+mapping 22 accuracy: 0.7857142857142857
+mapping 23 accuracy: 0.75
+mapping 24 accuracy: 0.7678571428571429
+mapping 25 accuracy: 0.7857142857142857
+mapping 26 accuracy: 0.8035714285714286
+mapping 27 accuracy: 0.8035714285714286
+mapping 28 accuracy: 0.6785714285714286
+mapping 29 accuracy: 0.7321428571428571
+mapping 30 accuracy: 0.7678571428571429
+mapping 31 accuracy: 0.7321428571428571
+mapping 32 accuracy: 0.7142857142857143
+mapping 33 accuracy: 0.75
+mapping 34 accuracy: 0.7678571428571429
+mapping 35 accuracy: 0.7857142857142857
+mapping 36 accuracy: 0.7857142857142857
+mapping 37 accuracy: 0.75
+mapping 38 accuracy: 0.7857142857142857
+mapping 39 accuracy: 0.7857142857142857
+evaluate mapping finished. best mappings: [7, 13, 26, 27, 0]
+mapping 7 accuracy on dev after train: 0.8392857142857143
+mapping 13 accuracy on dev after train: 0.8571428571428571
+mapping 26 accuracy on dev after train: 0.8035714285714286
+mapping 27 accuracy on dev after train: 0.8035714285714286
+mapping 0 accuracy on dev after train: 0.8392857142857143
+after train mapping 13 selected.
+--------------------
+iteration: 44 time: 2026-07-29 10:35:06.292804
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.7916666666666666
+mapping 1 accuracy on dev after train: 0.8333333333333334
+mapping 2 accuracy on dev after train: 0.7916666666666666
+mapping 3 accuracy on dev after train: 0.8333333333333334
+mapping 4 accuracy on dev after train: 0.8333333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 45 time: 2026-07-29 10:36:58.298274
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.7083333333333334
+mapping 1 accuracy: 0.7083333333333334
+mapping 2 accuracy: 0.6666666666666666
+evaluate mapping finished. best mappings: [0, 1, 2]
+mapping 0 accuracy on dev after train: 0.5416666666666666
+mapping 1 accuracy on dev after train: 0.625
+mapping 2 accuracy on dev after train: 0.625
+after train mapping 1 selected.
+--------------------
+iteration: 46 time: 2026-07-29 10:38:02.758186
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.5416666666666666
+mapping 1 accuracy: 0.5833333333333334
+mapping 2 accuracy: 0.5833333333333334
+mapping 3 accuracy: 0.5833333333333334
+mapping 4 accuracy: 0.5833333333333334
+mapping 5 accuracy: 0.5833333333333334
+mapping 6 accuracy: 0.625
+mapping 7 accuracy: 0.625
+mapping 8 accuracy: 0.6666666666666666
+mapping 9 accuracy: 0.6666666666666666
+mapping 10 accuracy: 0.625
+mapping 11 accuracy: 0.625
+mapping 12 accuracy: 0.5833333333333334
+mapping 13 accuracy: 0.5833333333333334
+mapping 14 accuracy: 0.6666666666666666
+mapping 15 accuracy: 0.6666666666666666
+mapping 16 accuracy: 0.7083333333333334
+mapping 17 accuracy: 0.75
+evaluate mapping finished. best mappings: [17, 16, 8, 9, 14]
+mapping 17 accuracy on dev after train: 0.625
+mapping 16 accuracy on dev after train: 0.75
+mapping 8 accuracy on dev after train: 0.7916666666666666
+mapping 9 accuracy on dev after train: 0.8333333333333334
+mapping 14 accuracy on dev after train: 0.8333333333333334
+after train mapping 9 selected.
+--------------------
+iteration: 47 time: 2026-07-29 10:40:27.877744
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.75
+mapping 1 accuracy: 0.75
+mapping 2 accuracy: 0.75
+mapping 3 accuracy: 0.75
+mapping 4 accuracy: 0.75
+mapping 5 accuracy: 0.75
+mapping 6 accuracy: 0.75
+mapping 7 accuracy: 0.75
+mapping 8 accuracy: 0.75
+mapping 9 accuracy: 0.75
+mapping 10 accuracy: 0.75
+mapping 11 accuracy: 0.75
+mapping 12 accuracy: 0.75
+mapping 13 accuracy: 0.75
+mapping 14 accuracy: 0.75
+mapping 15 accuracy: 0.75
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.8333333333333334
+mapping 1 accuracy on dev after train: 0.9583333333333334
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 0.8333333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 48 time: 2026-07-29 10:42:48.874433
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.9166666666666666
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9166666666666666
+mapping 6 accuracy: 0.9166666666666666
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.9166666666666666
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.9583333333333334
+mapping 17 accuracy: 0.9166666666666666
+mapping 18 accuracy: 0.9166666666666666
+mapping 19 accuracy: 0.9166666666666666
+mapping 20 accuracy: 0.9166666666666666
+mapping 21 accuracy: 0.9166666666666666
+mapping 22 accuracy: 0.9166666666666666
+mapping 23 accuracy: 0.9583333333333334
+mapping 24 accuracy: 0.9166666666666666
+mapping 25 accuracy: 0.9166666666666666
+mapping 26 accuracy: 0.9166666666666666
+mapping 27 accuracy: 0.9583333333333334
+mapping 28 accuracy: 0.9166666666666666
+mapping 29 accuracy: 0.9166666666666666
+mapping 30 accuracy: 0.9583333333333334
+mapping 31 accuracy: 0.9166666666666666
+mapping 32 accuracy: 0.9583333333333334
+mapping 33 accuracy: 0.9166666666666666
+mapping 34 accuracy: 0.9583333333333334
+mapping 35 accuracy: 0.9166666666666666
+mapping 36 accuracy: 0.9166666666666666
+mapping 37 accuracy: 0.9166666666666666
+mapping 38 accuracy: 0.9166666666666666
+mapping 39 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [4, 8, 14, 16, 23]
+mapping 4 accuracy on dev after train: 0.875
+mapping 8 accuracy on dev after train: 0.875
+mapping 14 accuracy on dev after train: 0.9166666666666666
+mapping 16 accuracy on dev after train: 0.8333333333333334
+mapping 23 accuracy on dev after train: 0.9583333333333334
+after train mapping 23 selected.
+--------------------
+iteration: 49 time: 2026-07-29 10:46:22.881898
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.4583333333333333
+mapping 1 accuracy: 0.5833333333333334
+mapping 2 accuracy: 0.6666666666666666
+mapping 3 accuracy: 0.625
+mapping 4 accuracy: 0.5416666666666666
+mapping 5 accuracy: 0.5
+mapping 6 accuracy: 0.625
+mapping 7 accuracy: 0.7083333333333334
+mapping 8 accuracy: 0.4583333333333333
+mapping 9 accuracy: 0.5833333333333334
+mapping 10 accuracy: 0.5833333333333334
+mapping 11 accuracy: 0.5416666666666666
+mapping 12 accuracy: 0.6666666666666666
+mapping 13 accuracy: 0.4583333333333333
+mapping 14 accuracy: 0.7083333333333334
+mapping 15 accuracy: 0.5
+mapping 16 accuracy: 0.5
+mapping 17 accuracy: 0.5
+mapping 18 accuracy: 0.4583333333333333
+mapping 19 accuracy: 0.5
+mapping 20 accuracy: 0.4583333333333333
+mapping 21 accuracy: 0.5416666666666666
+mapping 22 accuracy: 0.5833333333333334
+mapping 23 accuracy: 0.5833333333333334
+mapping 24 accuracy: 0.625
+mapping 25 accuracy: 0.375
+mapping 26 accuracy: 0.5416666666666666
+mapping 27 accuracy: 0.375
+mapping 28 accuracy: 0.5
+mapping 29 accuracy: 0.4166666666666667
+mapping 30 accuracy: 0.625
+mapping 31 accuracy: 0.5416666666666666
+mapping 32 accuracy: 0.375
+mapping 33 accuracy: 0.625
+mapping 34 accuracy: 0.625
+mapping 35 accuracy: 0.4166666666666667
+mapping 36 accuracy: 0.5416666666666666
+mapping 37 accuracy: 0.5
+mapping 38 accuracy: 0.4166666666666667
+mapping 39 accuracy: 0.5833333333333334
+evaluate mapping finished. best mappings: [7, 14, 2, 12, 3]
+mapping 7 accuracy on dev after train: 0.75
+mapping 14 accuracy on dev after train: 0.6666666666666666
+mapping 2 accuracy on dev after train: 0.625
+mapping 12 accuracy on dev after train: 0.5833333333333334
+mapping 3 accuracy on dev after train: 0.625
+after train mapping 7 selected.
+model saved at iteration 49
+--------------------
+iteration: 50 time: 2026-07-29 10:51:18.996809
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.8333333333333334
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.9166666666666666
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.875
+mapping 9 accuracy: 0.875
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.875
+mapping 12 accuracy: 0.8333333333333334
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.8333333333333334
+mapping 16 accuracy: 0.8333333333333334
+mapping 17 accuracy: 0.875
+mapping 18 accuracy: 0.875
+mapping 19 accuracy: 0.8333333333333334
+mapping 20 accuracy: 0.8333333333333334
+mapping 21 accuracy: 0.8333333333333334
+mapping 22 accuracy: 0.9166666666666666
+mapping 23 accuracy: 0.8333333333333334
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.7916666666666666
+mapping 27 accuracy: 0.875
+mapping 28 accuracy: 0.75
+mapping 29 accuracy: 0.9166666666666666
+mapping 30 accuracy: 0.9166666666666666
+mapping 31 accuracy: 0.875
+mapping 32 accuracy: 0.875
+mapping 33 accuracy: 0.875
+mapping 34 accuracy: 0.8333333333333334
+mapping 35 accuracy: 0.875
+mapping 36 accuracy: 0.8333333333333334
+mapping 37 accuracy: 0.875
+mapping 38 accuracy: 0.8333333333333334
+mapping 39 accuracy: 0.8333333333333334
+evaluate mapping finished. best mappings: [2, 3, 22, 29, 30]
+mapping 2 accuracy on dev after train: 0.8333333333333334
+mapping 3 accuracy on dev after train: 0.875
+mapping 22 accuracy on dev after train: 0.875
+mapping 29 accuracy on dev after train: 0.9166666666666666
+mapping 30 accuracy on dev after train: 0.9166666666666666
+after train mapping 29 selected.
+--------------------
+iteration: 51 time: 2026-07-29 10:55:04.235523
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.9166666666666666
+mapping 5 accuracy: 0.9166666666666666
+mapping 6 accuracy: 0.9166666666666666
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.9166666666666666
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.9166666666666666
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.9166666666666666
+mapping 17 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [8, 12, 0, 1, 4]
+mapping 8 accuracy on dev after train: 1.0
+mapping 12 accuracy on dev after train: 0.9166666666666666
+mapping 0 accuracy on dev after train: 0.9583333333333334
+mapping 1 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9583333333333334
+after train mapping 8 selected.
+--------------------
+iteration: 52 time: 2026-07-29 10:57:37.908518
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.8333333333333334
+mapping 1 accuracy: 0.8333333333333334
+mapping 2 accuracy: 0.8333333333333334
+mapping 3 accuracy: 0.8333333333333334
+mapping 4 accuracy: 0.8333333333333334
+mapping 5 accuracy: 0.8333333333333334
+mapping 6 accuracy: 0.8333333333333334
+mapping 7 accuracy: 0.8333333333333334
+mapping 8 accuracy: 0.8333333333333334
+mapping 9 accuracy: 0.8333333333333334
+mapping 10 accuracy: 0.7916666666666666
+mapping 11 accuracy: 0.8333333333333334
+mapping 12 accuracy: 0.8333333333333334
+mapping 13 accuracy: 0.8333333333333334
+mapping 14 accuracy: 0.8333333333333334
+mapping 15 accuracy: 0.8333333333333334
+mapping 16 accuracy: 0.8333333333333334
+mapping 17 accuracy: 0.7916666666666666
+mapping 18 accuracy: 0.8333333333333334
+mapping 19 accuracy: 0.7916666666666666
+mapping 20 accuracy: 0.8333333333333334
+mapping 21 accuracy: 0.8333333333333334
+mapping 22 accuracy: 0.7916666666666666
+mapping 23 accuracy: 0.8333333333333334
+mapping 24 accuracy: 0.8333333333333334
+mapping 25 accuracy: 0.8333333333333334
+mapping 26 accuracy: 0.8333333333333334
+mapping 27 accuracy: 0.8333333333333334
+mapping 28 accuracy: 0.8333333333333334
+mapping 29 accuracy: 0.8333333333333334
+mapping 30 accuracy: 0.8333333333333334
+mapping 31 accuracy: 0.8333333333333334
+mapping 32 accuracy: 0.8333333333333334
+mapping 33 accuracy: 0.8333333333333334
+mapping 34 accuracy: 0.8333333333333334
+mapping 35 accuracy: 0.8333333333333334
+mapping 36 accuracy: 0.8333333333333334
+mapping 37 accuracy: 0.8333333333333334
+mapping 38 accuracy: 0.8333333333333334
+mapping 39 accuracy: 0.7916666666666666
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.9583333333333334
+mapping 1 accuracy on dev after train: 0.9583333333333334
+mapping 2 accuracy on dev after train: 1.0
+mapping 3 accuracy on dev after train: 1.0
+mapping 4 accuracy on dev after train: 1.0
+after train mapping 2 selected.
+--------------------
+iteration: 53 time: 2026-07-29 11:01:33.334310
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.9107142857142857
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.8928571428571429
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.9107142857142857
+mapping 6 accuracy: 0.8571428571428571
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.875
+mapping 9 accuracy: 0.8928571428571429
+mapping 10 accuracy: 0.8928571428571429
+mapping 11 accuracy: 0.9107142857142857
+mapping 12 accuracy: 0.8571428571428571
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.8571428571428571
+mapping 16 accuracy: 0.875
+mapping 17 accuracy: 0.8571428571428571
+mapping 18 accuracy: 0.8392857142857143
+mapping 19 accuracy: 0.8928571428571429
+mapping 20 accuracy: 0.8928571428571429
+mapping 21 accuracy: 0.8571428571428571
+mapping 22 accuracy: 0.8571428571428571
+mapping 23 accuracy: 0.8571428571428571
+mapping 24 accuracy: 0.8571428571428571
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.9107142857142857
+mapping 27 accuracy: 0.875
+mapping 28 accuracy: 0.8928571428571429
+mapping 29 accuracy: 0.9107142857142857
+mapping 30 accuracy: 0.8571428571428571
+mapping 31 accuracy: 0.8571428571428571
+mapping 32 accuracy: 0.8571428571428571
+mapping 33 accuracy: 0.875
+mapping 34 accuracy: 0.8571428571428571
+mapping 35 accuracy: 0.8928571428571429
+mapping 36 accuracy: 0.8928571428571429
+mapping 37 accuracy: 0.875
+mapping 38 accuracy: 0.8214285714285714
+mapping 39 accuracy: 0.8928571428571429
+evaluate mapping finished. best mappings: [1, 5, 11, 26, 29]
+mapping 1 accuracy on dev after train: 0.8392857142857143
+mapping 5 accuracy on dev after train: 0.8392857142857143
+mapping 11 accuracy on dev after train: 0.8392857142857143
+mapping 26 accuracy on dev after train: 0.8035714285714286
+mapping 29 accuracy on dev after train: 0.8035714285714286
+after train mapping 1 selected.
+--------------------
+iteration: 54 time: 2026-07-29 11:08:08.271693
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.4583333333333333
+mapping 1 accuracy: 0.625
+evaluate mapping finished. best mappings: [1, 0]
+mapping 1 accuracy on dev after train: 0.5833333333333334
+mapping 0 accuracy on dev after train: 0.625
+after train mapping 0 selected.
+--------------------
+iteration: 55 time: 2026-07-29 11:08:55.523992
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.7916666666666666
+mapping 5 accuracy: 0.8333333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.7916666666666666
+mapping 10 accuracy: 0.5833333333333334
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.875
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.7916666666666666
+mapping 15 accuracy: 0.9583333333333334
+mapping 16 accuracy: 0.9583333333333334
+mapping 17 accuracy: 0.9583333333333334
+mapping 18 accuracy: 0.9583333333333334
+mapping 19 accuracy: 0.9583333333333334
+mapping 20 accuracy: 0.9583333333333334
+mapping 21 accuracy: 0.75
+mapping 22 accuracy: 0.875
+mapping 23 accuracy: 0.75
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.8333333333333334
+mapping 26 accuracy: 0.8333333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 6, 8]
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 6 accuracy on dev after train: 0.875
+mapping 8 accuracy on dev after train: 0.9166666666666666
+after train mapping 2 selected.
+--------------------
+iteration: 56 time: 2026-07-29 11:12:09.138347
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.7083333333333334
+mapping 5 accuracy: 0.9166666666666666
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.6666666666666666
+mapping 8 accuracy: 0.875
+mapping 9 accuracy: 0.75
+mapping 10 accuracy: 0.7083333333333334
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.7916666666666666
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.9166666666666666
+mapping 17 accuracy: 0.9166666666666666
+mapping 18 accuracy: 0.6666666666666666
+mapping 19 accuracy: 0.9166666666666666
+mapping 20 accuracy: 0.9166666666666666
+mapping 21 accuracy: 0.75
+mapping 22 accuracy: 0.875
+mapping 23 accuracy: 0.75
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.875
+evaluate mapping finished. best mappings: [12, 0, 1, 3, 5]
+mapping 12 accuracy on dev after train: 0.9166666666666666
+mapping 0 accuracy on dev after train: 0.9583333333333334
+mapping 1 accuracy on dev after train: 0.9583333333333334
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 5 accuracy on dev after train: 0.9583333333333334
+after train mapping 0 selected.
+--------------------
+iteration: 57 time: 2026-07-29 11:15:21.056113
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.875
+mapping 3 accuracy on dev after train: 0.875
+mapping 4 accuracy on dev after train: 0.9166666666666666
+after train mapping 4 selected.
+--------------------
+iteration: 58 time: 2026-07-29 11:17:29.681102
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.9166666666666666
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.9166666666666666
+mapping 5 accuracy: 0.9166666666666666
+mapping 6 accuracy: 0.9166666666666666
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9166666666666666
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.9166666666666666
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.9166666666666666
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.9166666666666666
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.9166666666666666
+mapping 17 accuracy: 0.9166666666666666
+mapping 18 accuracy: 0.9166666666666666
+mapping 19 accuracy: 0.9166666666666666
+mapping 20 accuracy: 0.9166666666666666
+mapping 21 accuracy: 0.9166666666666666
+mapping 22 accuracy: 0.9166666666666666
+mapping 23 accuracy: 0.9166666666666666
+mapping 24 accuracy: 0.9166666666666666
+mapping 25 accuracy: 0.9166666666666666
+mapping 26 accuracy: 0.9166666666666666
+mapping 27 accuracy: 0.9166666666666666
+mapping 28 accuracy: 0.9166666666666666
+mapping 29 accuracy: 0.9166666666666666
+mapping 30 accuracy: 0.9166666666666666
+mapping 31 accuracy: 0.9166666666666666
+mapping 32 accuracy: 0.9166666666666666
+mapping 33 accuracy: 0.9166666666666666
+mapping 34 accuracy: 0.9166666666666666
+mapping 35 accuracy: 0.9166666666666666
+mapping 36 accuracy: 0.9166666666666666
+mapping 37 accuracy: 0.9166666666666666
+mapping 38 accuracy: 0.9166666666666666
+mapping 39 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 1.0
+mapping 1 accuracy on dev after train: 1.0
+mapping 2 accuracy on dev after train: 1.0
+mapping 3 accuracy on dev after train: 1.0
+mapping 4 accuracy on dev after train: 1.0
+after train mapping 0 selected.
+--------------------
+iteration: 59 time: 2026-07-29 11:21:30.458218
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.7857142857142857
+mapping 1 accuracy: 0.75
+mapping 2 accuracy: 0.7678571428571429
+mapping 3 accuracy: 0.7678571428571429
+mapping 4 accuracy: 0.7857142857142857
+mapping 5 accuracy: 0.75
+mapping 6 accuracy: 0.7678571428571429
+mapping 7 accuracy: 0.7678571428571429
+mapping 8 accuracy: 0.7678571428571429
+mapping 9 accuracy: 0.75
+mapping 10 accuracy: 0.7857142857142857
+mapping 11 accuracy: 0.7678571428571429
+mapping 12 accuracy: 0.7678571428571429
+mapping 13 accuracy: 0.7678571428571429
+mapping 14 accuracy: 0.7857142857142857
+mapping 15 accuracy: 0.75
+mapping 16 accuracy: 0.7678571428571429
+mapping 17 accuracy: 0.75
+mapping 18 accuracy: 0.7678571428571429
+mapping 19 accuracy: 0.7857142857142857
+mapping 20 accuracy: 0.7142857142857143
+mapping 21 accuracy: 0.7857142857142857
+mapping 22 accuracy: 0.7678571428571429
+mapping 23 accuracy: 0.75
+mapping 24 accuracy: 0.7678571428571429
+mapping 25 accuracy: 0.7678571428571429
+mapping 26 accuracy: 0.7857142857142857
+mapping 27 accuracy: 0.7678571428571429
+mapping 28 accuracy: 0.7142857142857143
+mapping 29 accuracy: 0.7857142857142857
+mapping 30 accuracy: 0.75
+mapping 31 accuracy: 0.8035714285714286
+mapping 32 accuracy: 0.7678571428571429
+mapping 33 accuracy: 0.7678571428571429
+mapping 34 accuracy: 0.7678571428571429
+mapping 35 accuracy: 0.7678571428571429
+mapping 36 accuracy: 0.7678571428571429
+mapping 37 accuracy: 0.7678571428571429
+mapping 38 accuracy: 0.7678571428571429
+mapping 39 accuracy: 0.7678571428571429
+evaluate mapping finished. best mappings: [31, 0, 4, 10, 14]
+mapping 31 accuracy on dev after train: 0.8392857142857143
+mapping 0 accuracy on dev after train: 0.8571428571428571
+mapping 4 accuracy on dev after train: 0.8392857142857143
+mapping 10 accuracy on dev after train: 0.8392857142857143
+mapping 14 accuracy on dev after train: 0.8392857142857143
+after train mapping 0 selected.
+model saved at iteration 59
+--------------------
+iteration: 60 time: 2026-07-29 11:29:16.487792
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.7857142857142857
+mapping 1 accuracy: 0.7857142857142857
+mapping 2 accuracy: 0.7857142857142857
+mapping 3 accuracy: 0.8035714285714286
+mapping 4 accuracy: 0.7857142857142857
+mapping 5 accuracy: 0.7857142857142857
+mapping 6 accuracy: 0.7857142857142857
+mapping 7 accuracy: 0.8035714285714286
+mapping 8 accuracy: 0.7857142857142857
+mapping 9 accuracy: 0.8035714285714286
+mapping 10 accuracy: 0.7857142857142857
+mapping 11 accuracy: 0.8035714285714286
+mapping 12 accuracy: 0.7857142857142857
+mapping 13 accuracy: 0.8035714285714286
+mapping 14 accuracy: 0.8035714285714286
+mapping 15 accuracy: 0.7857142857142857
+mapping 16 accuracy: 0.7857142857142857
+mapping 17 accuracy: 0.8035714285714286
+mapping 18 accuracy: 0.7857142857142857
+mapping 19 accuracy: 0.8035714285714286
+mapping 20 accuracy: 0.7857142857142857
+mapping 21 accuracy: 0.7857142857142857
+mapping 22 accuracy: 0.7678571428571429
+mapping 23 accuracy: 0.7321428571428571
+mapping 24 accuracy: 0.8035714285714286
+mapping 25 accuracy: 0.7857142857142857
+mapping 26 accuracy: 0.8035714285714286
+mapping 27 accuracy: 0.7857142857142857
+mapping 28 accuracy: 0.75
+mapping 29 accuracy: 0.7857142857142857
+mapping 30 accuracy: 0.7678571428571429
+mapping 31 accuracy: 0.7678571428571429
+mapping 32 accuracy: 0.7321428571428571
+mapping 33 accuracy: 0.7857142857142857
+mapping 34 accuracy: 0.7857142857142857
+mapping 35 accuracy: 0.7678571428571429
+mapping 36 accuracy: 0.75
+mapping 37 accuracy: 0.7857142857142857
+mapping 38 accuracy: 0.6964285714285714
+mapping 39 accuracy: 0.8035714285714286
+evaluate mapping finished. best mappings: [3, 7, 9, 11, 13]
+mapping 3 accuracy on dev after train: 0.8571428571428571
+mapping 7 accuracy on dev after train: 0.8571428571428571
+mapping 9 accuracy on dev after train: 0.8392857142857143
+mapping 11 accuracy on dev after train: 0.7678571428571429
+mapping 13 accuracy on dev after train: 0.8035714285714286
+after train mapping 3 selected.
+--------------------
+iteration: 61 time: 2026-07-29 11:35:53.163946
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 1.0
+mapping 1 accuracy on dev after train: 1.0
+mapping 2 accuracy on dev after train: 0.9583333333333334
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9583333333333334
+after train mapping 0 selected.
+--------------------
+iteration: 62 time: 2026-07-29 11:38:29.119123
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.6666666666666666
+mapping 1 accuracy: 0.6666666666666666
+mapping 2 accuracy: 0.625
+evaluate mapping finished. best mappings: [0, 1, 2]
+mapping 0 accuracy on dev after train: 0.5416666666666666
+mapping 1 accuracy on dev after train: 0.6666666666666666
+mapping 2 accuracy on dev after train: 0.5833333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 63 time: 2026-07-29 11:39:40.634849
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.8333333333333334
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.875
+mapping 9 accuracy: 0.875
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.875
+mapping 12 accuracy: 0.8333333333333334
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.875
+mapping 16 accuracy: 0.8333333333333334
+mapping 17 accuracy: 0.875
+evaluate mapping finished. best mappings: [1, 2, 3, 4, 5]
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.9583333333333334
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 0.9166666666666666
+mapping 5 accuracy on dev after train: 0.875
+after train mapping 2 selected.
+--------------------
+iteration: 64 time: 2026-07-29 11:42:23.183158
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.9166666666666666
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.7916666666666666
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.8333333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.8333333333333334
+mapping 17 accuracy: 0.8333333333333334
+mapping 18 accuracy: 0.9166666666666666
+mapping 19 accuracy: 0.9583333333333334
+mapping 20 accuracy: 0.9166666666666666
+mapping 21 accuracy: 0.7916666666666666
+mapping 22 accuracy: 0.9583333333333334
+mapping 23 accuracy: 0.7916666666666666
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.9166666666666666
+mapping 26 accuracy: 0.875
+evaluate mapping finished. best mappings: [0, 1, 2, 5, 6]
+mapping 0 accuracy on dev after train: 0.9166666666666666
+mapping 1 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 5 accuracy on dev after train: 0.9583333333333334
+mapping 6 accuracy on dev after train: 0.9583333333333334
+after train mapping 5 selected.
+--------------------
+iteration: 65 time: 2026-07-29 11:45:39.241906
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.9583333333333334
+mapping 1 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.8333333333333334
+after train mapping 0 selected.
+--------------------
+iteration: 66 time: 2026-07-29 11:47:48.065672
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.5833333333333334
+mapping 1 accuracy: 0.5833333333333334
+mapping 2 accuracy: 0.5416666666666666
+evaluate mapping finished. best mappings: [0, 1, 2]
+mapping 0 accuracy on dev after train: 0.4166666666666667
+mapping 1 accuracy on dev after train: 0.4166666666666667
+mapping 2 accuracy on dev after train: 0.3333333333333333
+after train mapping 0 selected.
+--------------------
+iteration: 67 time: 2026-07-29 11:49:00.533153
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.5416666666666666
+mapping 1 accuracy: 0.5416666666666666
+mapping 2 accuracy: 0.625
+evaluate mapping finished. best mappings: [2, 0, 1]
+mapping 2 accuracy on dev after train: 0.5416666666666666
+mapping 0 accuracy on dev after train: 0.5416666666666666
+mapping 1 accuracy on dev after train: 0.625
+after train mapping 1 selected.
+--------------------
+iteration: 68 time: 2026-07-29 11:50:12.679701
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.5416666666666666
+mapping 1 accuracy: 0.5416666666666666
+mapping 2 accuracy: 0.5416666666666666
+evaluate mapping finished. best mappings: [0, 1, 2]
+mapping 0 accuracy on dev after train: 0.625
+mapping 1 accuracy on dev after train: 0.5416666666666666
+mapping 2 accuracy on dev after train: 0.5833333333333334
+after train mapping 0 selected.
+--------------------
+iteration: 69 time: 2026-07-29 11:51:24.768576
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.8214285714285714
+mapping 1 accuracy: 0.8571428571428571
+mapping 2 accuracy: 0.8571428571428571
+mapping 3 accuracy: 0.8392857142857143
+mapping 4 accuracy: 0.8035714285714286
+mapping 5 accuracy: 0.8571428571428571
+mapping 6 accuracy: 0.8571428571428571
+mapping 7 accuracy: 0.8214285714285714
+mapping 8 accuracy: 0.8571428571428571
+mapping 9 accuracy: 0.8571428571428571
+mapping 10 accuracy: 0.8214285714285714
+mapping 11 accuracy: 0.8571428571428571
+mapping 12 accuracy: 0.8392857142857143
+mapping 13 accuracy: 0.8392857142857143
+mapping 14 accuracy: 0.8214285714285714
+mapping 15 accuracy: 0.8571428571428571
+mapping 16 accuracy: 0.8035714285714286
+mapping 17 accuracy: 0.8571428571428571
+mapping 18 accuracy: 0.8571428571428571
+mapping 19 accuracy: 0.8214285714285714
+mapping 20 accuracy: 0.8214285714285714
+mapping 21 accuracy: 0.8035714285714286
+mapping 22 accuracy: 0.8392857142857143
+mapping 23 accuracy: 0.8571428571428571
+mapping 24 accuracy: 0.8571428571428571
+mapping 25 accuracy: 0.8571428571428571
+mapping 26 accuracy: 0.8214285714285714
+mapping 27 accuracy: 0.8392857142857143
+mapping 28 accuracy: 0.8214285714285714
+mapping 29 accuracy: 0.8214285714285714
+mapping 30 accuracy: 0.8571428571428571
+mapping 31 accuracy: 0.8035714285714286
+mapping 32 accuracy: 0.8392857142857143
+mapping 33 accuracy: 0.7857142857142857
+mapping 34 accuracy: 0.875
+mapping 35 accuracy: 0.8571428571428571
+mapping 36 accuracy: 0.8571428571428571
+mapping 37 accuracy: 0.8571428571428571
+mapping 38 accuracy: 0.8392857142857143
+mapping 39 accuracy: 0.8214285714285714
+evaluate mapping finished. best mappings: [34, 1, 2, 5, 6]
+mapping 34 accuracy on dev after train: 0.8392857142857143
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.8571428571428571
+mapping 5 accuracy on dev after train: 0.8392857142857143
+mapping 6 accuracy on dev after train: 0.8214285714285714
+after train mapping 1 selected.
+model saved at iteration 69
+--------------------
+iteration: 70 time: 2026-07-29 11:59:15.012189
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.8333333333333334
+mapping 1 accuracy: 0.8333333333333334
+mapping 2 accuracy: 0.8333333333333334
+mapping 3 accuracy: 0.8333333333333334
+mapping 4 accuracy: 0.8333333333333334
+mapping 5 accuracy: 0.8333333333333334
+mapping 6 accuracy: 0.8333333333333334
+mapping 7 accuracy: 0.8333333333333334
+mapping 8 accuracy: 0.8333333333333334
+mapping 9 accuracy: 0.8333333333333334
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.8333333333333334
+mapping 12 accuracy: 0.8333333333333334
+mapping 13 accuracy: 0.8333333333333334
+mapping 14 accuracy: 0.8333333333333334
+mapping 15 accuracy: 0.8333333333333334
+mapping 16 accuracy: 0.8333333333333334
+mapping 17 accuracy: 0.875
+mapping 18 accuracy: 0.8333333333333334
+mapping 19 accuracy: 0.8333333333333334
+mapping 20 accuracy: 0.8333333333333334
+mapping 21 accuracy: 0.8333333333333334
+mapping 22 accuracy: 0.8333333333333334
+mapping 23 accuracy: 0.8333333333333334
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.8333333333333334
+mapping 26 accuracy: 0.8333333333333334
+mapping 27 accuracy: 0.8333333333333334
+mapping 28 accuracy: 0.8333333333333334
+mapping 29 accuracy: 0.875
+mapping 30 accuracy: 0.8333333333333334
+mapping 31 accuracy: 0.8333333333333334
+mapping 32 accuracy: 0.8333333333333334
+mapping 33 accuracy: 0.8333333333333334
+mapping 34 accuracy: 0.8333333333333334
+mapping 35 accuracy: 0.8333333333333334
+mapping 36 accuracy: 0.8333333333333334
+mapping 37 accuracy: 0.8333333333333334
+mapping 38 accuracy: 0.875
+mapping 39 accuracy: 0.8333333333333334
+evaluate mapping finished. best mappings: [10, 17, 24, 29, 38]
+mapping 10 accuracy on dev after train: 0.8333333333333334
+mapping 17 accuracy on dev after train: 0.8333333333333334
+mapping 24 accuracy on dev after train: 0.9166666666666666
+mapping 29 accuracy on dev after train: 0.8333333333333334
+mapping 38 accuracy on dev after train: 0.875
+after train mapping 24 selected.
+--------------------
+iteration: 71 time: 2026-07-29 12:03:18.340734
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.9107142857142857
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.8571428571428571
+mapping 3 accuracy: 0.8928571428571429
+mapping 4 accuracy: 0.9107142857142857
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.9107142857142857
+mapping 8 accuracy: 0.875
+mapping 9 accuracy: 0.8928571428571429
+mapping 10 accuracy: 0.9285714285714286
+mapping 11 accuracy: 0.8571428571428571
+mapping 12 accuracy: 0.875
+mapping 13 accuracy: 0.8928571428571429
+mapping 14 accuracy: 0.9107142857142857
+mapping 15 accuracy: 0.875
+mapping 16 accuracy: 0.9107142857142857
+mapping 17 accuracy: 0.8928571428571429
+mapping 18 accuracy: 0.875
+mapping 19 accuracy: 0.9285714285714286
+mapping 20 accuracy: 0.8214285714285714
+mapping 21 accuracy: 0.9285714285714286
+mapping 22 accuracy: 0.9107142857142857
+mapping 23 accuracy: 0.8928571428571429
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.9107142857142857
+mapping 27 accuracy: 0.9107142857142857
+mapping 28 accuracy: 0.8035714285714286
+mapping 29 accuracy: 0.8392857142857143
+mapping 30 accuracy: 0.8928571428571429
+mapping 31 accuracy: 0.8571428571428571
+mapping 32 accuracy: 0.8214285714285714
+mapping 33 accuracy: 0.8571428571428571
+mapping 34 accuracy: 0.875
+mapping 35 accuracy: 0.875
+mapping 36 accuracy: 0.8571428571428571
+mapping 37 accuracy: 0.8571428571428571
+mapping 38 accuracy: 0.8928571428571429
+mapping 39 accuracy: 0.9285714285714286
+evaluate mapping finished. best mappings: [10, 19, 21, 39, 0]
+mapping 10 accuracy on dev after train: 0.7678571428571429
+mapping 19 accuracy on dev after train: 0.8035714285714286
+mapping 21 accuracy on dev after train: 0.75
+mapping 39 accuracy on dev after train: 0.7678571428571429
+mapping 0 accuracy on dev after train: 0.8214285714285714
+after train mapping 0 selected.
+--------------------
+iteration: 72 time: 2026-07-29 12:10:01.800356
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.8392857142857143
+mapping 1 accuracy: 0.8571428571428571
+mapping 2 accuracy: 0.8571428571428571
+mapping 3 accuracy: 0.8571428571428571
+mapping 4 accuracy: 0.8392857142857143
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.8392857142857143
+mapping 7 accuracy: 0.8571428571428571
+mapping 8 accuracy: 0.8571428571428571
+mapping 9 accuracy: 0.8571428571428571
+mapping 10 accuracy: 0.8392857142857143
+mapping 11 accuracy: 0.875
+mapping 12 accuracy: 0.8392857142857143
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.8392857142857143
+mapping 15 accuracy: 0.8571428571428571
+mapping 16 accuracy: 0.8571428571428571
+mapping 17 accuracy: 0.8571428571428571
+mapping 18 accuracy: 0.8571428571428571
+mapping 19 accuracy: 0.8392857142857143
+mapping 20 accuracy: 0.8571428571428571
+mapping 21 accuracy: 0.8392857142857143
+mapping 22 accuracy: 0.8571428571428571
+mapping 23 accuracy: 0.8571428571428571
+mapping 24 accuracy: 0.8571428571428571
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.8392857142857143
+mapping 27 accuracy: 0.8571428571428571
+mapping 28 accuracy: 0.8214285714285714
+mapping 29 accuracy: 0.8571428571428571
+mapping 30 accuracy: 0.875
+mapping 31 accuracy: 0.8392857142857143
+mapping 32 accuracy: 0.8571428571428571
+mapping 33 accuracy: 0.8392857142857143
+mapping 34 accuracy: 0.875
+mapping 35 accuracy: 0.875
+mapping 36 accuracy: 0.8571428571428571
+mapping 37 accuracy: 0.8571428571428571
+mapping 38 accuracy: 0.8571428571428571
+mapping 39 accuracy: 0.8571428571428571
+evaluate mapping finished. best mappings: [5, 11, 13, 25, 30]
+mapping 5 accuracy on dev after train: 0.875
+mapping 11 accuracy on dev after train: 0.875
+mapping 13 accuracy on dev after train: 0.7857142857142857
+mapping 25 accuracy on dev after train: 0.8392857142857143
+mapping 30 accuracy on dev after train: 0.8214285714285714
+after train mapping 5 selected.
+--------------------
+iteration: 73 time: 2026-07-29 12:16:45.389720
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.625
+mapping 1 accuracy: 0.625
+evaluate mapping finished. best mappings: [0, 1]
+mapping 0 accuracy on dev after train: 0.7916666666666666
+mapping 1 accuracy on dev after train: 0.8333333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 74 time: 2026-07-29 12:17:34.073625
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 1.0
+mapping 1 accuracy: 1.0
+mapping 2 accuracy: 1.0
+mapping 3 accuracy: 1.0
+mapping 4 accuracy: 1.0
+mapping 5 accuracy: 1.0
+mapping 6 accuracy: 1.0
+mapping 7 accuracy: 1.0
+mapping 8 accuracy: 1.0
+mapping 9 accuracy: 1.0
+mapping 10 accuracy: 1.0
+mapping 11 accuracy: 1.0
+mapping 12 accuracy: 1.0
+mapping 13 accuracy: 1.0
+mapping 14 accuracy: 1.0
+mapping 15 accuracy: 1.0
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.9583333333333334
+mapping 1 accuracy on dev after train: 1.0
+mapping 2 accuracy on dev after train: 1.0
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9583333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 75 time: 2026-07-29 12:20:13.510288
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.7916666666666666
+mapping 1 accuracy: 0.8333333333333334
+mapping 2 accuracy: 0.875
+evaluate mapping finished. best mappings: [2, 1, 0]
+mapping 2 accuracy on dev after train: 0.7083333333333334
+mapping 1 accuracy on dev after train: 0.6666666666666666
+mapping 0 accuracy on dev after train: 0.75
+after train mapping 0 selected.
+--------------------
+iteration: 76 time: 2026-07-29 12:21:25.852886
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.8214285714285714
+mapping 1 accuracy: 0.8214285714285714
+mapping 2 accuracy: 0.8392857142857143
+mapping 3 accuracy: 0.8392857142857143
+mapping 4 accuracy: 0.8214285714285714
+mapping 5 accuracy: 0.8214285714285714
+mapping 6 accuracy: 0.8392857142857143
+mapping 7 accuracy: 0.8392857142857143
+mapping 8 accuracy: 0.8392857142857143
+mapping 9 accuracy: 0.8392857142857143
+mapping 10 accuracy: 0.8214285714285714
+mapping 11 accuracy: 0.8214285714285714
+mapping 12 accuracy: 0.8214285714285714
+mapping 13 accuracy: 0.8214285714285714
+mapping 14 accuracy: 0.8392857142857143
+mapping 15 accuracy: 0.8392857142857143
+mapping 16 accuracy: 0.8392857142857143
+mapping 17 accuracy: 0.8392857142857143
+mapping 18 accuracy: 0.8392857142857143
+mapping 19 accuracy: 0.8214285714285714
+mapping 20 accuracy: 0.8214285714285714
+mapping 21 accuracy: 0.8214285714285714
+mapping 22 accuracy: 0.8392857142857143
+mapping 23 accuracy: 0.8035714285714286
+mapping 24 accuracy: 0.8214285714285714
+mapping 25 accuracy: 0.8392857142857143
+mapping 26 accuracy: 0.8392857142857143
+mapping 27 accuracy: 0.7857142857142857
+mapping 28 accuracy: 0.8035714285714286
+mapping 29 accuracy: 0.7857142857142857
+mapping 30 accuracy: 0.8214285714285714
+mapping 31 accuracy: 0.8035714285714286
+mapping 32 accuracy: 0.7857142857142857
+mapping 33 accuracy: 0.8392857142857143
+mapping 34 accuracy: 0.8214285714285714
+mapping 35 accuracy: 0.8035714285714286
+mapping 36 accuracy: 0.7857142857142857
+mapping 37 accuracy: 0.8214285714285714
+mapping 38 accuracy: 0.7857142857142857
+mapping 39 accuracy: 0.8214285714285714
+evaluate mapping finished. best mappings: [2, 3, 6, 7, 8]
+mapping 2 accuracy on dev after train: 0.8571428571428571
+mapping 3 accuracy on dev after train: 0.875
+mapping 6 accuracy on dev after train: 0.9107142857142857
+mapping 7 accuracy on dev after train: 0.8928571428571429
+mapping 8 accuracy on dev after train: 0.8214285714285714
+after train mapping 6 selected.
+--------------------
+iteration: 77 time: 2026-07-29 12:28:11.012997
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.8928571428571429
+mapping 2 accuracy: 0.875
+mapping 3 accuracy: 0.9107142857142857
+mapping 4 accuracy: 0.8928571428571429
+mapping 5 accuracy: 0.8928571428571429
+mapping 6 accuracy: 0.8928571428571429
+mapping 7 accuracy: 0.8571428571428571
+mapping 8 accuracy: 0.8928571428571429
+mapping 9 accuracy: 0.8928571428571429
+mapping 10 accuracy: 0.8928571428571429
+mapping 11 accuracy: 0.875
+mapping 12 accuracy: 0.9107142857142857
+mapping 13 accuracy: 0.9107142857142857
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.8928571428571429
+mapping 16 accuracy: 0.875
+mapping 17 accuracy: 0.875
+mapping 18 accuracy: 0.8928571428571429
+mapping 19 accuracy: 0.8928571428571429
+mapping 20 accuracy: 0.8928571428571429
+mapping 21 accuracy: 0.9107142857142857
+mapping 22 accuracy: 0.9107142857142857
+mapping 23 accuracy: 0.8928571428571429
+mapping 24 accuracy: 0.8928571428571429
+mapping 25 accuracy: 0.8928571428571429
+mapping 26 accuracy: 0.875
+mapping 27 accuracy: 0.8928571428571429
+mapping 28 accuracy: 0.8928571428571429
+mapping 29 accuracy: 0.9107142857142857
+mapping 30 accuracy: 0.8928571428571429
+mapping 31 accuracy: 0.8928571428571429
+mapping 32 accuracy: 0.9107142857142857
+mapping 33 accuracy: 0.875
+mapping 34 accuracy: 0.8928571428571429
+mapping 35 accuracy: 0.8928571428571429
+mapping 36 accuracy: 0.875
+mapping 37 accuracy: 0.875
+mapping 38 accuracy: 0.9107142857142857
+mapping 39 accuracy: 0.875
+evaluate mapping finished. best mappings: [3, 12, 13, 21, 22]
+mapping 3 accuracy on dev after train: 0.8035714285714286
+mapping 12 accuracy on dev after train: 0.875
+mapping 13 accuracy on dev after train: 0.8571428571428571
+mapping 21 accuracy on dev after train: 0.875
+mapping 22 accuracy on dev after train: 0.8571428571428571
+after train mapping 12 selected.
+--------------------
+iteration: 78 time: 2026-07-29 12:34:57.091185
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.8392857142857143
+mapping 1 accuracy: 0.8214285714285714
+mapping 2 accuracy: 0.8214285714285714
+mapping 3 accuracy: 0.7857142857142857
+mapping 4 accuracy: 0.8035714285714286
+mapping 5 accuracy: 0.8214285714285714
+mapping 6 accuracy: 0.8035714285714286
+mapping 7 accuracy: 0.8392857142857143
+mapping 8 accuracy: 0.8035714285714286
+mapping 9 accuracy: 0.8392857142857143
+mapping 10 accuracy: 0.8392857142857143
+mapping 11 accuracy: 0.8214285714285714
+mapping 12 accuracy: 0.7857142857142857
+mapping 13 accuracy: 0.7857142857142857
+mapping 14 accuracy: 0.8214285714285714
+mapping 15 accuracy: 0.8035714285714286
+mapping 16 accuracy: 0.8035714285714286
+mapping 17 accuracy: 0.8392857142857143
+mapping 18 accuracy: 0.8035714285714286
+mapping 19 accuracy: 0.8571428571428571
+mapping 20 accuracy: 0.8035714285714286
+mapping 21 accuracy: 0.8035714285714286
+mapping 22 accuracy: 0.8035714285714286
+mapping 23 accuracy: 0.8571428571428571
+mapping 24 accuracy: 0.8214285714285714
+mapping 25 accuracy: 0.8035714285714286
+mapping 26 accuracy: 0.8571428571428571
+mapping 27 accuracy: 0.8035714285714286
+mapping 28 accuracy: 0.8035714285714286
+mapping 29 accuracy: 0.7857142857142857
+mapping 30 accuracy: 0.8214285714285714
+mapping 31 accuracy: 0.8392857142857143
+mapping 32 accuracy: 0.8214285714285714
+mapping 33 accuracy: 0.8214285714285714
+mapping 34 accuracy: 0.8214285714285714
+mapping 35 accuracy: 0.8035714285714286
+mapping 36 accuracy: 0.8214285714285714
+mapping 37 accuracy: 0.8035714285714286
+mapping 38 accuracy: 0.7678571428571429
+mapping 39 accuracy: 0.8214285714285714
+evaluate mapping finished. best mappings: [19, 23, 26, 0, 7]
+mapping 19 accuracy on dev after train: 0.9464285714285714
+mapping 23 accuracy on dev after train: 0.9464285714285714
+mapping 26 accuracy on dev after train: 0.9464285714285714
+mapping 0 accuracy on dev after train: 0.9642857142857143
+mapping 7 accuracy on dev after train: 0.9464285714285714
+after train mapping 0 selected.
+--------------------
+iteration: 79 time: 2026-07-29 12:41:46.683959
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 1.0
+mapping 1 accuracy: 1.0
+mapping 2 accuracy: 1.0
+mapping 3 accuracy: 1.0
+mapping 4 accuracy: 1.0
+mapping 5 accuracy: 1.0
+mapping 6 accuracy: 1.0
+mapping 7 accuracy: 1.0
+mapping 8 accuracy: 1.0
+mapping 9 accuracy: 1.0
+mapping 10 accuracy: 1.0
+mapping 11 accuracy: 1.0
+mapping 12 accuracy: 1.0
+mapping 13 accuracy: 1.0
+mapping 14 accuracy: 1.0
+mapping 15 accuracy: 1.0
+mapping 16 accuracy: 1.0
+mapping 17 accuracy: 1.0
+mapping 18 accuracy: 1.0
+mapping 19 accuracy: 1.0
+mapping 20 accuracy: 1.0
+mapping 21 accuracy: 1.0
+mapping 22 accuracy: 1.0
+mapping 23 accuracy: 1.0
+mapping 24 accuracy: 1.0
+mapping 25 accuracy: 1.0
+mapping 26 accuracy: 1.0
+mapping 27 accuracy: 1.0
+mapping 28 accuracy: 1.0
+mapping 29 accuracy: 1.0
+mapping 30 accuracy: 1.0
+mapping 31 accuracy: 1.0
+mapping 32 accuracy: 1.0
+mapping 33 accuracy: 1.0
+mapping 34 accuracy: 0.9583333333333334
+mapping 35 accuracy: 1.0
+mapping 36 accuracy: 1.0
+mapping 37 accuracy: 1.0
+mapping 38 accuracy: 1.0
+mapping 39 accuracy: 1.0
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9166666666666666
+after train mapping 3 selected.
+model saved at iteration 79
+--------------------
+iteration: 80 time: 2026-07-29 12:46:58.077494
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.7916666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.875
+evaluate mapping finished. best mappings: [1, 2, 0]
+mapping 1 accuracy on dev after train: 0.75
+mapping 2 accuracy on dev after train: 0.7083333333333334
+mapping 0 accuracy on dev after train: 0.75
+after train mapping 1 selected.
+--------------------
+iteration: 81 time: 2026-07-29 12:48:11.737778
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9166666666666666
+mapping 2 accuracy: 0.9166666666666666
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.9166666666666666
+mapping 5 accuracy: 0.9166666666666666
+mapping 6 accuracy: 0.9166666666666666
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9166666666666666
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.9166666666666666
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.9166666666666666
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.9166666666666666
+mapping 15 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.8333333333333334
+mapping 2 accuracy on dev after train: 0.9583333333333334
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9583333333333334
+after train mapping 2 selected.
+--------------------
+iteration: 82 time: 2026-07-29 12:50:52.806009
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.7083333333333334
+mapping 1 accuracy: 0.7916666666666666
+evaluate mapping finished. best mappings: [1, 0]
+mapping 1 accuracy on dev after train: 0.6666666666666666
+mapping 0 accuracy on dev after train: 0.7083333333333334
+after train mapping 0 selected.
+--------------------
+iteration: 83 time: 2026-07-29 12:51:42.266457
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.8333333333333334
+mapping 2 accuracy: 0.9166666666666666
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.9166666666666666
+mapping 5 accuracy: 0.8333333333333334
+mapping 6 accuracy: 0.875
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.8333333333333334
+mapping 9 accuracy: 0.8333333333333334
+mapping 10 accuracy: 0.9166666666666666
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.8333333333333334
+mapping 13 accuracy: 0.8333333333333334
+mapping 14 accuracy: 0.8333333333333334
+mapping 15 accuracy: 0.8333333333333334
+mapping 16 accuracy: 0.9166666666666666
+mapping 17 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [0, 2, 3, 4, 10]
+mapping 0 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.9583333333333334
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 0.9166666666666666
+mapping 10 accuracy on dev after train: 0.9583333333333334
+after train mapping 2 selected.
+--------------------
+iteration: 84 time: 2026-07-29 12:54:31.884803
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 1.0
+mapping 1 accuracy: 1.0
+mapping 2 accuracy: 1.0
+mapping 3 accuracy: 1.0
+mapping 4 accuracy: 1.0
+mapping 5 accuracy: 1.0
+mapping 6 accuracy: 1.0
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 1.0
+mapping 11 accuracy: 1.0
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 1.0
+mapping 15 accuracy: 1.0
+mapping 16 accuracy: 1.0
+mapping 17 accuracy: 1.0
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 1.0
+mapping 1 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 1.0
+after train mapping 0 selected.
+--------------------
+iteration: 85 time: 2026-07-29 12:57:19.942246
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.8333333333333334
+mapping 1 accuracy: 0.7916666666666666
+mapping 2 accuracy: 0.7916666666666666
+mapping 3 accuracy: 0.7916666666666666
+mapping 4 accuracy: 0.8333333333333334
+mapping 5 accuracy: 0.7916666666666666
+mapping 6 accuracy: 0.7916666666666666
+mapping 7 accuracy: 0.75
+mapping 8 accuracy: 0.7916666666666666
+mapping 9 accuracy: 0.75
+mapping 10 accuracy: 0.7916666666666666
+mapping 11 accuracy: 0.7916666666666666
+mapping 12 accuracy: 0.75
+mapping 13 accuracy: 0.7083333333333334
+mapping 14 accuracy: 0.7916666666666666
+mapping 15 accuracy: 0.7916666666666666
+mapping 16 accuracy: 0.7916666666666666
+mapping 17 accuracy: 0.7916666666666666
+evaluate mapping finished. best mappings: [0, 4, 1, 2, 3]
+mapping 0 accuracy on dev after train: 1.0
+mapping 4 accuracy on dev after train: 1.0
+mapping 1 accuracy on dev after train: 1.0
+mapping 2 accuracy on dev after train: 1.0
+mapping 3 accuracy on dev after train: 1.0
+after train mapping 0 selected.
+--------------------
+iteration: 86 time: 2026-07-29 13:00:11.122810
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.8571428571428571
+mapping 1 accuracy: 0.8571428571428571
+mapping 2 accuracy: 0.8571428571428571
+mapping 3 accuracy: 0.8392857142857143
+mapping 4 accuracy: 0.8392857142857143
+mapping 5 accuracy: 0.8571428571428571
+mapping 6 accuracy: 0.8392857142857143
+mapping 7 accuracy: 0.8571428571428571
+mapping 8 accuracy: 0.8392857142857143
+mapping 9 accuracy: 0.8571428571428571
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.8571428571428571
+mapping 12 accuracy: 0.8214285714285714
+mapping 13 accuracy: 0.8392857142857143
+mapping 14 accuracy: 0.8571428571428571
+mapping 15 accuracy: 0.8571428571428571
+mapping 16 accuracy: 0.8392857142857143
+mapping 17 accuracy: 0.8571428571428571
+mapping 18 accuracy: 0.8392857142857143
+mapping 19 accuracy: 0.8571428571428571
+mapping 20 accuracy: 0.8392857142857143
+mapping 21 accuracy: 0.8571428571428571
+mapping 22 accuracy: 0.8392857142857143
+mapping 23 accuracy: 0.8392857142857143
+mapping 24 accuracy: 0.8571428571428571
+mapping 25 accuracy: 0.8392857142857143
+mapping 26 accuracy: 0.8571428571428571
+mapping 27 accuracy: 0.8392857142857143
+mapping 28 accuracy: 0.8392857142857143
+mapping 29 accuracy: 0.8392857142857143
+mapping 30 accuracy: 0.8571428571428571
+mapping 31 accuracy: 0.8571428571428571
+mapping 32 accuracy: 0.8571428571428571
+mapping 33 accuracy: 0.8392857142857143
+mapping 34 accuracy: 0.8571428571428571
+mapping 35 accuracy: 0.8571428571428571
+mapping 36 accuracy: 0.8571428571428571
+mapping 37 accuracy: 0.8571428571428571
+mapping 38 accuracy: 0.8392857142857143
+mapping 39 accuracy: 0.875
+evaluate mapping finished. best mappings: [10, 39, 0, 1, 2]
+mapping 10 accuracy on dev after train: 0.8571428571428571
+mapping 39 accuracy on dev after train: 0.8392857142857143
+mapping 0 accuracy on dev after train: 0.8392857142857143
+mapping 1 accuracy on dev after train: 0.8392857142857143
+mapping 2 accuracy on dev after train: 0.8392857142857143
+after train mapping 10 selected.
+--------------------
+iteration: 87 time: 2026-07-29 13:07:09.402467
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.9583333333333334
+mapping 1 accuracy on dev after train: 0.9166666666666666
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 0.9166666666666666
+after train mapping 0 selected.
+--------------------
+iteration: 88 time: 2026-07-29 13:09:56.919253
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.8571428571428571
+mapping 1 accuracy: 0.8571428571428571
+mapping 2 accuracy: 0.8571428571428571
+mapping 3 accuracy: 0.8571428571428571
+mapping 4 accuracy: 0.8571428571428571
+mapping 5 accuracy: 0.8571428571428571
+mapping 6 accuracy: 0.8571428571428571
+mapping 7 accuracy: 0.8571428571428571
+mapping 8 accuracy: 0.8392857142857143
+mapping 9 accuracy: 0.8392857142857143
+mapping 10 accuracy: 0.8571428571428571
+mapping 11 accuracy: 0.8571428571428571
+mapping 12 accuracy: 0.8571428571428571
+mapping 13 accuracy: 0.8571428571428571
+mapping 14 accuracy: 0.8392857142857143
+mapping 15 accuracy: 0.8392857142857143
+mapping 16 accuracy: 0.875
+mapping 17 accuracy: 0.8571428571428571
+mapping 18 accuracy: 0.8571428571428571
+mapping 19 accuracy: 0.8571428571428571
+mapping 20 accuracy: 0.8571428571428571
+mapping 21 accuracy: 0.8571428571428571
+mapping 22 accuracy: 0.8392857142857143
+mapping 23 accuracy: 0.8214285714285714
+mapping 24 accuracy: 0.8571428571428571
+mapping 25 accuracy: 0.8392857142857143
+mapping 26 accuracy: 0.875
+mapping 27 accuracy: 0.8571428571428571
+mapping 28 accuracy: 0.8214285714285714
+mapping 29 accuracy: 0.8571428571428571
+mapping 30 accuracy: 0.8928571428571429
+mapping 31 accuracy: 0.8928571428571429
+mapping 32 accuracy: 0.8035714285714286
+mapping 33 accuracy: 0.8571428571428571
+mapping 34 accuracy: 0.8571428571428571
+mapping 35 accuracy: 0.8928571428571429
+mapping 36 accuracy: 0.8035714285714286
+mapping 37 accuracy: 0.8928571428571429
+mapping 38 accuracy: 0.7678571428571429
+mapping 39 accuracy: 0.8571428571428571
+evaluate mapping finished. best mappings: [30, 31, 35, 37, 16]
+mapping 30 accuracy on dev after train: 0.8571428571428571
+mapping 31 accuracy on dev after train: 0.8571428571428571
+mapping 35 accuracy on dev after train: 0.8392857142857143
+mapping 37 accuracy on dev after train: 0.8571428571428571
+mapping 16 accuracy on dev after train: 0.8571428571428571
+after train mapping 30 selected.
+--------------------
+iteration: 89 time: 2026-07-29 13:16:55.856800
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+mapping 16 accuracy: 0.9583333333333334
+mapping 17 accuracy: 0.9583333333333334
+mapping 18 accuracy: 0.9583333333333334
+mapping 19 accuracy: 0.9583333333333334
+mapping 20 accuracy: 0.9583333333333334
+mapping 21 accuracy: 0.9583333333333334
+mapping 22 accuracy: 0.9583333333333334
+mapping 23 accuracy: 0.9583333333333334
+mapping 24 accuracy: 0.9583333333333334
+mapping 25 accuracy: 0.9583333333333334
+mapping 26 accuracy: 0.9583333333333334
+mapping 27 accuracy: 0.9583333333333334
+mapping 28 accuracy: 0.9583333333333334
+mapping 29 accuracy: 0.9583333333333334
+mapping 30 accuracy: 0.9583333333333334
+mapping 31 accuracy: 0.9583333333333334
+mapping 32 accuracy: 0.9583333333333334
+mapping 33 accuracy: 0.9583333333333334
+mapping 34 accuracy: 0.9583333333333334
+mapping 35 accuracy: 0.9583333333333334
+mapping 36 accuracy: 0.9583333333333334
+mapping 37 accuracy: 0.9583333333333334
+mapping 38 accuracy: 0.9583333333333334
+mapping 39 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.9166666666666666
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.9166666666666666
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9583333333333334
+after train mapping 3 selected.
+model saved at iteration 89
+--------------------
+iteration: 90 time: 2026-07-29 13:22:12.715160
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.9107142857142857
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.9107142857142857
+mapping 3 accuracy: 0.875
+mapping 4 accuracy: 0.8928571428571429
+mapping 5 accuracy: 0.8571428571428571
+mapping 6 accuracy: 0.9107142857142857
+mapping 7 accuracy: 0.875
+mapping 8 accuracy: 0.9107142857142857
+mapping 9 accuracy: 0.875
+mapping 10 accuracy: 0.8571428571428571
+mapping 11 accuracy: 0.8571428571428571
+mapping 12 accuracy: 0.8928571428571429
+mapping 13 accuracy: 0.8928571428571429
+mapping 14 accuracy: 0.875
+mapping 15 accuracy: 0.9107142857142857
+mapping 16 accuracy: 0.8928571428571429
+mapping 17 accuracy: 0.875
+mapping 18 accuracy: 0.9107142857142857
+mapping 19 accuracy: 0.8571428571428571
+mapping 20 accuracy: 0.8571428571428571
+mapping 21 accuracy: 0.8928571428571429
+mapping 22 accuracy: 0.9107142857142857
+mapping 23 accuracy: 0.8214285714285714
+mapping 24 accuracy: 0.8928571428571429
+mapping 25 accuracy: 0.875
+mapping 26 accuracy: 0.8571428571428571
+mapping 27 accuracy: 0.8928571428571429
+mapping 28 accuracy: 0.7857142857142857
+mapping 29 accuracy: 0.8571428571428571
+mapping 30 accuracy: 0.8928571428571429
+mapping 31 accuracy: 0.8928571428571429
+mapping 32 accuracy: 0.8214285714285714
+mapping 33 accuracy: 0.9107142857142857
+mapping 34 accuracy: 0.875
+mapping 35 accuracy: 0.8571428571428571
+mapping 36 accuracy: 0.7857142857142857
+mapping 37 accuracy: 0.8571428571428571
+mapping 38 accuracy: 0.8035714285714286
+mapping 39 accuracy: 0.8392857142857143
+evaluate mapping finished. best mappings: [0, 2, 6, 8, 15]
+mapping 0 accuracy on dev after train: 0.9285714285714286
+mapping 2 accuracy on dev after train: 0.8214285714285714
+mapping 6 accuracy on dev after train: 0.9107142857142857
+mapping 8 accuracy on dev after train: 0.8392857142857143
+mapping 15 accuracy on dev after train: 0.875
+after train mapping 0 selected.
+--------------------
+iteration: 91 time: 2026-07-29 13:29:05.612112
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 1
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.9166666666666666
+mapping 1 accuracy on dev after train: 0.875
+mapping 2 accuracy on dev after train: 0.875
+mapping 3 accuracy on dev after train: 0.9166666666666666
+mapping 4 accuracy on dev after train: 0.9166666666666666
+after train mapping 0 selected.
+--------------------
+iteration: 92 time: 2026-07-29 13:31:23.871197
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9166666666666666
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9166666666666666
+mapping 3 accuracy: 0.9166666666666666
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+mapping 16 accuracy: 0.9583333333333334
+mapping 17 accuracy: 0.9583333333333334
+mapping 18 accuracy: 0.9583333333333334
+mapping 19 accuracy: 0.9166666666666666
+mapping 20 accuracy: 0.9583333333333334
+mapping 21 accuracy: 0.9583333333333334
+mapping 22 accuracy: 0.9583333333333334
+mapping 23 accuracy: 0.9583333333333334
+mapping 24 accuracy: 0.9583333333333334
+mapping 25 accuracy: 0.9583333333333334
+mapping 26 accuracy: 0.9583333333333334
+mapping 27 accuracy: 0.9583333333333334
+mapping 28 accuracy: 0.9166666666666666
+mapping 29 accuracy: 0.9583333333333334
+mapping 30 accuracy: 0.9583333333333334
+mapping 31 accuracy: 0.9166666666666666
+mapping 32 accuracy: 0.9583333333333334
+mapping 33 accuracy: 0.9166666666666666
+mapping 34 accuracy: 0.9583333333333334
+mapping 35 accuracy: 0.9583333333333334
+mapping 36 accuracy: 0.9583333333333334
+mapping 37 accuracy: 0.9166666666666666
+mapping 38 accuracy: 0.9166666666666666
+mapping 39 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [1, 4, 5, 6, 8]
+mapping 1 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9166666666666666
+mapping 5 accuracy on dev after train: 0.9166666666666666
+mapping 6 accuracy on dev after train: 0.9166666666666666
+mapping 8 accuracy on dev after train: 0.9166666666666666
+after train mapping 1 selected.
+--------------------
+iteration: 93 time: 2026-07-29 13:35:44.170803
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 1.0
+mapping 1 accuracy: 1.0
+mapping 2 accuracy: 1.0
+mapping 3 accuracy: 1.0
+mapping 4 accuracy: 1.0
+mapping 5 accuracy: 1.0
+mapping 6 accuracy: 0.9166666666666666
+mapping 7 accuracy: 0.9166666666666666
+mapping 8 accuracy: 0.9166666666666666
+mapping 9 accuracy: 0.9166666666666666
+mapping 10 accuracy: 0.9166666666666666
+mapping 11 accuracy: 0.9166666666666666
+mapping 12 accuracy: 0.9166666666666666
+mapping 13 accuracy: 0.9166666666666666
+mapping 14 accuracy: 0.9166666666666666
+mapping 15 accuracy: 0.9166666666666666
+mapping 16 accuracy: 0.9166666666666666
+mapping 17 accuracy: 0.9166666666666666
+evaluate mapping finished. best mappings: [0, 1, 2, 3, 4]
+mapping 0 accuracy on dev after train: 0.9583333333333334
+mapping 1 accuracy on dev after train: 1.0
+mapping 2 accuracy on dev after train: 0.9583333333333334
+mapping 3 accuracy on dev after train: 0.9583333333333334
+mapping 4 accuracy on dev after train: 0.9583333333333334
+after train mapping 1 selected.
+--------------------
+iteration: 94 time: 2026-07-29 13:38:39.205910
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 1
+mapping 0 accuracy: 0.875
+mapping 1 accuracy: 0.875
+mapping 2 accuracy: 0.9107142857142857
+mapping 3 accuracy: 0.9107142857142857
+mapping 4 accuracy: 0.875
+mapping 5 accuracy: 0.875
+mapping 6 accuracy: 0.9107142857142857
+mapping 7 accuracy: 0.9107142857142857
+mapping 8 accuracy: 0.9107142857142857
+mapping 9 accuracy: 0.9107142857142857
+mapping 10 accuracy: 0.875
+mapping 11 accuracy: 0.875
+mapping 12 accuracy: 0.875
+mapping 13 accuracy: 0.875
+mapping 14 accuracy: 0.8928571428571429
+mapping 15 accuracy: 0.8928571428571429
+mapping 16 accuracy: 0.8928571428571429
+mapping 17 accuracy: 0.8928571428571429
+mapping 18 accuracy: 0.8928571428571429
+mapping 19 accuracy: 0.875
+mapping 20 accuracy: 0.875
+mapping 21 accuracy: 0.875
+mapping 22 accuracy: 0.8928571428571429
+mapping 23 accuracy: 0.8035714285714286
+mapping 24 accuracy: 0.875
+mapping 25 accuracy: 0.8928571428571429
+mapping 26 accuracy: 0.8928571428571429
+mapping 27 accuracy: 0.8571428571428571
+mapping 28 accuracy: 0.8035714285714286
+mapping 29 accuracy: 0.8571428571428571
+mapping 30 accuracy: 0.8928571428571429
+mapping 31 accuracy: 0.8571428571428571
+mapping 32 accuracy: 0.8214285714285714
+mapping 33 accuracy: 0.8928571428571429
+mapping 34 accuracy: 0.8928571428571429
+mapping 35 accuracy: 0.8571428571428571
+mapping 36 accuracy: 0.8214285714285714
+mapping 37 accuracy: 0.8928571428571429
+mapping 38 accuracy: 0.8035714285714286
+mapping 39 accuracy: 0.8928571428571429
+evaluate mapping finished. best mappings: [2, 3, 6, 7, 8]
+mapping 2 accuracy on dev after train: 0.8928571428571429
+mapping 3 accuracy on dev after train: 0.8392857142857143
+mapping 6 accuracy on dev after train: 0.875
+mapping 7 accuracy on dev after train: 0.8571428571428571
+mapping 8 accuracy on dev after train: 0.8928571428571429
+after train mapping 2 selected.
+--------------------
+iteration: 95 time: 2026-07-29 13:45:35.892695
+selected task: digikala-tc
+len train data is 56 and len dev data is 56
+selected template: 2
+mapping 0 accuracy: 0.9107142857142857
+mapping 1 accuracy: 0.9107142857142857
+mapping 2 accuracy: 0.9107142857142857
+mapping 3 accuracy: 0.8928571428571429
+mapping 4 accuracy: 0.8928571428571429
+mapping 5 accuracy: 0.9107142857142857
+mapping 6 accuracy: 0.9107142857142857
+mapping 7 accuracy: 0.9107142857142857
+mapping 8 accuracy: 0.8928571428571429
+mapping 9 accuracy: 0.9107142857142857
+mapping 10 accuracy: 0.9107142857142857
+mapping 11 accuracy: 0.9285714285714286
+mapping 12 accuracy: 0.8928571428571429
+mapping 13 accuracy: 0.8928571428571429
+mapping 14 accuracy: 0.9107142857142857
+mapping 15 accuracy: 0.9107142857142857
+mapping 16 accuracy: 0.8928571428571429
+mapping 17 accuracy: 0.9107142857142857
+mapping 18 accuracy: 0.9285714285714286
+mapping 19 accuracy: 0.9107142857142857
+mapping 20 accuracy: 0.9107142857142857
+mapping 21 accuracy: 0.8928571428571429
+mapping 22 accuracy: 0.8928571428571429
+mapping 23 accuracy: 0.9107142857142857
+mapping 24 accuracy: 0.9107142857142857
+mapping 25 accuracy: 0.9107142857142857
+mapping 26 accuracy: 0.9107142857142857
+mapping 27 accuracy: 0.8928571428571429
+mapping 28 accuracy: 0.8571428571428571
+mapping 29 accuracy: 0.8928571428571429
+mapping 30 accuracy: 0.9107142857142857
+mapping 31 accuracy: 0.9107142857142857
+mapping 32 accuracy: 0.9107142857142857
+mapping 33 accuracy: 0.9107142857142857
+mapping 34 accuracy: 0.9285714285714286
+mapping 35 accuracy: 0.9107142857142857
+mapping 36 accuracy: 0.9107142857142857
+mapping 37 accuracy: 0.9107142857142857
+mapping 38 accuracy: 0.8928571428571429
+mapping 39 accuracy: 0.9107142857142857
+evaluate mapping finished. best mappings: [11, 18, 34, 0, 1]
+mapping 11 accuracy on dev after train: 0.9107142857142857
+mapping 18 accuracy on dev after train: 0.9107142857142857
+mapping 34 accuracy on dev after train: 0.9107142857142857
+mapping 0 accuracy on dev after train: 0.875
+mapping 1 accuracy on dev after train: 0.9107142857142857
+after train mapping 11 selected.
+--------------------
+iteration: 96 time: 2026-07-29 13:52:35.615890
+selected task: parsinlu-food-sentiment
+len train data is 24 and len dev data is 24
+selected template: 2
+mapping 0 accuracy: 0.9583333333333334
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 0.9583333333333334
+mapping 6 accuracy: 0.9583333333333334
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 0.9583333333333334
+mapping 10 accuracy: 0.9583333333333334
+mapping 11 accuracy: 0.9583333333333334
+mapping 12 accuracy: 0.9583333333333334
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 0.9583333333333334
+mapping 15 accuracy: 0.9583333333333334
+mapping 16 accuracy: 0.9583333333333334
+mapping 17 accuracy: 0.9583333333333334
+mapping 18 accuracy: 0.9583333333333334
+mapping 19 accuracy: 1.0
+mapping 20 accuracy: 0.9583333333333334
+mapping 21 accuracy: 0.9583333333333334
+mapping 22 accuracy: 1.0
+mapping 23 accuracy: 0.9583333333333334
+mapping 24 accuracy: 0.9583333333333334
+mapping 25 accuracy: 0.9583333333333334
+mapping 26 accuracy: 0.9583333333333334
+mapping 27 accuracy: 0.9583333333333334
+mapping 28 accuracy: 0.9583333333333334
+mapping 29 accuracy: 0.9583333333333334
+mapping 30 accuracy: 0.9583333333333334
+mapping 31 accuracy: 0.9583333333333334
+mapping 32 accuracy: 0.9583333333333334
+mapping 33 accuracy: 0.9583333333333334
+mapping 34 accuracy: 1.0
+mapping 35 accuracy: 0.9583333333333334
+mapping 36 accuracy: 0.9583333333333334
+mapping 37 accuracy: 0.9583333333333334
+mapping 38 accuracy: 0.9583333333333334
+mapping 39 accuracy: 1.0
+evaluate mapping finished. best mappings: [19, 22, 34, 39, 0]
+mapping 19 accuracy on dev after train: 0.9583333333333334
+mapping 22 accuracy on dev after train: 0.9583333333333334
+mapping 34 accuracy on dev after train: 0.9166666666666666
+mapping 39 accuracy on dev after train: 0.9583333333333334
+mapping 0 accuracy on dev after train: 0.9583333333333334
+after train mapping 19 selected.
+--------------------
+iteration: 97 time: 2026-07-29 13:57:01.556776
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.625
+mapping 1 accuracy: 0.6666666666666666
+evaluate mapping finished. best mappings: [1, 0]
+mapping 1 accuracy on dev after train: 0.625
+mapping 0 accuracy on dev after train: 0.7916666666666666
+after train mapping 0 selected.
+--------------------
+iteration: 98 time: 2026-07-29 13:57:52.479737
+selected task: parsinlu-nli
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 0.75
+mapping 1 accuracy: 0.6666666666666666
+evaluate mapping finished. best mappings: [0, 1]
+mapping 0 accuracy on dev after train: 0.75
+mapping 1 accuracy on dev after train: 0.75
+after train mapping 0 selected.
+--------------------
+iteration: 99 time: 2026-07-29 13:58:44.054968
+selected task: parsinlu-movie-sentiment
+len train data is 24 and len dev data is 24
+selected template: 3
+mapping 0 accuracy: 1.0
+mapping 1 accuracy: 0.9583333333333334
+mapping 2 accuracy: 0.9583333333333334
+mapping 3 accuracy: 0.9583333333333334
+mapping 4 accuracy: 0.9583333333333334
+mapping 5 accuracy: 1.0
+mapping 6 accuracy: 1.0
+mapping 7 accuracy: 0.9583333333333334
+mapping 8 accuracy: 0.9583333333333334
+mapping 9 accuracy: 1.0
+mapping 10 accuracy: 1.0
+mapping 11 accuracy: 1.0
+mapping 12 accuracy: 1.0
+mapping 13 accuracy: 0.9583333333333334
+mapping 14 accuracy: 1.0
+mapping 15 accuracy: 1.0
+mapping 16 accuracy: 1.0
+mapping 17 accuracy: 1.0
+mapping 18 accuracy: 1.0
+mapping 19 accuracy: 1.0
+mapping 20 accuracy: 1.0
+mapping 21 accuracy: 1.0
+mapping 22 accuracy: 0.9583333333333334
+mapping 23 accuracy: 1.0
+mapping 24 accuracy: 0.9583333333333334
+mapping 25 accuracy: 0.9583333333333334
+mapping 26 accuracy: 0.9583333333333334
+mapping 27 accuracy: 0.9583333333333334
+mapping 28 accuracy: 1.0
+mapping 29 accuracy: 1.0
+mapping 30 accuracy: 1.0
+mapping 31 accuracy: 0.9583333333333334
+mapping 32 accuracy: 1.0
+mapping 33 accuracy: 1.0
+mapping 34 accuracy: 0.9583333333333334
+mapping 35 accuracy: 0.9583333333333334
+mapping 36 accuracy: 1.0
+mapping 37 accuracy: 1.0
+mapping 38 accuracy: 0.9583333333333334
+mapping 39 accuracy: 1.0
+evaluate mapping finished. best mappings: [0, 5, 6, 9, 10]
+mapping 0 accuracy on dev after train: 1.0
+mapping 5 accuracy on dev after train: 1.0
+mapping 6 accuracy on dev after train: 1.0
+mapping 9 accuracy on dev after train: 1.0
+mapping 10 accuracy on dev after train: 1.0
+after train mapping 0 selected.
+model saved at iteration 99
+--------------------
+final model saved!
