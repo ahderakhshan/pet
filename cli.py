@@ -399,7 +399,7 @@ def main():
             new_model = best_model
             torch.cuda.empty_cache()
             #time.sleep(60)
-            if (iteration+1) % 5 == 0:
+            if (iteration+1) % 3 == 0:
                 #time.sleep(600)
                 new_model.save_pretrained(args.output_dir + str(iteration + 1))
                 log_file.write(f"model saved at iteration {iteration}\n")
@@ -411,7 +411,7 @@ def main():
                 if torch.cuda.is_available():
                     state["cuda"] = torch.cuda.get_rng_state_all()
 
-                torch.save(state, args.output_dir + "/state.pt")
+                torch.save(state, args.output_dir + str(iteration + 1) + "/state.pt")
 
             log_file.write("-" * 20 + "\n")
 
