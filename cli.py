@@ -262,7 +262,14 @@ def main():
     pet_model_cfg, pet_train_cfg, pet_eval_cfg = load_pet_configs(args)
     # sc_model_cfg, sc_train_cfg, sc_eval_cfg = load_sequence_classifier_configs(args)
     # ipet_cfg = load_ipet_config(args)
-    random.seed(42)
+    # random.seed(42)
+    state = torch.load(args.output_dir + "3" + "/state.pt", weights_only=False)
+
+    random.setstate(state["python"])
+    torch.set_rng_state(state["torch"])
+
+    if torch.cuda.is_available() and "cuda" in state:
+        torch.cuda.set_rng_state_all(state["cuda"])
     tasks_patterns = {
         "parsinlu-food-sentiment": [1, 2, 3],
         "parsinlu-movie-sentiment": [1, 2, 3],
