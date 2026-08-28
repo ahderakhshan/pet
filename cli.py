@@ -411,7 +411,7 @@ def main():
                 if torch.cuda.is_available():
                     state["cuda"] = torch.cuda.get_rng_state_all()
 
-                torch.save(state, args.outpu_dir + "/state.pt")
+                torch.save(state, args.output_dir + "/state.pt")
 
             log_file.write("-" * 20 + "\n")
 
