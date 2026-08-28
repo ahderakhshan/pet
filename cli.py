@@ -300,110 +300,117 @@ def main():
     wrapper.config.pattern_id = 1
     new_model = wrapper.model
     pet_model_cfg.first_load = False
-    log_file = open("./log_file.txt", "w", encoding="utf-8-sig")
+    log_file = open("./log_file2.txt", "w", encoding="utf-8-sig")
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(args.train_iterations):
+            if iteration <= 249:
+                selected_seed = random.randint(1, 10000000)
+                selected_task = random.sample(tasks, k=1)[0]
+                train_dev_data = load_examples(
+                    selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
+                    num_examples_per_label=2 * args.k, seed=selected_seed)
+                selected_template = random.choice(tasks_patterns[selected_task])
+            else:
+                # seed selection
+                selected_seed = random.randint(1, 10000000)
+                logger.info(f"*** selected seed: {selected_seed}")
 
-            # seed selection
-            selected_seed = random.randint(1, 10000000)
-            logger.info(f"*** selected seed: {selected_seed}")
+                # task selection
+                selected_task = random.sample(tasks, k=1)[0]
+                processor = PROCESSORS[selected_task]()
+                label_list = processor.get_labels()
+                logger.info(f"*** selected task: {selected_task}\n")
+                log_file.write(f"iteration: {iteration} time: {str(datetime.datetime.now())}\n")
+                log_file.write(f"selected task: {selected_task}\n")
 
-            # task selection
-            selected_task = random.sample(tasks, k=1)[0]
-            processor = PROCESSORS[selected_task]()
-            label_list = processor.get_labels()
-            logger.info(f"*** selected task: {selected_task}\n")
-            log_file.write(f"iteration: {iteration} time: {str(datetime.datetime.now())}\n")
-            log_file.write(f"selected task: {selected_task}\n")
-
-            # data preparation
-            train_dev_data = load_examples(
-                selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
-                num_examples_per_label=2*args.k, seed=selected_seed)
-            train_data, dev_data = [], []
-            all_labels = set()
-            for data in train_dev_data:
-                if len([sample for sample in train_data if sample.label == data.label]) < args.k:
-                    train_data.append(data)
-                else:
-                    dev_data.append(data)
-                all_labels.add(data.label)
-            for label in all_labels:
-                train_label_data = [d for d in train_data if d.label == label]
-                dev_label_data = [d for d in dev_data if d.label == label]
-                if len(train_label_data) < args.k:
-                    replace_data = train_label_data[:int(len(train_label_data)/2)]
-                    for data in replace_data:
+                # data preparation
+                train_dev_data = load_examples(
+                    selected_task, data_dirs[selected_task], TRAIN_SET, num_examples=None,
+                    num_examples_per_label=2*args.k, seed=selected_seed)
+                train_data, dev_data = [], []
+                all_labels = set()
+                for data in train_dev_data:
+                    if len([sample for sample in train_data if sample.label == data.label]) < args.k:
+                        train_data.append(data)
+                    else:
                         dev_data.append(data)
-                        train_data.remove(data)
-                elif len(dev_label_data) < args.k:
-                    replace_data = train_label_data[:int((len(train_label_data) - len(dev_label_data))/2)]
-                    for data in replace_data:
-                        dev_data.append(data)
-                        train_data.remove(data)
-            # log_file.write(f"train data text a is {[d.text_a for d in train_data]}\n")
-            logger.info(f"*** len train data is {len(train_data)} and len dev data is {len(dev_data)}")
-            log_file.write(f"len train data is {len(train_data)} and len dev data is {len(dev_data)}\n")
+                    all_labels.add(data.label)
+                for label in all_labels:
+                    train_label_data = [d for d in train_data if d.label == label]
+                    dev_label_data = [d for d in dev_data if d.label == label]
+                    if len(train_label_data) < args.k:
+                        replace_data = train_label_data[:int(len(train_label_data)/2)]
+                        for data in replace_data:
+                            dev_data.append(data)
+                            train_data.remove(data)
+                    elif len(dev_label_data) < args.k:
+                        replace_data = train_label_data[:int((len(train_label_data) - len(dev_label_data))/2)]
+                        for data in replace_data:
+                            dev_data.append(data)
+                            train_data.remove(data)
+                # log_file.write(f"train data text a is {[d.text_a for d in train_data]}\n")
+                logger.info(f"*** len train data is {len(train_data)} and len dev data is {len(dev_data)}")
+                log_file.write(f"len train data is {len(train_data)} and len dev data is {len(dev_data)}\n")
 
-            # confing determination
-            pet_eval_cfg.metrics = METRICS.get(selected_task, DEFAULT_METRICS)
-            pet_model_cfg.task_name = selected_task
-            pet_model_cfg.label_list = label_list
-            pet_model_cfg.seed = selected_seed
-            wrapper.config = pet_model_cfg
-            wrapper = pet.init_model(pet_model_cfg)
-            wrapper = wrapper.set_model(new_model)
+                # confing determination
+                pet_eval_cfg.metrics = METRICS.get(selected_task, DEFAULT_METRICS)
+                pet_model_cfg.task_name = selected_task
+                pet_model_cfg.label_list = label_list
+                pet_model_cfg.seed = selected_seed
+                wrapper.config = pet_model_cfg
+                wrapper = pet.init_model(pet_model_cfg)
+                wrapper = wrapper.set_model(new_model)
 
-            # select template
-            selected_template = random.choice(tasks_patterns[selected_task])
-            log_file.write(f"selected template: {selected_template}\n")
+                # select template
+                selected_template = random.choice(tasks_patterns[selected_task])
+                log_file.write(f"selected template: {selected_template}\n")
 
-            # evaluate mappings
-            template_mapping_count = task_template_total_mappings_count[selected_task][selected_template]
-            scores = {k: 0 for k in range(template_mapping_count)}
-            for template_mapping in range(template_mapping_count):
-                evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
-                evaluate_pet_model_cfg.mapping_no = template_mapping
-                evaluate_pet_model_cfg.pattern_id = selected_template
-                evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
-                evaluate_wrapper = evaluate_wrapper.set_model(new_model)
-                result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
-                scores[template_mapping] = result['scores']['acc']
-                log_file.write(f"mapping {template_mapping} accuracy: {result['scores']['acc']}\n")
-            scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
-            best_mappings = list(scores.keys())[:args.n_mappings]
-            log_file.write(f"evaluate mapping finished. best mappings: {best_mappings}\n")
+                # evaluate mappings
+                template_mapping_count = task_template_total_mappings_count[selected_task][selected_template]
+                scores = {k: 0 for k in range(template_mapping_count)}
+                for template_mapping in range(template_mapping_count):
+                    evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
+                    evaluate_pet_model_cfg.mapping_no = template_mapping
+                    evaluate_pet_model_cfg.pattern_id = selected_template
+                    evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
+                    evaluate_wrapper = evaluate_wrapper.set_model(new_model)
+                    result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
+                    scores[template_mapping] = result['scores']['acc']
+                    log_file.write(f"mapping {template_mapping} accuracy: {result['scores']['acc']}\n")
+                scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
+                best_mappings = list(scores.keys())[:args.n_mappings]
+                log_file.write(f"evaluate mapping finished. best mappings: {best_mappings}\n")
 
-            # select best mappings
-            best_result = -1
-            best_model = None
-            train_mapping_selection = None
-            for mapping in best_mappings:
-                # train model on train set
-                mapping_selector_model_cfg = copy.deepcopy(pet_model_cfg)
-                mapping_selector_model_cfg.pattern_id = selected_template
-                mapping_selector_model_cfg.mapping_no = mapping
-                mapping_selector_wrapper = pet.init_model(mapping_selector_model_cfg)
-                mapping_selector_wrapper = mapping_selector_wrapper.set_model(new_model)
-                pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
-                                       pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
-                result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
-                log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores']['acc']}\n")
-                if result['scores']['acc'] > best_result:
-                    best_result = result['scores']['acc']
-                    best_model = mapping_selector_wrapper.model
-                    train_mapping_selection = mapping
-            log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
+                # select best mappings
+                best_result = -1
+                best_model = None
+                train_mapping_selection = None
+                for mapping in best_mappings:
+                    # train model on train set
+                    mapping_selector_model_cfg = copy.deepcopy(pet_model_cfg)
+                    mapping_selector_model_cfg.pattern_id = selected_template
+                    mapping_selector_model_cfg.mapping_no = mapping
+                    mapping_selector_wrapper = pet.init_model(mapping_selector_model_cfg)
+                    mapping_selector_wrapper = mapping_selector_wrapper.set_model(new_model)
+                    pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
+                                           pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
+                    result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
+                    log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores']['acc']}\n")
+                    if result['scores']['acc'] > best_result:
+                        best_result = result['scores']['acc']
+                        best_model = mapping_selector_wrapper.model
+                        train_mapping_selection = mapping
+                log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
 
-            new_model = best_model
-            torch.cuda.empty_cache()
-            time.sleep(60)
-            if (iteration+1) % 50 == 0:
-                time.sleep(600)
-                new_model.save_pretrained(args.output_dir + str(iteration + 1))
-                log_file.write(f"model saved at iteration {iteration}\n")
-            log_file.write("-" * 20 + "\n")
+                new_model = best_model
+                torch.cuda.empty_cache()
+                time.sleep(60)
+                if (iteration+1) % 50 == 0:
+                    time.sleep(600)
+                    new_model.save_pretrained(args.output_dir + str(iteration + 1))
+                    log_file.write(f"model saved at iteration {iteration}\n")
+                log_file.write("-" * 20 + "\n")
 
     # new_model.save_pretrained(args.output_dir)
     log_file.write(f"final model saved!")
