@@ -1,8 +1,8 @@
 python cli.py --method our_method \
-  --train_iterations 300 \
+  --train_iterations 10 \
   --data_dir ./ \
   --model_type xlm-roberta \
-  --model_name_or_path "/home/user2/fnlp/pet/pet/new_model250" \
+  --model_name_or_path xlm-roberta-large \
   --task_name parsinlu-movie-sentiment \
   --output_dir ./new_model \
-  --pet_max_seq_length 512
+  --pet_max_seq_length 256

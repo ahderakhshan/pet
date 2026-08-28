@@ -368,10 +368,7 @@ def main():
                 evaluate_pet_model_cfg.pattern_id = selected_template
                 evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
                 evaluate_wrapper = evaluate_wrapper.set_model(new_model)
-                if iteration > 249:
-                    result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
-                else:
-                    result = {'scores': {'acc': 0}}
+                result = pet.evaluate(evaluate_wrapper, train_data, pet_eval_cfg, priming_data=None)
                 scores[template_mapping] = result['scores']['acc']
                 log_file.write(f"mapping {template_mapping} accuracy: {result['scores']['acc']}\n")
             scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
@@ -389,24 +386,33 @@ def main():
                 mapping_selector_model_cfg.mapping_no = mapping
                 mapping_selector_wrapper = pet.init_model(mapping_selector_model_cfg)
                 mapping_selector_wrapper = mapping_selector_wrapper.set_model(new_model)
-                if iteration > 249:
-                    pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
-                                           pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
-                    result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
-                    log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores']['acc']}\n")
-                    if result['scores']['acc'] > best_result:
-                        best_result = result['scores']['acc']
-                        best_model = mapping_selector_wrapper.model
-                        train_mapping_selection = mapping
+                pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
+                                       pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
+                result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
+                log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores']['acc']}\n")
+                if result['scores']['acc'] > best_result:
+                    best_result = result['scores']['acc']
+                    best_model = mapping_selector_wrapper.model
+                    train_mapping_selection = mapping
             log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
 
             new_model = best_model
             torch.cuda.empty_cache()
-            time.sleep(60)
-            if (iteration+1) % 50 == 0:
-                time.sleep(600)
+            #time.sleep(60)
+            if (iteration+1) % 5 == 0:
+                #time.sleep(600)
                 new_model.save_pretrained(args.output_dir + str(iteration + 1))
                 log_file.write(f"model saved at iteration {iteration}\n")
+                state = {
+                    "python": random.getstate(),
+                    "torch": torch.get_rng_state(),
+                }
+
+                if torch.cuda.is_available():
+                    state["cuda"] = torch.cuda.get_rng_state_all()
+
+                torch.save(state, args.outpu_dir + "/state.pt")
+
             log_file.write("-" * 20 + "\n")
 
     # new_model.save_pretrained(args.output_dir)
