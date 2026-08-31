@@ -262,14 +262,14 @@ def main():
     pet_model_cfg, pet_train_cfg, pet_eval_cfg = load_pet_configs(args)
     # sc_model_cfg, sc_train_cfg, sc_eval_cfg = load_sequence_classifier_configs(args)
     # ipet_cfg = load_ipet_config(args)
-    random.seed(42)
-    # state = torch.load(args.output_dir + "200" + "/state.pt", weights_only=False)
-    #
-    # random.setstate(state["python"])
-    # torch.set_rng_state(state["torch"])
-    #
-    # if torch.cuda.is_available() and "cuda" in state:
-    #     torch.cuda.set_rng_state_all(state["cuda"])
+    # random.seed(42)
+    state = torch.load(args.output_dir + "50" + "/state.pt", weights_only=False)
+
+    random.setstate(state["python"])
+    torch.set_rng_state(state["torch"])
+
+    if torch.cuda.is_available() and "cuda" in state:
+        torch.cuda.set_rng_state_all(state["cuda"])
     tasks_patterns = {
         "parsinlu-food-sentiment": [1, 2, 3],
         "parsinlu-movie-sentiment": [1, 2, 3],
@@ -310,7 +310,7 @@ def main():
     log_file = open("./log_file2.txt", "w", encoding="utf-8-sig")
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
-        for iteration in range(args.train_iterations):
+        for iteration in range(50,args.train_iterations):
 
             # seed selection
             selected_seed = random.randint(1, 10000000)
