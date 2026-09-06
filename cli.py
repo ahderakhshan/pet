@@ -307,7 +307,7 @@ def main():
     wrapper.config.pattern_id = 1
     new_model = wrapper.model
     pet_model_cfg.first_load = False
-    log_file = open("./log_file2.txt", "w", encoding="utf-8-sig")
+    log_file = open("./log_file3.txt", "w", encoding="utf-8-sig")
     if args.method == "our_method":
         tasks = ["parsinlu-food-sentiment", "parsinlu-movie-sentiment", "parsinlu-nli", "digikala-tc"]
         for iteration in range(args.train_iterations):
@@ -388,11 +388,12 @@ def main():
             train_mapping_selection = None
             for mapping in best_mappings:
                 # train model on train set
+                temp_model = copy.deepcopy(new_model)
                 mapping_selector_model_cfg = copy.deepcopy(pet_model_cfg)
                 mapping_selector_model_cfg.pattern_id = selected_template
                 mapping_selector_model_cfg.mapping_no = mapping
                 mapping_selector_wrapper = pet.init_model(mapping_selector_model_cfg)
-                mapping_selector_wrapper = mapping_selector_wrapper.set_model(new_model)
+                mapping_selector_wrapper = mapping_selector_wrapper.set_model(temp_model)
                 pet.train_single_model(mapping_selector_wrapper, train_data, pet_train_cfg,
                                        pet_eval_cfg, ipet_train_data=None, unlabeled_data=None)
                 result = pet.evaluate(mapping_selector_wrapper, dev_data, pet_eval_cfg, priming_data=None)
@@ -401,6 +402,8 @@ def main():
                     best_result = result['scores']['acc']
                     best_model = copy.deepcopy(mapping_selector_wrapper.model)
                     train_mapping_selection = mapping
+                del temp_model
+                torch.cuda.empty_cache()
             log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
 
             new_model = copy.deepcopy(best_model)
