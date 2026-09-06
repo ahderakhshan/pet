@@ -262,14 +262,14 @@ def main():
     pet_model_cfg, pet_train_cfg, pet_eval_cfg = load_pet_configs(args)
     # sc_model_cfg, sc_train_cfg, sc_eval_cfg = load_sequence_classifier_configs(args)
     # ipet_cfg = load_ipet_config(args)
-    # random.seed(42)
-    state = torch.load(args.output_dir + "50" + "/state.pt", weights_only=False)
+    random.seed(42)
+    # state = torch.load(args.output_dir + "50" + "/state.pt", weights_only=False)
+    #
+    # random.setstate(state["python"])
+    # torch.set_rng_state(state["torch"])
 
-    random.setstate(state["python"])
-    torch.set_rng_state(state["torch"])
-
-    if torch.cuda.is_available() and "cuda" in state:
-        torch.cuda.set_rng_state_all(state["cuda"])
+    # if torch.cuda.is_available() and "cuda" in state:
+    #     torch.cuda.set_rng_state_all(state["cuda"])
     tasks_patterns = {
         "parsinlu-food-sentiment": [1, 2, 3],
         "parsinlu-movie-sentiment": [1, 2, 3],
@@ -404,7 +404,18 @@ def main():
             log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
 
             new_model = best_model
+
+            # Evaluate on all mappings after best model selection
+            for template_mapping in range(template_mapping_count):
+                evaluate_pet_model_cfg = copy.deepcopy(pet_model_cfg)
+                evaluate_pet_model_cfg.mapping_no = template_mapping
+                evaluate_pet_model_cfg.pattern_id = selected_template
+                evaluate_wrapper = pet.init_model(evaluate_pet_model_cfg)
+                evaluate_wrapper = evaluate_wrapper.set_model(new_model)
+                result = pet.evaluate(evaluate_wrapper, dev_data, pet_eval_cfg, priming_data=None)
+                log_file.write(f"best model accuracy on dev for mapping {template_mapping}: {result['scores']['acc']}\n")
             torch.cuda.empty_cache()
+
             time.sleep(60)
             if (iteration+1) % 50 == 0:
                 time.sleep(600)

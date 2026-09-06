@@ -155,7 +155,7 @@ class TransformerModelWrapper:
             cache_dir=config.cache_dir if config.cache_dir else None, use_cache=False)
 
         self.tokenizer = tokenizer_class.from_pretrained(
-            "xlm-roberta-large", #config.model_name_or_path,
+            "xlm-roberta-large", #config.model_name_or_path, #TODO: CHANGE MANUALLY SELECT TEMPLATE
             cache_dir=config.cache_dir if config.cache_dir else None)  # type: PreTrainedTokenizer
 
         if self.config.model_type == 'gpt2':
