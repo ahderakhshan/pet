@@ -410,6 +410,7 @@ def main():
 
             new_model = copy.deepcopy(best_model)
             new_model.to('cuda')
+            best_model.to('cpu')
             del best_model
             torch.cuda.empty_cache()
 
