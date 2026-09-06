@@ -399,11 +399,13 @@ def main():
                 log_file.write(f"mapping {mapping} accuracy on dev after train: {result['scores']['acc']}\n")
                 if result['scores']['acc'] > best_result:
                     best_result = result['scores']['acc']
-                    best_model = mapping_selector_wrapper.model
+                    best_model = copy.deepcopy(mapping_selector_wrapper.model)
                     train_mapping_selection = mapping
             log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
 
-            new_model = best_model
+            new_model = copy.deepcopy(best_model)
+            del best_model
+            torch.cuda.empty_cache()
 
             # Evaluate on all mappings after best model selection
             for template_mapping in range(template_mapping_count):
