@@ -386,9 +386,11 @@ def main():
             best_result = -1
             best_model = None
             train_mapping_selection = None
+            new_model.to('cpu')
             for mapping in best_mappings:
                 # train model on train set
                 temp_model = copy.deepcopy(new_model)
+                temp_model.to('cuda')
                 mapping_selector_model_cfg = copy.deepcopy(pet_model_cfg)
                 mapping_selector_model_cfg.pattern_id = selected_template
                 mapping_selector_model_cfg.mapping_no = mapping
@@ -407,6 +409,7 @@ def main():
             log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
 
             new_model = copy.deepcopy(best_model)
+            new_model.to('cuda')
             del best_model
             torch.cuda.empty_cache()
 
