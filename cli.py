@@ -404,6 +404,7 @@ def main():
                     best_result = result['scores']['acc']
                     best_model = copy.deepcopy(mapping_selector_wrapper.model)
                     train_mapping_selection = mapping
+                temp_model.to('cpu')
                 del temp_model
                 torch.cuda.empty_cache()
             log_file.write(f"after train mapping {train_mapping_selection} selected.\n")
