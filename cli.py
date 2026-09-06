@@ -443,7 +443,7 @@ def main():
 
             log_file.write("-" * 20 + "\n")
 
-    # new_model.save_pretrained(args.output_dir)
+    new_model.save_pretrained(args.output_dir)
     log_file.write(f"final model saved!")
 
     # if args.method == 'pet':

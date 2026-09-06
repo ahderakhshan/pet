@@ -1,5 +1,5 @@
 python cli.py --method our_method \
-  --train_iterations 5 \
+  --train_iterations 400 \
   --data_dir ./ \
   --model_type xlm-roberta \
   --model_name_or_path xlm-roberta-large \
